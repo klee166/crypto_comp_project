@@ -1,3 +1,6 @@
+# Cryptocurrency Competitor Finder
+The world of cryptocurrency extends far beyond not just Bitcoin, Ethereum, and Ripple. As the field of cryptocurrency becomes more popular, people invent more cryptocurrenties. And, it is very important for investers to be discreet at choosing which one would have the best potential value. As there is a program that compares stock prices and values, these investors would need a program that finds cryptocurrency competitors based on their interest. And, our program does not only find competitors from web scrawling, but also recommends the most competitive cryptocurrency out of all the selections.
+
 We will be using Python 3 and Python virtual environments:
 
 $ python3 -m venv venv
