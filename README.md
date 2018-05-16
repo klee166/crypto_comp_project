@@ -8,7 +8,7 @@ $ python3 -m venv venv
 
 $ . ./venv/bin/activate
 
-$pip install requests BeautifulSoup4
+$ pip install requests BeautifulSoup4
 
 # Tools
 1. web_robot.py: use Python BeautifulSoup to build a robot that crawls https://coinmarketcap.com/ and the official websites of the first 100 cryptocurrencies on CoinMarketCap; write the website contents to myfile.txt.
