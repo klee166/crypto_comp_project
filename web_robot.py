@@ -2,7 +2,6 @@ from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
-from htmlmin.minify import html_minify
 
 def simple_get(url):
     """
@@ -12,7 +11,7 @@ def simple_get(url):
     """
     try:
         with closing(get(url, stream=True)) as resp: # closing ensures that any network resources are freed when they go out of scope in that with block: prevents fatal errors and network timeouts
-            if is_good_response(resp):
+            if is_good_response(resp, url):
                 return resp.content
             else:
                 return None
@@ -22,12 +21,21 @@ def simple_get(url):
         return None
 
 
-def is_good_response(resp):
+def is_good_response(resp, url):
     """
     Returns true if the response seems to be HTML, false otherwise
     """
     content_type = resp.headers['Content-Type'].lower()
-    return (resp.status_code == 200
+    if (resp.status_code != 200 and resp.status_code != 503) :
+        print('status code not 200\n', url)
+
+    elif (content_type is None) :
+        print('content type is None\n', url)
+
+    elif (content_type.find('html') <= -1):
+        print('content_type.find(html) is not > -1\n', url)
+
+    return ((resp.status_code == 200 or resp.status_code == 503)
             and content_type is not None
             and content_type.find('html') > -1)
 
@@ -41,19 +49,18 @@ def log_error(e):
 
 output_file=open("myfile.txt", "w")
 raw_html = simple_get('https://coinmarketcap.com/') # main page
-html = BeautifulSoup(raw_html)
+html = BeautifulSoup(raw_html, 'html.parser')
 for each_div in html.findAll("a", {"class": "currency-name-container"}):
-    if(each_div.text != "VeChain" and each_div.text != "NEO" and each_div.text != "TRON" and each_div.text !="NEM"):
+    if(each_div.text != "VeChain" and each_div.text != "NEO" and each_div.text != "TRON"):
         output_file.write("\n")
-        output_file.write(".I ")
+        output_file.write("I. ")
         output_file.write(each_div.text) # cryptocurrency name
         output_file.write(" ")
         new_href = "https://coinmarketcap.com"+each_div['href']
-        new_html = BeautifulSoup(simple_get(new_href)) # open the cryptocurrency website
-        #new_html = html_minify(new_html, encoding='utf-8')
+        new_html = BeautifulSoup(simple_get(new_href), 'html.parser') # open the cryptocurrency website
         for element in new_html.findAll("a", text="Website"):
             website = element['href']
-            web_html = BeautifulSoup(simple_get(website))
+            web_html = BeautifulSoup(simple_get(website), 'html.parser')
             for para in web_html.findAll("p"):
                 print(para.text)
                 output_file.write(para.text)
