@@ -2,6 +2,7 @@ from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
+from htmlmin.minify import html_minify
 
 def simple_get(url):
     """
@@ -40,18 +41,19 @@ def log_error(e):
 
 output_file=open("myfile.txt", "w")
 raw_html = simple_get('https://coinmarketcap.com/') # main page
-html = BeautifulSoup(raw_html, 'html.parser')
+html = BeautifulSoup(raw_html)
 for each_div in html.findAll("a", {"class": "currency-name-container"}):
-    if(each_div.text != "VeChain" and each_div.text != "NEO" and each_div.text != "TRON"):
+    if(each_div.text != "VeChain" and each_div.text != "NEO" and each_div.text != "TRON" and each_div.text !="NEM"):
         output_file.write("\n")
-        output_file.write("I. ")
+        output_file.write(".I ")
         output_file.write(each_div.text) # cryptocurrency name
         output_file.write(" ")
         new_href = "https://coinmarketcap.com"+each_div['href']
-        new_html = BeautifulSoup(simple_get(new_href), 'html.parser') # open the cryptocurrency website
+        new_html = BeautifulSoup(simple_get(new_href)) # open the cryptocurrency website
+        #new_html = html_minify(new_html, encoding='utf-8')
         for element in new_html.findAll("a", text="Website"):
             website = element['href']
-            web_html = BeautifulSoup(simple_get(website), 'html.parser')
+            web_html = BeautifulSoup(simple_get(website))
             for para in web_html.findAll("p"):
                 print(para.text)
                 output_file.write(para.text)
