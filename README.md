@@ -30,3 +30,12 @@ $ python -mpip install -U matplotlib
 3. stemmer.py: use nltk.tokenize package to tokenize the content of myfile.txt first and then use nltk Porter Stemmers to stem each token; write to myfile.stemmed.
 
 4. similarity.py: Outputs pairwise cosine similarity in a matrix form and uses (k-mean clustering and agglomerative clustering to separate these data into different clusters
+
+# To generate new data
+1. python3 web_robot.py
+2. python3 tokenizer.py
+3. python3 stemmer.py
+4. cat myfile.tokenized | perl make_hist.prl>myfile.tokenized.hist
+5. cat myfile.stemmed | perl make_hist.prl>myfile.stemmed.hist
+
+
