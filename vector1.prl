@@ -38,6 +38,7 @@ my $HOME = ".";
 my $token_docs = "$DIR/myfile";           # tokenized cacm journals
 my $corps_freq = "$DIR/myfile";           # frequency of each token in the journ.
 my $stoplist   = "$DIR/common_words";   # common uninteresting words
+my $crypto_words = "$DIR/key_words";        # words most relevant in the field of cryptocurrency
 
 
 # @doc_vector
@@ -92,6 +93,13 @@ my %stoplist_hash  = ( );
 
 my %relevance_hash = ( );
 
+# @crypto_hash
+#
+# a hash used for storing words most relevant in cryptocurrency
+# and thus should be given a greater weight
+
+my %crypto_hash = ( );
+
 # @doc_simula
 #
 # array used for storing query to document or document to document
@@ -105,6 +113,7 @@ my @doc_simula = ( );
 # documents in a query to document or document to document calculation.
 
 my @res_vector = ( );
+
 
 
 # start program
@@ -163,6 +172,9 @@ sub init_corp_freq {
     my $stoplist_fh   = new FileHandle $stoplist  , "r"
 	or croak "Failed $stoplist";
 
+    my $crypto_fh = new FileHandle $crypto_words  , "r"
+    or croak "Failed $crypto_words";
+
     my $line = undef;
 
     while (defined( $line = <$corps_freq_fh> )) {
@@ -185,6 +197,12 @@ sub init_corp_freq {
 
 	chomp $line;
 	$stoplist_hash{ $line } = 1;
+    }
+
+    while (defined( $line = <$crypto_fh> )) {
+
+    chomp $line;
+    $crypto_hash{ $line } = 1;
     }
 
 }
@@ -234,27 +252,27 @@ sub init_doc_vectors {
 	last if $word =~ /^\.I 0$/; # indicates end of file so kick out
 
 	if ($word =~ /^\.I/) {     # indicates start of a new document
-
+      print $word;
 	    push @doc_vector, { };
 	    $doc_num++;
-      if($doc_num == 56) {
-        print $word;
-      }
 
 	    next;
 	}
 
 
 	# not implemented yet
-	if ($word =~ /[a-zA-Z]/ and ! exists $stoplist_hash{ $word }) {
+	if ($word =~ /[a-zA-Z]/ and ! exists $stoplist_hash{ lc($word) }) {
 
   #    print $word, "\n";
   #    print $docs_freq_hash{ $word }, "\n";
 
-	    if (defined( $docs_freq_hash{ $word } )) {
-
+	    if (defined( $docs_freq_hash{ $word } ) ) {
+          #  if (exists $crypto_hash{ lc ($word) }) {
+           #         $doc_vector[$doc_num]{ $word } += 10;
+           # } else {
 				$doc_vector[$doc_num]{ $word } += 1; # Term Frequency: # occurences of term t in document d
   #      print $doc_vector[$doc_num]{ $word }, "\n";
+            #}
 	    }
 	    else {
 		print "ERROR: Document frequency of zero: ", $word, "\n";
@@ -267,9 +285,22 @@ sub init_doc_vectors {
 
     	foreach my $hash (@doc_vector) {
     	  	foreach my $key (keys %{ $hash }) {
-    	        $hash->{ $key } = $hash->{ $key } * log( $doc_num / $docs_freq_hash{ $key });
-    		}
-   		}
+               
+    	         #  $hash->{ $key } = $hash->{ $key } * log( $doc_num / $docs_freq_hash{ $key });
+                
+                if (exists $crypto_hash{ lc ($key) }) {
+                    $hash->{ $key } = $hash->{ $key } + 3;
+             #       print($key, "->", $hash->{ $key }, "\n");
+                } 
+                
+             #       $hash->{ $key } = 1;
+           #  print($key, "->", $hash->{ $key }, "\n");
+            }
+
+                 
+    	}
+            
+   		
 
 
     return $doc_num;
@@ -303,7 +334,7 @@ sub init_doc_vectors {
 ##########################################################
 
 sub main_loop {
-  print "INITIALIZING VECTORS ... \n";
+    print "INITIALIZING VECTORS ... \n";
 
   &init_files ("unstemmed");
 
@@ -324,7 +355,7 @@ sub main_loop {
 
 	OPTIONS:
 	  1 = Find the similarity between two cryptocurrencies
-	  2 = Clustering cryptocurrencies and find competitors
+	  2 = Find cryptocurrencies most similar to a given one
 	  3 = Find the best cryptocurrency for each clustering
 	  4 = Quit
 
@@ -341,13 +372,275 @@ EndOfMenu
 	exit 0 if $option == 4;
 
 	&do_full_cosine_similarity and next if $option == 1;
+    &get_and_show_retrieved_set and next if $option == 2;
 #  &find_competitors and next if $option == 2;
 #	&find_best and next if $option == 3;
 
     }
 }
 
+##########################################################
+## GET_AND_SHOW_RETRIEVED_SET
+##   
+##  This function requests key retrieval parameters,
+##  including:
+##  
+##  A) Is a query vector or document vector being used
+##     as the retrieval seed? Both are vector representations
+##     but they are stored in different data structures,
+##     and one may optionally want to treat them slightly
+##     differently.
+##
+##  B) Enter the number of the query or document vector to
+##     be used as the retrieval seed.
+##
+##     Alternately, one may wish to request a new query
+##     from standard input here (and call the appropriate
+##     tokenization, stemming and term-weighting routines).
+##
+##  C) Request the maximum number of retrieved documents
+##     to display.
+##
+##  Perl note: one reads a line from a file <FILE> or <STDIN>
+##             by the assignment $string=<STDIN>; Beware of
+##             string equality testing, as these strings 
+##             will have a newline (\n) attached.
+##########################################################
 
+sub get_and_show_retrieved_set {
+
+    # if not an interactive query than we need to retrieve which
+    # query/document we want to use from the corpus
+    
+    my $vect_num = 1;
+
+    print "Target Document/Query number: ";
+
+          $vect_num  = <STDIN>;
+    chomp $vect_num;
+
+    if   ($vect_num !~ /^[1-9]/) { $vect_num  = 1; }
+
+    print "\n";
+    
+
+
+    print "Show how many matching documents (20): ";
+    
+    my    $max_show  = <STDIN>;
+    chomp $max_show;
+
+    if   ($max_show !~ /[0-9]/) { $max_show  = 20; }
+
+    
+
+    print "Document to Document comparison\n";
+    
+    &get_retrieved_set( $doc_vector[$vect_num]);
+    &shw_retrieved_set( $max_show, 
+                $vect_num, 
+                $doc_vector[$vect_num]);
+    
+}
+
+###########################################################
+## GET_RETRIEVED_SET
+##
+##  Parameters:
+## 
+##  $qry_vector{} - the query vector to be compared with the
+##                  document set. May also be another document 
+##                  vector.
+##
+##  This function computes the document similarity between the
+##  given vector $qry_vector{} and all vectors in the document
+##  collection storing these values in the array @doc_simula
+##
+##  An array of the document numbers is then sorted by this
+##  similarity function, forming the rank order of documents
+##  for use in the retrieval set.  
+##
+##  The -1 in the simcomp similarity comparision function
+##  makes the sorted list in descending order.
+##########################################################
+ 
+sub get_retrieved_set {
+
+    my $qry_vector = shift;
+    my $method  = shift;
+    my $tot_number = (scalar @doc_vector) - 1;
+    my $index      = 0;
+
+    @doc_simula = ( );   # insure that storage vectors are empty before we
+    @res_vector = ( );   # calculate vector similarities
+
+    push @doc_simula, 0.0;    # push one empty value so that indices 
+                              # correspond with document values
+
+    for $index ( 1 .. $tot_number) {
+        
+            push @doc_simula, &cosine_sim_a( $qry_vector, $doc_vector[$index], $index);
+        
+    }
+
+
+    @res_vector = 
+      sort { -1 * ($doc_simula[$a] <=> $doc_simula[$b]); } 1 .. $tot_number;
+}
+
+############################################################
+## SHW_RETRIEVED_SET
+##
+## Assumes the following global data structures have been
+## initialized, based on the results of &get_retrieved_set.
+##
+## 1) @res_vector - contains the document numbers sorted in 
+##                  rank order
+## 2) @doc_simula - The similarity measure for each document, 
+##                  computed by &get_retrieved_set.
+##
+## Also assumes that the following have been initialized in
+## advance:
+##
+##       $titles[ $doc_num ]    - the document title for a 
+##                                document number, $doc_num
+##       $relevance_hash{ $qry_num }{ $doc_num }
+##                              - is $doc_num relevant given
+##                                query number, $qry_num
+##
+## Parameters:
+##   $max_show   - the maximum number of matched documents 
+##                 to display.
+##   $qry_num    - the vector number of the query
+##   $qry_vect   - the query vector (passed by reference)
+##   $comparison - "Query" or "Document" (type of vector 
+##                 being compared to)
+##
+## In the case of "Query"-based retrieval, the relevance 
+## judgements for the returned set are displayed. This is 
+## ignored when doing document-to-document comparisons, as 
+## there are nor relevance judgements.
+##
+############################################################
+
+sub shw_retrieved_set {
+
+    my $max_show   = shift;
+    my $qry_num    = shift;
+    my $qry_vect   = shift;
+
+
+    print << "EndOfList";
+
+    ************************************************************
+    Documents Most Similar To Document number $qry_num
+    ************************************************************
+    Similarity   Doc#  
+    ==========   ==== 
+
+EndOfList
+    ;
+
+    my $rel_num = $qry_num;
+    my $index   = 0;
+
+    for $index ( 0 .. $max_show ) {
+    my $ind = $res_vector[$index];
+    my $id = $ind;
+    print "  ";
+    
+
+    my ($similarity) = $doc_simula[$ind] == 1 ? "1.00000000" : ($doc_simula[$ind]    =~ /^([0-9]+\.\d{0,8})/);
+   # my  $title       = substr $titles_vector[$ind], 0, 47;
+
+   
+    printf("   %8f     %d\n", $similarity, $ind);
+    #print($id, "\n");
+
+    }
+
+    print "\n";
+    print "Show the terms that overlap between the query and ";
+    print "retrieved docs (y/n): ";
+
+    my  $show_terms = <STDIN>;
+    if ($show_terms !~ /[nN]/) {
+
+    my $index = 0;
+
+    for $index ( 0 .. $max_show ) {
+        my $ind = $res_vector[$index];
+
+        show_overlap( $qry_vect,
+              $doc_vector[$ind],
+              $qry_num,
+              $ind );
+
+        if ($index % 5 == 4) {
+
+        print "\n";
+        print "Continue (y/n)? ";
+
+        my  $cont = <STDIN>;
+        if ($cont =~ /[nN]/) {
+            last;
+        }
+        }
+    }
+    }
+}
+
+########################################################
+## SHOW_OVERLAP
+## 
+## Parameters:
+##  - Two vectors ($qry_vect and $doc_vect), passed by
+##    reference.
+##  - The number of the vectors for display purposes
+##
+## PARTIALLY IMPLEMENTED:
+## 
+## This function should show the terms that two vectors
+## have in common, the relative weights of these terms
+## in the two vectors, and any additional useful information
+## such as the document frequency of the terms, etc.
+##
+## Useful for understanding the reason why documents
+## are judged as relevant. 
+##
+## Present in a sorted order most informative to the user.
+##
+########################################################
+
+sub show_overlap {
+
+    my $qry_vect = shift;
+    my $doc_vect = shift;
+    my $qry_num  = shift;
+    my $doc_num  = shift;
+
+    print "============================================================\n";
+    printf( "%-15s  %8d   %8d\t%s\n", 
+       "Vector Overlap",
+       $qry_num        ,
+       $doc_num        ,
+       "Docfreq"       );
+    print "============================================================\n";
+
+    my $term_one   = undef;
+    my $weight_one = undef;
+
+    while (($term_one, $weight_one) = each %{ $qry_vect }) {
+    if (exists $$doc_vect{ $term_one }) {
+
+        printf( "%-15s  %8d   %8d\t%d\n"    ,
+           $term_one                    ,
+           $weight_one                  ,
+           $$doc_vect{ $term_one }      ,
+           $docs_freq_hash{ $term_one } );
+    }
+    }
+}
 
 ########################################################
 ## DO_FULL_COSINE_SIMILARITY
@@ -422,11 +715,9 @@ sub full_cosine_similarity {
     my $sum_square2 = 0;
 
     while (($term_one, $weight_one) = each %{ $qry_vect }) {
-      #print $term_one, $weight_one, "\n";
     	$num += $weight_one * ($$doc_vect{ $term_one } || 0);
     	$sum1 += $weight_one;
     	$sum_square1 += ($weight_one * $weight_one);
-
 
     	if (exists $$doc_vect{ $term_one }) {
     		printf( "%-15s  %8d   %8d\t%8d\n",
@@ -436,15 +727,12 @@ sub full_cosine_similarity {
 		   	$weight_one * $$doc_vect{ $term_one } );
     	}
     }
-    # "sum_square1", $sum_square1, "\n";
 
     while (($term_two, $weight_two) = each %{ $doc_vect }) {
-    #  print $term_two, $weight_two, "\n";
     	$sum2 += $weight_two;
     	$sum_square2 += ($weight_two * $weight_two);
     }
 
-    #print "sum_square2", $sum_square2, "\n";
 
     my $cos_sim = &cosine_sim_b($num, $sum_square1, $sum_square2);
 
@@ -466,6 +754,7 @@ sub cosine_sim_a {
 
     my $vec1 = shift;
     my $vec2 = shift;
+    my $index = shift;
 
     my $num     = 0;
     my $sum_sq1 = 0;
@@ -498,8 +787,12 @@ sub cosine_sim_a {
     my $term = undef;
 
     foreach $term (@val1) { $sum_sq1 += $term * $term; }
+    #print("==========Got Here==========\n");
     foreach $term (@val2) { $sum_sq2 += $term * $term; }
 
+    if ($sum_sq2 == 0) {
+        print("Doc ", $index, " has sum_sq2 = 0\n ");
+    }
     return ( $num / sqrt( $sum_sq1 * $sum_sq2 ));
 }
 
