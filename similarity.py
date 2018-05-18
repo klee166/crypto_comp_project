@@ -88,15 +88,15 @@ with open('myfile.txt','rb') as f:
 	for i in kmeans:
 		k = i.astype(int)
 		cluster_group[k].append(list_names[j])
-		print list_names[j]
-		print i
+		print (list_names[j])
+		print (i)
 		j = j + 1
 
 	j = 0
 	print("Hierachy Clustering")
 	for i in np.nditer(hcluster):
-		print list_names[j]
-		print i
+		print (list_names[j])
+		print (i)
 		j = j + 1
 
 	print("The Best Sentimental Anaysis")
@@ -116,8 +116,8 @@ with open('myfile.txt','rb') as f:
 				max_name = name
 		first = -1
 
-		print max_name 
-		print max_val
+		print (max_name) 
+		print (max_val)
 
 
 
