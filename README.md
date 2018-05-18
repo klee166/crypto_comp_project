@@ -4,6 +4,10 @@ The world of cryptocurrency extends far beyond not just Bitcoin, Ethereum, and R
 # Setup
 We will be using Python 3 and Python virtual environments:
 
+To make histogram
+
+$ cat myfile.stemmed | perl make_hist.prl
+
 $ python3 -m venv venv
 
 $ . ./venv/bin/activate
