@@ -2,6 +2,7 @@ from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
+import re
 import urllib3
 urllib3.disable_warnings()
 
@@ -65,5 +66,7 @@ for each_div in html.findAll("a", {"class": "currency-name-container"}):
                 output_file.write(" ")
                 print(website)
                 web_html = BeautifulSoup(simple_get(website), 'html.parser')
-                for para in web_html.findAll("p"):
-                    output_file.write(para.text)
+                for para in web_html.findAll("p"): # for each p tag
+                    ipath = para.text
+                    if(len(re.findall(r'[\u4e00-\u9fff]+', ipath)) == 0): # check Chinese character
+                        output_file.write(para.text)
