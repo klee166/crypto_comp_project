@@ -114,7 +114,12 @@ my @doc_simula = ( );
 
 my @res_vector = ( );
 
+# @titles_vector
+#
+# vector of the cacm journal titles. Indexed in order of apperance
+# within the corpus.
 
+my @titles_vector  = ( );
 
 # start program
 
@@ -244,6 +249,7 @@ sub init_doc_vectors {
 
     push @doc_vector, { };     # push one empty value onto @doc_vector so that
                                # indices correspond with document numbers
+    push @titles_vector, "";  
 
     while (defined( $word = <$token_docs_fh> )) {
 
@@ -251,8 +257,9 @@ sub init_doc_vectors {
 
 	last if $word =~ /^\.I 0$/; # indicates end of file so kick out
 
-	if ($word =~ /^\.I/) {     # indicates start of a new document
-      print $word;
+	if ($word =~ /^\.I /) {     # indicates start of a new document
+     # print $word;
+      push @titles_vector, substr $word, 3;
 	    push @doc_vector, { };
 	    $doc_num++;
 
@@ -260,13 +267,12 @@ sub init_doc_vectors {
 	}
 
 
-	# not implemented yet
 	if ($word =~ /[a-zA-Z]/ and ! exists $stoplist_hash{ lc($word) }) {
 
   #    print $word, "\n";
   #    print $docs_freq_hash{ $word }, "\n";
 
-	    if (defined( $docs_freq_hash{ $word } ) ) {
+	    if (defined( $docs_freq_hash{ ($word) } ) ) {
           #  if (exists $crypto_hash{ lc ($word) }) {
            #         $doc_vector[$doc_num]{ $word } += 10;
            # } else {
@@ -535,8 +541,8 @@ sub shw_retrieved_set {
     ************************************************************
     Documents Most Similar To Document number $qry_num
     ************************************************************
-    Similarity   Doc#  
-    ==========   ==== 
+    Similarity    #      Cryptocurrency Name
+    ==========   ====  =======================
 
 EndOfList
     ;
@@ -554,7 +560,7 @@ EndOfList
    # my  $title       = substr $titles_vector[$ind], 0, 47;
 
    
-    printf("   %8f     %d\n", $similarity, $ind);
+    printf("   %8f     %d\t %s\n", $similarity, $ind, $titles_vector[$ind]);
     #print($id, "\n");
 
     }
@@ -620,7 +626,7 @@ sub show_overlap {
     my $doc_num  = shift;
 
     print "============================================================\n";
-    printf( "%-15s  %8d   %8d\t%s\n", 
+    printf( "%-20s  %8d   %8d\t%s\n", 
        "Vector Overlap",
        $qry_num        ,
        $doc_num        ,
@@ -633,7 +639,7 @@ sub show_overlap {
     while (($term_one, $weight_one) = each %{ $qry_vect }) {
     if (exists $$doc_vect{ $term_one }) {
 
-        printf( "%-15s  %8d   %8d\t%d\n"    ,
+        printf( "%-20s  %8d   %8d\t%d\n"    ,
            $term_one                    ,
            $weight_one                  ,
            $$doc_vect{ $term_one }      ,
