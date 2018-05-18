@@ -32,6 +32,10 @@ list_names = []
 name = ""
 temp_txt = ""
 first = 1
+second = -1
+
+# in order to get rid of extermely sparse matrices
+threshold_value = 18
 #print("Loading the Program... ")
 with open('myfile.txt','rb') as f:
 	read_txt = f.readlines()
@@ -40,9 +44,13 @@ with open('myfile.txt','rb') as f:
 		temp_temp_txt = text.rstrip()
 		if(".I" == temp_temp_txt[0:2]):
 			if(first == -1):
-				raw_documents.append(temp_txt)
+				if(len(temp_txt) > threshold_value):
+					raw_documents.append(temp_txt)
+				else:
+					list_names.remove(name)
 				temp_txt = ""
 			first = -1
+		
 			temp_temp_temp_txt = temp_temp_txt.split(" ")
 			name = temp_temp_temp_txt[1]
 			temp_txt = temp_txt + text[3:]
@@ -87,5 +95,5 @@ with open('myfile.txt','rb') as f:
 		c=kmeans_f.labels_, edgecolor='')
 	plt.show()
 	np.set_printoptions(threshold=np.nan)
-   	#print pairwise_similarity
+   	print pairwise_similarity
 	f.close()
