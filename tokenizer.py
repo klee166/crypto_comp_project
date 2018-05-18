@@ -9,3 +9,4 @@ for token in tokens:
     else:
         output_file.write(token)
         output_file.write("\n")
+output_file.write(".I 0")
