@@ -5,11 +5,11 @@
 
 while (<STDIN>) {
    chop;
-   if ($_ =~ /^[.]I/) {
+   if ($_ =~ /^[.]I$/) {
       if ($totdocfreq > 0) {
         &process_doc_freqs;
       }
-   } 
+   }
    else {
      $curdocfreq{$_}++;
      $totdocfreq++;
@@ -42,6 +42,4 @@ sub print_freqs {
   while (($term,$freq) = each %numdocs) {
     printf("%5d\t%5d\t%s\n",$freq,$corpusfreq{$term},$term);
   }
-}  
-
-
+}
