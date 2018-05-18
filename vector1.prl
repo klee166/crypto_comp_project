@@ -362,8 +362,7 @@ sub main_loop {
 	OPTIONS:
 	  1 = Find the similarity between two cryptocurrencies
 	  2 = Find cryptocurrencies most similar to a given one
-	  3 = Find the best cryptocurrency for each clustering
-	  4 = Quit
+	  3 = Quit
 
 	============================================================
 
@@ -375,7 +374,7 @@ EndOfMenu
 	my    $option = <STDIN>;
 	chomp $option;
 
-	exit 0 if $option == 4;
+	exit 0 if $option == 3;
 
 	&do_full_cosine_similarity and next if $option == 1;
     &get_and_show_retrieved_set and next if $option == 2;
@@ -419,6 +418,8 @@ sub get_and_show_retrieved_set {
     # query/document we want to use from the corpus
     
     my $vect_num = 1;
+
+    &show_crypto;
 
     print "Target Document/Query number: ";
 
@@ -648,6 +649,16 @@ sub show_overlap {
     }
 }
 
+sub show_crypto {
+    print("\nHere is a list of available cryptocurrencies: \n");
+    my $tot_number = (scalar @titles_vector) - 1;
+    my $index      = 0;
+     for $index ( 1 .. $tot_number) {
+        print($index, ". ", $titles_vector[$index], "\n");
+     }
+
+}
+
 ########################################################
 ## DO_FULL_COSINE_SIMILARITY
 ##
@@ -660,6 +671,7 @@ sub show_overlap {
 
 sub do_full_cosine_similarity {
 
+    &show_crypto;
     print "\n";
     print "1st Document number: ";
 
