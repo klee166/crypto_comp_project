@@ -7,5 +7,9 @@ output_file=open("myfile.stemmed", "w")
 tokens = nltk.word_tokenize(input_file)
 stemmer = PorterStemmer()
 for token in tokens:
-            output_file.write(stemmer.stem(token))
-            output_file.write("\n")
+    if(token == ".I"):
+        output_file.write(stemmer.stem(token))
+        output_file.write(" ")
+    else:
+        output_file.write(stemmer.stem(token))
+        output_file.write("\n")
