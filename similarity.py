@@ -2,6 +2,7 @@ import gensim
 import numpy as np
 import nltk
 from nltk.tokenize import word_tokenize
+from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.cluster import AgglomerativeClustering
@@ -30,7 +31,7 @@ raw_documents = []
 list_names = []
 name = ""
 temp_txt = ""
-first = -1
+first = 1
 #print("Loading the Program... ")
 with open('myfile.txt','rb') as f:
 	read_txt = f.readlines()
@@ -38,24 +39,23 @@ with open('myfile.txt','rb') as f:
 		text = text.decode('utf-8')
 		temp_temp_txt = text.rstrip()
 		if(".I" == temp_temp_txt[0:2]):
+			if(first == -1):
+				raw_documents.append(temp_txt)
+				temp_txt = ""
+			first = -1
 			temp_temp_temp_txt = temp_temp_txt.split(" ")
 			name = temp_temp_temp_txt[1]
+			temp_txt = temp_txt + text[3:]
 			list_names.append(name)
-			if(first == 1):
-				#print temp_txt
-				raw_documents.append(temp_txt)
-			if(len(text) > 1):
-				temp_txt = temp_txt + text[2:]
-				first = 1
-		else:
+		else: 
 			temp_txt = temp_txt + text
-			first = 1
-	#print raw_documents
+
+
 	vect = TfidfVectorizer(tokenizer=normalize, stop_words='english').fit_transform(raw_documents)
-	pairwise_similarity = ((vect * vect.T).A)
+	pairwise_similarity = cosine_similarity(vect)
 
 	# predict k_means
-	eigen_values, eigen_vectors = np.linalg.eigh(pairwise_similarity)
+	#eigen_values, eigen_vectors = np.linalg.eigh(pairwise_similarity)
 	kmeans = KMeans(n_clusters=5, init='k-means++').fit_predict(pairwise_similarity)
 	kmeans_f = KMeans(n_clusters=5, init='k-means++').fit(pairwise_similarity)
 
@@ -87,4 +87,5 @@ with open('myfile.txt','rb') as f:
 		c=kmeans_f.labels_, edgecolor='')
 	plt.show()
 	np.set_printoptions(threshold=np.nan)
-f.close()
+   	#print pairwise_similarity
+	f.close()
