@@ -231,10 +231,10 @@ sub init_doc_vectors {
 
 	chomp $word;
 
-	last if $word =~ /^\.I 0/; # indicates end of file so kick out
+	last if $word =~ /^\.I 0$/; # indicates end of file so kick out
 
 	if ($word =~ /^\.I/) {     # indicates start of a new document
-
+      print $word;
 	    push @doc_vector, { };
 	    $doc_num++;
 
@@ -243,15 +243,15 @@ sub init_doc_vectors {
 
 
 	# not implemented yet
-	if (($word =~ /[\S]/) || ($word =~ /[a-zA-Z]/ and ! exists $stoplist_hash{ $word })) {
+	if ($word =~ /[a-zA-Z]/ and ! exists $stoplist_hash{ $word }) {
 
-#	    print $word, "\n";
-#	    print $docs_freq_hash{ $word }, "\n";
+  #    print $word, "\n";
+  #    print $docs_freq_hash{ $word }, "\n";
 
 	    if (defined( $docs_freq_hash{ $word } )) {
 
 				$doc_vector[$doc_num]{ $word } += 1; # Term Frequency: # occurences of term t in document d
-
+  #      print $doc_vector[$doc_num]{ $word }, "\n";
 	    }
 	    else {
 		print "ERROR: Document frequency of zero: ", $word, "\n";
@@ -302,7 +302,7 @@ sub init_doc_vectors {
 sub main_loop {
     print "INITIALIZING VECTORS ... \n";
 
-  &init_files ( "stemmed");
+  &init_files ("unstemmed");
 
 	&init_corp_freq;
 
@@ -338,8 +338,8 @@ EndOfMenu
 	exit 0 if $option == 4;
 
 	&do_full_cosine_similarity and next if $option == 1;
-  &find_competitors and next if $option == 2;
-	&find_best and next if $option == 3;
+#  &find_competitors and next if $option == 2;
+#	&find_best and next if $option == 3;
 
     }
 }
@@ -442,132 +442,8 @@ sub full_cosine_similarity {
 
     print "==================================\n";
     printf( "%-15s\t\n", "Cosine Similarity");
-	printf( "%8d\t\n", $cos_sim);
+	printf( "%8f\t\n", $cos_sim);
     print "==================================\n";
-}
-
-
-##########################################################
-##  FULL_PRECISION_RECALL_TEST
-##
-##  This function should test the various precision/recall
-##  measures discussed in the assignment and store cumulative
-##  statistics over all queries.
-##
-##  As each query takes a few seconds to process, print
-##  some sort of feedback for each query so the user
-##  has something to watch.
-##
-##  It is helpful to also log this information to a file.
-##########################################################
-
-sub full_precision_recall_test {
-	print "============================================================\n";
-    printf(" Name          pr0.25  pr0.50  pr0.75  pr_1.00  pr_mean1  pr_mean2  pr_norm  rec_norm\n");
-    print "============================================================\n";
-
-
-    # This is problem	Problem number
-    &test_method("Raw TF ", "1a");
-    &test_method("TF IDF ", "1b"); # same
-    &test_method("Boolean ", "1c");
-    &test_method("Cosine Sim ", "2a"); #same
-    &test_method("Dice         ", "2b");
-    &test_method("Unstemmed ", "3a");
-    &test_method("Stemmed ", "3b"); #same
-    &test_method("No Stopwords ", "4a"); #same
-    &test_method("All Tokens ", "4b"); #same
-    &test_method("Equal W ", "5a");
-    &test_method("Relative W ", "5c");
-    &test_method("Default ", "default");
-    return;
-
-    # Suggestion: if using global variables to store cumulative
-    #             statistics, initialize them here.
-
-#    for my $ind ( 1 .. $tot_queries ) {
-#
-#	&get_retrieved_set( $qry_vector[$ind] );
-#	&comp_recall( $relevance_hash{ $ind }, $ind );
-#
-#	# Suggestion: Collect cumulative statistics here or in
-#	#             global variables set in the above funtion
-#    }
-
-    # Suggestion: Print some sort of summary here.
-}
-
-sub test_method {
-	my $name = shift;
-	my $query_model = shift;
-
-
-
-	$token_docs = "$DIR/cacm";           # tokenized cacm journals
-	$corps_freq = "$DIR/cacm";           # frequency of each token in the journ.
-	$stoplist   = "$DIR/common_words";   # common uninteresting words
-	$titles     = "$DIR/titles.short";   # titles of each article in cacm
-	$token_qrys = "$DIR/query";          # tokenized canned querys
-	$query_freq = "$DIR/query";          # frequency of each token in the querys
-	$query_relv = "$DIR/query\.rels";    # relevance of a journal entry to a
-                                        #  given query
-
-	# these files are created in your $HOME directory
-
-	$token_intr = "$HOME/interactive";    # file created for interactive queries
-	$inter_freq = "$HOME/interactive";    # frequency of each token in above
-
-
-	@doc_vector = ( );
-	@qry_vector = ( );
-	%docs_freq_hash = ( );
-	%corp_freq_hash = ( );
-	%stoplist_hash  = ( );
-	@titles_vector  = ( );
-	%relevance_hash = ( );
-
-	if($query_model eq "3a") {
-		&init_files("unstemmed");
-	} else {
-		&init_files("stemmed");
-	}
-
-	my @output = ();
-	for(my $i = 0; $i < 8; $i++) {
-	 	push @output, 0;
-	}
-	&init_corp_freq;
-	&init_doc_vectors($query_model);
-	&init_qry_vectors($query_model);
-
-	my $num_queries = scalar @qry_vector;
-	my @result;
-
-	for(my $i = 1; $i < $num_queries; $i++) {
-		&get_retrieved_set($qry_vector[$i], $query_model);
-		@result = &comp_recall($relevance_hash{$i}, $i);
-		for (my $j = 0; $j < scalar @output; $j++) {
-			$output[$j] = $output[$j] + $result[$j];
-		}
-	}
-
-
-	# DEBUGGING PURPOSE
-	my $prec_tf = $output[0]/ ($num_queries -1);
-	my $prec_f = $output[1]/ ($num_queries -1);
-	my $prec_svf = $output[2] / ($num_queries -1);
-	my $prec_one = $output[3] / ($num_queries -1);
-	my $prec_mean_one = $output[4] / ($num_queries -1);
-	my $prec_mean_two = $output[5] / ($num_queries -1);
-	my $prec_norm = $output[6] / ($num_queries -1);
-	my $recall_norm = $output[7] / ($num_queries -1);
-
-	printf " %s\t", $name;
-	for (my $k = 0; $k < scalar @output; $k++) {
-		printf "%.4f\t", $output[$k] / ($num_queries -1);
-	}
-	printf "\n";
-
 }
 
 

@@ -54,14 +54,14 @@ raw_html = simple_get('https://coinmarketcap.com/') # main page
 html = BeautifulSoup(raw_html, 'html.parser')
 for each_div in html.findAll("a", {"class": "currency-name-container"}):
     new_href = "https://coinmarketcap.com"+each_div['href']
-    output_file.write("\n")
-    output_file.write(".I ")
-    output_file.write(each_div.text) # cryptocurrency name
-    output_file.write(" ")
     new_html = BeautifulSoup(simple_get(new_href), 'html.parser') # open the cryptocurrency website
     for element in new_html.findAll("a", text="Website"):
         website = element['href']
         if(simple_get(website) != None):
+            output_file.write("\n")
+            output_file.write(".I ")
+            output_file.write(each_div.text) # cryptocurrency name
+            output_file.write(" ")
             print(website)
             web_html = BeautifulSoup(simple_get(website), 'html.parser')
             for para in web_html.findAll("p"):
