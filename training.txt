@@ -1,0 +1,1137 @@
+.I 1
+Litecoin (LTC or Ł) is a peer-to-peer cryptocurrency and open source software project released under the MIT/X11 license. Creation and transfer of coins is based on an open source cryptographic protocol and is not managed by any central authority. The coin was inspired by, and in technical details is nearly identical to, Bitcoin (BTC).
+
+
+== History ==
+Litecoin was released via an open-source client on GitHub on October 7, 2011 by Charlie Lee, a former Google employee. The Litecoin network went live on October 13, 2011. It was a fork of the Bitcoin Core client, differing primarily by having a decreased block generation time (2.5 minutes), increased maximum number of coins, different hashing algorithm (scrypt, instead of SHA-256), and a slightly modified GUI.
+During the month of November 2013, the aggregate value of Litecoin experienced massive growth which included a 100% leap within 24 hours.
+Litecoin reached a $1 billion market capitalization in November 2013.
+In May 2017, Litecoin became the first of the top 5 (by market cap) cryptocurrencies to adopt Segregated Witness. Later in May of the same year, the first Lightning Network transaction was completed through Litecoin, transferring 0.00000001 LTC from Zürich to San Francisco in under one second.
+In February 2018, the EU online retailer Alza.cz began accepting Litecoin as a payment method.
+
+
+== Differences from Bitcoin ==
+Litecoin is different in some ways from Bitcoin.
+The Litecoin Network aims to process a block every 2.5 minutes, rather than Bitcoin's 10 minutes. The developers claim that this allows Litecoin to have faster transaction confirmation.
+Litecoin uses scrypt in its proof-of-work algorithm, a sequential memory-hard function requiring asymptotically more memory than an algorithm which is not memory-hard.
+Due to Litecoin's use of the scrypt algorithm, FPGA and ASIC devices made for mining Litecoin are more complicated to create and more expensive to produce than they are for Bitcoin, which uses SHA-256.
+
+
+== See also ==
+Crypto-anarchism
+Private currency
+List of scrypt crypto currencies
+
+
+== References ==
+
+
+== External links ==
+Official website
+.I 1
+Bitcoin Cash is a cryptocurrency. In mid-2017 the developers, not content with the Segregated Witness feature, implemented a change to the bitcoin code. The change, called a hard fork, took effect on August 1, 2017. As a result, the bitcoin ledger called the blockchain and the cryptocurrency split in two. At the time of the fork anyone owning bitcoin was also in possession of the same number of Bitcoin Cash units.
+
+
+== History ==
+In May 2017, bitcoin transactions took up to four days to complete. In order to speed transactions, users could pay a transaction fee, which at the end of 2017 averaged about $28. The delay and especially the fees made bitcoin impractical for everyday use to make small purchases.
+
+
+=== Idea forms ===
+Up until July 2017, bitcoin users maintained a common set of rules for the cryptocurrency. On July 20, 2017 at block height 476768 Bitcoin Improvement Proposal (BIP) 91 was locked in (i.e. scheduled to activate at block height 477120). It was designed to reject blocks created by miners not supporting Segregated Witness (SegWit).
+Some members of the bitcoin community felt that adopting BIP 91 without increasing the block-size limit favored people who wanted to treat bitcoin as a digital investment rather than as a transactional currency and devised a plan to increase the number of transactions its ledger can process by increasing the block size limit to eight megabytes.
+The Bitcoin Cash name was originally proposed by Chinese mining pool ViaBTC.
+
+
+=== Development ===
+The first implementation of the Bitcoin Cash protocol called Bitcoin ABC was revealed by Amaury "Deadal Nix" Séchet at the Future of Bitcoin conference in Arnhem, Netherlands. Subsequently, Bitcoin Unlimited made its first release of Bitcoin Cash compatible software, named BUCash and Bitcoin XT also released before the Bitcoin Cash fork. This meant that 3 full node clients were available before the Bitcoin Cash hard fork on August 1, 2017.
+These clients implemented the following changes from bitcoin:
+Increase maximum block size to 8 megabytes.
+Modification of the transaction signature hashing algorithm. This provides replay protection for Bitcoin Cash transactions against the bitcoin chain.
+Replaced the original bitcoin difficulty adjustment algorithm (a difficulty adjustment every 2016 blocks), with the new Emergency Difficulty Adjustment (EDA) algorithm. EDA was intended to allow difficulty to more quickly respond to drastic drops in hashrate presumed to occur immediately post fork.
+
+
+=== Launch ===
+Upon launch, Bitcoin Cash inherited the transaction history of the bitcoin cryptocurrency on that date, but all later transactions were separate. Block 478558 was the last common block and thus the first separate Bitcoin Cash block was 478559. Bitcoin Cash cryptocurrency wallets started to reject bitcoin blocks and bitcoin transactions after 13:20 UTC, August 1, 2017 because it used a timer to initiate a fork. One exchange started Bitcoin Cash futures trading at 0.5 BTC on July 23; the futures dropped to 0.1 BTC by July 30. Market cap appeared since 23:15 UTC, August 1, 2017. Per the coinmarketcap.com site, the price of BTC on August 1, 2017 was USD$2,718.26 and the price of BCH was USD$380.01, which suggests the BCH split ratio to be 0.12265. The launch of Bitcoin Cash has created an ideological divide over which chain is the true bitcoin.
+
+
+=== Move of hashpower and difficulty adjustment ===
+On August 9, 2017 it was 30% more profitable to mine on the bitcoin chain. As both chains use the same proof-of-work algorithm, miners can easily move their hashpower between the two. As of August 30, 2017 around 1,500 more blocks were mined on the Bitcoin Cash chain than on the bitcoin chain as the high profitability periods attracted a significant proportion of total processing power. Due to the new Emergency Difficulty Adjustment (EDA) algorithm used by Bitcoin Cash, mining difficulty fluctuated rapidly, and the most profitable chain to mine switched repeatedly between Bitcoin Cash and bitcoin.
+A fix for these difficulty, hashrate, and profitability fluctuations was introduced on November 13, 2017 at 7:06 p.m. UTC. The EDA algorithm has been replaced with a new difficulty adjustment algorithm (DAA) that hopes to prevent extreme fluctuations in difficulty while still allowing Bitcoin Cash to adapt to hashrate changes faster than the original bitcoin algorithm adjusting the difficulty every 2016 blocks.
+
+
+=== Block size increase ===
+On May 15, 2018 the protocol was upgraded via a planned hard fork to increase the block size limit from 8 to 32 Megabytes.
+
+
+== Market acceptance and naming ==
+By the end of August 1, 2017, Bitcoin Cash became the third largest cryptocurrency in terms of market capitalization.
+
+
+=== Cryptocurrency exchanges ===
+Bitcoin Cash has been adopted by digital currency exchanges. Exchanges such as Coinbase, Kraken, ShapeShift and many others use the Bitcoin Cash name and the BCH ticker symbol for the cryptocurrency. Bitstamp and Bitfinex temporarily used the name Bcash, but after being criticized, they switched the name back to Bitcoin Cash.
+Bittrex, Binance, and Huobi exchange use BCC as Bitcoin Cash's ticker symbol instead. BCC is more commonly used as the ticker symbol for Bitconnect.
+
+
+=== Cryptocurrency wallets ===
+Cryptocurrency wallets such as the Ledger hardware wallet, KeepKey hardware wallet, Electron Cash software wallet and Bitcoin.com software wallet support Bitcoin Cash, using either BCH or BCC as the ticker symbol for it. Bitcoin Cash is also supported by the Trezor hardware wallet and the Blockchain.info wallet.
+
+
+=== Payment service providers ===
+The cryptocurrency payment processor Bitpay added support for Bitcoin Cash on March 28, 2018.
+
+
+== See also ==
+List of bitcoin forks
+List of cryptocurrencies
+
+
+== References ==
+
+
+== External links ==
+ Media related to Bitcoin Cash at Wikimedia Commons
+Official website
+.I 1
+Monero (XMR) is an open-source cryptocurrency created in April 2014 that focuses on privacy and decentralization that runs on Windows, macOS, Linux, Android, iOS, and FreeBSD. Monero uses a public ledger to record transactions while new units are created through a process called mining. Monero aims to improve on existing cryptocurrency design by obscuring sender, recipient and amount of every transaction made as well as making the mining process more egalitarian.
+The focus on privacy has attracted illicit use by people interested in evading law enforcement. The egalitarian mining process made it viable to distribute the mining effort opening new funding avenues for both legitimate online publishers and malicious hackers who covertly embed mining code into websites and apps.
+
+
+== Architecture ==
+Unlike many cryptocurrencies that are derivatives of Bitcoin, Monero is based on the CryptoNight proof-of-work hash algorithm, which comes from the CryptoNote protocol. It possesses significant algorithmic differences relating to blockchain obfuscation. By providing a high level of privacy, Monero is fungible, meaning that every unit of the currency can be substituted by another unit. This makes Monero different from public-ledger cryptocurrencies like Bitcoin, where addresses with coins previously associated with undesired activity can be blacklisted and have their coins refused by other users.
+In particular, the ring signatures mix the spender's input with a group of others, making it exponentially more difficult to establish a link between each subsequent transaction. Also, the "stealth addresses" generated for each transaction make it impossible to discover the actual destination address of a transaction by anyone else other than the sender and the receiver. Finally, the "ring confidential transactions" mechanism hides the transferred amount.
+Monero is designed to be resistant to application-specific integrated circuit mining, which is commonly used to mine other cryptocurrencies such as Bitcoin. It can be mined somewhat efficiently on consumer grade hardware such as x86, x86-64, ARM and GPUs.
+
+
+== History ==
+The underlying CryptoNote protocol that Monero is based on was originally launched by pseudonymous author Nicolas van Saberhagen in October 2013.
+Monero was originally launched by a Bitcointalk forum user only known as "thankful_for_today" under the name BitMonero which is a compound of Bit (as in Bitcoin) and Monero (literally meaning "coin" in Esperanto). Five days later, the currency's supporters opted for the name to be shortened to Monero.
+In September 2014, Monero was attacked when an unknown party exploited a flaw in CryptoNote that permitted the creation of two subchains that refused to recognize the validity of transactions on each other. CryptoNote later released a patch for the flaw, which Monero implemented.
+Monero experienced rapid growth in market capitalization and transaction volume during the year 2016, partly due to adoption in 2016 by major darknet market AlphaBay, which was closed in July 2017 by law enforcement.
+On January 10, 2017, the privacy of Monero transactions were further strengthened by the adoption of Bitcoin Core developer Gregory Maxwell's algorithm Confidential Transactions, hiding the amounts being transacted, in combination with an improved version of Ring Signatures.
+
+
+== Transaction linkability ==
+In April 2017 research highlighted three major threats to Monero user's privacy. The first relies on leveraging the ring signature size of zero, and ability to see the output amounts. The second, described as "Leveraging Output Merging", involves tracking transactions where two outputs belong to the same user, such as when a user is sending the funds to himself ("churning"). Finally the third threat, "Temporal Analysis", shows that predicting the right output in a ring signature is easier than previously thought.
+Monero development team addressed the first concern in early 2017 with introduction of Ring Confidential Transactions (ringCT) as well as mandating a minimum size of ring signatures in the March 2016 protocol upgrade. Monero developers also noted that Monero Research Labs, their academic and research arm, already noted and outlined the deficiency in two public research papers in 2014 and 2015.
+
+
+== Client software ==
+A user needs client software, a so-called wallet, to interact with the Monero network. The Monero Project produces the reference implementation of a Monero wallet and there are also third party implementations of Monero clients exist such as Monerujo and Cakewallet which also make it possible to use Monero on Android and iOS. Finally, a web wallet allows users to interact with the network entirely through the browser using a third party website.
+
+
+== Implementations of Monero ==
+The feasibility of CPU mining Monero has made it viable for malicious actors to covertly distribute miners embedded in malware, using the victim's hardware and electricity for the financial gain of the malware developer as well as legitimate uses with user consent.
+The JavaScript implementation of Monero miner Coinhive has made it possible to embed the miner into a website in such a way to use website visitor's CPU to mine the cryptocurrency while the visitor is consuming the content of the webpage. While this can be done with user's consent in an effort to provide an alternative funding model to serving ads, some websites have done this without informed consent which has prompted the in-browser miners to be blocked by browser extensions and ad blocking subscription lists.
+Monero is sometimes employed by Bitcoin users to break link between transactions, with bitcoins first converted to Monero, then after some delay, converted back and sent to an address unrelated to those used before. Researchers have reported that the operators behind the global ransomware incident WannaCry have converted their proceeds into Monero. It is also the preferred payment method of choice for The Shadow Brokers. Exchanges ShapeShift and Changelly are cooperating with police after it emerged that the WannaCry attackers used it to convert Bitcoin to Monero. "Any transactions made through ShapeShift can not be hidden or obscured and are thus 100 percent transparent" stated ShapeShift.
+
+
+== See also ==
+Crypto-anarchism
+
+
+== References ==
+
+
+== External links ==
+Official website
+.I 1
+Nano is a cryptocurrency that was formerly called Raiblocks and focuses on providing payment solutions. 
+Nano counts with instant transactions, zero transaction fees and a high degree of scalability.
+The leading cryptocurrency Bitcoin has been criticized for the delays in payments and high transaction fees, that resulted from a higher level of adoption of the cryptocurrency in late 2017. Hence many opinion leaders in the crypto industry claimed that Bitcoin no longer serves as a means of payment and instead is just a store of value as for example gold. Other cryptocurrencies like Nano tried to fill this gap and are designed particularly for serving as payment solutions. 
+Nano official website
+Nano Events & Announcements
+
+
+
+.I 1
+Dash (Digital Cash) is an open source peer-to-peer cryptocurrency with a strong focus on the payments industry. Based on the Bitcoin project, Dash aims to be the most user friendly and scalable payments system in the world[1].In addition to Bitcoin's feature set, Dash offers instant transactions (InstantSend),[2] private transactions (PrivateSend)[3] and operates a self-governing and self-funding mechanism that fosters the creation of independent entities that serve the network[4]. This decentralized governance and funding system makes it one of the first decentralized autonomous organizations (DAO)[5] and the first DAO recognised by international law[6].Dash splits its block reward 45% to miners, 45% to masternodes and 10% to a treasury managed by the DAO - this allows the network to scale on-chain by incentivising all essential network infrastructure to upgrade as required.Software development is currently focused on improving access for non-technical users: enabling payment of contacts by name rather than cryptographic addresses, and single-click purchases from websites or mobile apps without a central authority.[7][8]Dash was originally released as XCoin on January 18, 2014. The founder, Evan Duffield, proposed a series of improvements to Bitcoin's protocol[9], including:XCoin was renamed to Darkcoin on January 28th, reflecting a focus on user anonymity, then on March 25, 2015, rebranded as Dash (a portmanteau of "Digital Cash") to reflect a shift in focus towards mainstream payments.[10]Unlike Bitcoin's single-tier network of miners, Dash utilizes a two-tier network of masternodes and miners.As in Bitcoin, Dash miners secure the network by providing proof of work. The second tier of the Dash network consists of masternodes, which perform PrivateSend, InstantSend, and governance functions. In future releases aimed at improving ease-of-use, the masternode network will store encrypted data relating to user and merchant accounts (DashDrive), and will enable third party clients to interact with the Dash network via a decentralised API (DAPI).Masternodes require 1000 DASH as collateral to prevent sybil attacks. This collateral can be spent at any time, but doing so removes the associated masternode from the network. Because masternodes perform essential functions, and because their hardware and bandwidth requirements increase as the network scales, the block reward is split between miners and masternodes, with each group earning 45% of the block reward - this ensures that all essential parts of the network are incentivised for their participation.The remaining 10% of each block reward funds the "budget" or "treasury"[11] from which payouts are awarded to contractors working for the network. Anyone with a plan for improving or growing the Dash network can submit a proposal to the masternodes, requesting funding for their project. Projects are then approved or rejected by a periodic vote, and payouts occur directly from the blockchain to the address contained in the proposal.PrivateSend is a coin-mixing service based on CoinJoin, with numerous modifications. These include using masternodes instead of a single website, chaining by mixing with multiple masternodes, restricting the mixing to only accept certain denominations (e.g.: 0.01 DASH, 0.1 DASH, 1 DASH, and 10 DASH, etc.), and passive mode. The maximum allowed for a PrivateSend transaction is 1000 DASH.[13]Later iterations used a more advanced method of pre-mixing denominations built into the user's cryptocurrency wallet. The implementation of PrivateSend also allows masternodes to submit the transactions using special network code called DSTX,[14] this provides additional privacy to users due to the deadchange issue present in other CoinJoin based implementations such as DarkWallet and CoinShuffle.[15]In June 2016, DarkSend was rebranded to PrivateSend.In its current implementation it adds privacy to transactions by combining identical inputs from multiple users into a single transaction with several outputs. Due to the identical inputs, transactions usually cannot be directly traced, obfuscating the flow of funds. PrivateSend makes Dash "fungible"[16] by mixing the coins in the same denomination with other wallets, ensuring that all coins are of the same value.InstantSend is a service that allows for near-instant transactions. Through this system, inputs can be locked to specific transactions and verified by consensus of the masternode network. Conflicting transactions and blocks are rejected. If a consensus cannot be reached, validation of the transaction occurs through standard block confirmation. InstantSend solves the double-spending problem without the longer confirmation times of other cryptocurriencies such as Bitcoin.[17]In June 2016, InstantX was rebranded to InstantSend.Dash is the first decentralized autonomous organization powered by a Sybil proof decentralized governance and funding system.[18] Decentralized Governance by Blockchain (DGBB), often referred to simply as the "treasury system" is a means of coming to consensus on proposed network changes and funding development of the Dash ecosystem. Ten percent of the block rewards go to this "treasury" in order to pay for projects that benefit Dash. Funding from the treasury system has been used to hire additional developers and other employees, to fund attendance at conferences, and to fund integrations with major exchanges and API providers.Each masternode operator receives one vote. Proposals are eligible for funding according to the following formula: (YES VOTES - NO VOTES) > (TOTAL NUMBER OF MASTERNODES * 0.1). If there are more proposals that meet that criterion than there are budget funds for the month, then the proposals with the highest number of net votes will be paid. Community interaction with proposal submitters is done through the dash.org forums, or through community-driven websites, like DashCentral.[19] These websites allow proposal submitters to provide multiple drafts, then lobby for community support before finally submitting their project to the network for a vote. After the submitter has enough support, the network will automatically pay out the required funds in the next super block, which happens monthly.The funding system has seen revenue growth. In September 2015, the treasury system provided $14,000 in funding per month.[20] Due to increases in the value of Dash, as of March 2017 the treasury system provided about $574,000 per month in funding.[21] The treasury system has created a positive feedback loop, whereby additional development increases the value of Dash, which increases the amount of funding provided by the budget system.
+.I 2
+Bitcoin (₿) is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator. The network is peer-to-peer and transactions take place between users directly, without an intermediary. These transactions are verified by network nodes through the use of cryptography and recorded in a public distributed ledger called a blockchain. Bitcoin was invented by an unknown person or group of people under the name Satoshi Nakamoto and released as open-source software in 2009.
+Bitcoins are created as a reward for a process known as mining. They can be exchanged for other currencies, products, and services. As of February 2015, over 100,000 merchants and vendors accepted bitcoin as payment. Research produced by the University of Cambridge estimates that in 2017, there were 2.9 to 5.8 million unique users using a cryptocurrency wallet, most of them using bitcoin.
+
+
+== Etymology ==
+The word bitcoin first occurred and was defined in the white paper that was published on 31 October 2008. It is a compound of the words bit and coin. The white paper frequently uses the shorter coin.
+There is no uniform convention for bitcoin capitalization. Some sources use Bitcoin, capitalized, to refer to the technology and network and bitcoin, lowercase, to refer to the unit of account. The Wall Street Journal, The Chronicle of Higher Education, and the Oxford English Dictionary advocate use of lowercase bitcoin in all cases, a convention followed throughout this article.
+
+
+=== Units ===
+The unit of account of the bitcoin system is a bitcoin. Ticker symbols used to represent bitcoin are BTC and XBT. Small amounts of bitcoin used as alternative units are millibitcoin (mBTC), and satoshi (sat). Named in homage to bitcoin's creator, a satoshi is the smallest amount within bitcoin representing 0.00000001 bitcoins, one hundred millionth of a bitcoin. A millibitcoin equals 0.001 bitcoins, one thousandth of a bitcoin or 100,000 satoshis.
+
+
+=== Symbol ===
+The Unicode character for bitcoin is ₿. This was standardized in version 10.0 in June 2017. As with most new symbols, font support is very limited. Typefaces supporting it include Horta.
+
+
+== History ==
+
+On 18 August 2008, the domain name "bitcoin.org" was registered. In November that year, a link to a paper authored by Satoshi Nakamoto titled Bitcoin: A Peer-to-Peer Electronic Cash System was posted to a cryptography mailing list. Nakamoto implemented the bitcoin software as open source code and released it in January 2009 on SourceForge. The identity of Nakamoto remains unknown.
+In January 2009, the bitcoin network came into existence after Satoshi Nakamoto mined the first ever block on the chain, known as the genesis block. Embedded in the coinbase of this block was the following text:
+
+The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.
+
+This note has been interpreted as both a timestamp of the genesis date and a derisive comment on the instability caused by fractional-reserve banking.
+The receiver of the first bitcoin transaction was cypherpunk Hal Finney, who created the first reusable proof-of-work system (RPOW) in 2004. Finney downloaded the bitcoin software the day it was released, and received 10 bitcoins from Nakamoto. Other early cypherpunk supporters were Wei Dai, creator of bitcoin predecessor b-money, and Nick Szabo, creator of bitcoin predecessor bit gold.
+In the early days, Nakamoto is estimated to have mined 1 million bitcoins. In 2010, Nakamoto handed the network alert key and control of the Bitcoin Core code repository over to Gavin Andresen, who later became lead developer at the Bitcoin Foundation. Nakamoto subsequently disappeared from any involvement in bitcoin. Andresen stated he then sought to decentralize control, saying: "As soon as Satoshi stepped back and threw the project onto my shoulders, one of the first things I did was try to decentralize that. So, if I get hit by a bus, it would be clear that the project would go on." This left opportunity for controversy to develop over the future development path of bitcoin.
+
+
+=== Forks ===
+Over the history of Bitcoin there have been several spins offs and deliberate hard forks that have lived on as separate blockchains. These have come to be known as "altcoins", short for alternative coins, since Bitcoin was the first blockchain and these are derivative of it. These spin offs occur so that new ideas can be tested, when the scope of that idea is outside that of Bitcoin, or when the community is split about merging such changes.
+The first fork of Bitcoin was Namecoin, with discussions taking place on the Bitcointalk forum and IRC in December 2010. Another early spin off was Litecoin, which began in October, 2011. Since then there have been numerous forks of Bitcoin. See list of bitcoin forks.
+
+
+== Design ==
+
+
+=== Blockchain ===
+
+The blockchain is a public ledger that records bitcoin transactions. It is implemented as a chain of blocks, each block containing a hash of the previous block up to the genesis block of the chain. A novel solution accomplishes this without any trusted central authority: the maintenance of the blockchain is performed by a network of communicating nodes running bitcoin software. Transactions of the form payer X sends Y bitcoins to payee Z are broadcast to this network using readily available software applications. Network nodes can validate transactions, add them to their copy of the ledger, and then broadcast these ledger additions to other nodes. The blockchain is a distributed database – to achieve independent verification of the chain of ownership of any and every bitcoin amount, each network node stores its own copy of the blockchain. Approximately once every 10 minutes, a new group of accepted transactions, a block, is created, added to the blockchain, and quickly published to all nodes. This allows bitcoin software to determine when a particular bitcoin amount has been spent, which is necessary in order to prevent double-spending in an environment without central oversight. Whereas a conventional ledger records the transfers of actual bills or promissory notes that exist apart from it, the blockchain is the only place that bitcoins can be said to exist in the form of unspent outputs of transactions.
+
+
+=== Transactions ===
+
+Transactions are defined using a Forth-like scripting language.:ch. 5 Transactions consist of one or more inputs and one or more outputs. When a user sends bitcoins, the user designates each address and the amount of bitcoin being sent to that address in an output. To prevent double spending, each input must refer to a previous unspent output in the blockchain. The use of multiple inputs corresponds to the use of multiple coins in a cash transaction. Since transactions can have multiple outputs, users can send bitcoins to multiple recipients in one transaction. As in a cash transaction, the sum of inputs (coins used to pay) can exceed the intended sum of payments. In such a case, an additional output is used, returning the change back to the payer. Any input satoshis not accounted for in the transaction outputs become the transaction fee.
+
+
+=== Transaction fees ===
+
+Paying a transaction fee is optional. Miners can choose which transactions to process, and they are incentivised to prioritize those that pay higher fees.
+Because the size of mined blocks is capped by the network, miners choose transactions based on the fee paid relative to their storage size, not the absolute amount of money paid as a fee. Thus, fees are generally measured in satoshis per byte, or sat/b. The size of transactions is dependent on the number of inputs used to create the transaction, and the number of outputs.
+
+
+=== Ownership ===
+
+In the blockchain, bitcoins are registered to bitcoin addresses. Creating a bitcoin address is nothing more than picking a random valid private key and computing the corresponding bitcoin address. This computation can be done in a split second. But the reverse (computing the private key of a given bitcoin address) is mathematically unfeasible and so users can tell others and make public a bitcoin address without compromising its corresponding private key. Moreover, the number of valid private keys is so vast that it is extremely unlikely someone will compute a key-pair that is already in use and has funds. The vast number of valid private keys makes it unfeasible that brute force could be used for that. To be able to spend the bitcoins, the owner must know the corresponding private key and digitally sign the transaction. The network verifies the signature using the public key.
+If the private key is lost, the bitcoin network will not recognize any other evidence of ownership; the coins are then unusable, and effectively lost. For example, in 2013 one user claimed to have lost 7,500 bitcoins, worth $7.5 million at the time, when he accidentally discarded a hard drive containing his private key. A backup of his key(s) would have prevented this.
+
+
+=== Mining ===
+
+Mining is a record-keeping service done through the use of computer processing power. Miners keep the blockchain consistent, complete, and unalterable by repeatedly grouping newly broadcast transactions into a block, which is then broadcast to the network and verified by recipient nodes. Each block contains a SHA-256 cryptographic hash of the previous block, thus linking it to the previous block and giving the blockchain its name.
+To be accepted by the rest of the network, a new block must contain a so-called proof-of-work (PoW). The system used is based on Adam Back's 1997 anti-spam scheme, Hashcash. The PoW requires miners to find a number called a nonce, such that when the block content is hashed along with the nonce, the result is numerically smaller than the network's difficulty target. This proof is easy for any node in the network to verify, but extremely time-consuming to generate, as for a secure cryptographic hash, miners must try many different nonce values (usually the sequence of tested values is the ascending natural numbers: 0, 1, 2, 3, ...) before meeting the difficulty target.
+Every 2,016 blocks (approximately 14 days at roughly 10 min per block), the difficulty target is adjusted based on the network's recent performance, with the aim of keeping the average time between new blocks at ten minutes. In this way the system automatically adapts to the total amount of mining power on the network. Between 1 March 2014 and 1 March 2015, the average number of nonces miners had to try before creating a new block increased from 16.4 quintillion to 200.5 quintillion.
+The proof-of-work system, alongside the chaining of blocks, makes modifications of the blockchain extremely hard, as an attacker must modify all subsequent blocks in order for the modifications of one block to be accepted. As new blocks are mined all the time, the difficulty of modifying a block increases as time passes and the number of subsequent blocks (also called confirmations of the given block) increases.
+
+
+==== Pooled mining ====
+
+Computing power is often bundled together or "pooled" to reduce variance in miner income. Individual mining rigs often have to wait for long periods to confirm a block of transactions and receive payment. In a pool, all participating miners get paid every time a participating server solves a block. This payment depends on the amount of work an individual miner contributed to help find that block.
+
+
+=== Supply ===
+
+The successful miner finding the new block is rewarded with newly created bitcoins and transaction fees. As of 9 July 2016, the reward amounted to 12.5 newly created bitcoins per block added to the blockchain. To claim the reward, a special transaction called a coinbase is included with the processed payments. All bitcoins in existence have been created in such coinbase transactions. The bitcoin protocol specifies that the reward for adding a block will be halved every 210,000 blocks (approximately every four years). Eventually, the reward will decrease to zero, and the limit of 21 million bitcoins will be reached c. 2140; the record keeping will then be rewarded by transaction fees solely.
+In other words, bitcoin's inventor Nakamoto set a monetary policy based on artificial scarcity at bitcoin's inception that there would only ever be 21 million bitcoins in total. Their numbers are being released roughly every ten minutes and the rate at which they are generated would drop by half every four years until all were in circulation.
+
+
+=== Wallets ===
+
+A wallet stores the information necessary to transact bitcoins. While wallets are often described as a place to hold or store bitcoins, due to the nature of the system, bitcoins are inseparable from the blockchain transaction ledger. A better way to describe a wallet is something that "stores the digital credentials for your bitcoin holdings" and allows one to access (and spend) them. Bitcoin uses public-key cryptography, in which two cryptographic keys, one public and one private, are generated. At its most basic, a wallet is a collection of these keys.
+There are three modes which wallets can operate in. They have an inverse relationship with regards to trustlessness and computational requirements.
+Full clients verify transactions directly by downloading a full copy of the blockchain (over 150 GB As of January 2018). They are the most secure and reliable way of using the network, as trust in external parties is not required. Full clients check the validity of mined blocks, preventing them from transacting on a chain that breaks or alters network rules. Because of its size and complexity, downloading and verifying the entire blockchain is not suitable for all computing devices.
+Lightweight clients consult full clients to send and receive transactions without requiring a local copy of the entire blockchain (see simplified payment verification – SPV). This makes lightweight clients much faster to set up and allows them to be used on low-power, low-bandwidth devices such as smartphones. When using a lightweight wallet, however, the user must trust the server to a certain degree, as it can report faulty values back to the user. Lightweight clients follow the longest blockchain and do not ensure it is valid, requiring trust in miners.
+Third-party internet services called online wallets offer similar functionality but may be easier to use. In this case, credentials to access funds are stored with the online wallet provider rather than on the user's hardware. As a result, the user must have complete trust in the wallet provider. A malicious provider or a breach in server security may cause entrusted bitcoins to be stolen. An example of such a security breach occurred with Mt. Gox in 2011. This has led to the often-repeated meme "Not your keys, not your bitcoin".
+
+Physical wallets store offline the credentials necessary to spend bitcoins. One notable example was a novelty coin with these credentials printed on the reverse side. Paper wallets are simply paper printouts.
+Another type of wallet called a hardware wallet keeps credentials offline while facilitating transactions.
+
+
+=== Implementations ===
+
+The first wallet program – simply named "Bitcoin" – was released in 2009 by Satoshi Nakamoto as open-source code. In version 0.5 the client moved from the wxWidgets user interface toolkit to Qt, and the whole bundle was referred to as "Bitcoin-Qt". After the release of version 0.9, the software bundle was renamed "Bitcoin Core" to distinguish itself from the underlying network. It is sometimes referred to as the "Satoshi client".
+While a decentralized system cannot have an "official" implementation, Bitcoin Core is considered by some to be bitcoin's preferred implementation. Today, other alternative clients (forks of Bitcoin Core) exist, such as Bitcoin XT, Bitcoin Unlimited, and Parity Bitcoin.
+
+
+=== Decentralization ===
+Bitcoin was designed not to need a central authority and the bitcoin network is considered to be decentralized. However, researchers have pointed out a visible "trend towards centralization" by the means of miners joining large mining pools to minimise the variance of their income. According to researchers, other parts of the ecosystem are also "controlled by a small set of entities", notably online wallets and simplified payment verification (SPV) clients.
+Because transactions on the network are confirmed by miners, decentralization of the network requires that no single miner or mining pool obtains 51% of the hashing power, which would allow them to double-spend coins, prevent certain transactions from being verified and prevent other miners from earning income. As of 2013 just six mining pools controlled 75% of overall bitcoin hashing power.
+In 2014 mining pool Ghash.io obtained 51% hashing power which raised significant controversies about the safety of the network. The pool has voluntarily capped their hashing power at 39.99% and requested other pools to act responsibly for the benefit of the whole network.
+
+
+=== Privacy ===
+Bitcoin is pseudonymous, meaning that funds are not tied to real-world entities but rather bitcoin addresses. Owners of bitcoin addresses are not explicitly identified, but all transactions on the blockchain are public. In addition, transactions can be linked to individuals and companies through "idioms of use" (e.g., transactions that spend coins from multiple inputs indicate that the inputs may have a common owner) and corroborating public transaction data with known information on owners of certain addresses. Additionally, bitcoin exchanges, where bitcoins are traded for traditional currencies, may be required by law to collect personal information.
+To heighten financial privacy, a new bitcoin address can be generated for each transaction. For example, hierarchical deterministic wallets generate pseudorandom "rolling addresses" for every transaction from a single seed, while only requiring a single passphrase to be remembered to recover all corresponding private keys. Researchers at Stanford University and Concordia University have also shown that bitcoin exchanges and other entities can prove assets, liabilities, and solvency without revealing their addresses using zero-knowledge proofs. "Bulletproofs," a version of Confidential Transactions proposed by Greg Maxwell, have been tested by Professor Dan Boneh of Stanford. Other solutions such Merkelized Abstract Syntax Trees (MAST), pay-to-script-hash (P2SH) with MERKLE-BRANCH-VERIFY, and "Tail Call Execution Semantics", have also been proposed to support private smart contracts.
+
+
+=== Fungibility ===
+Wallets and similar software technically handle all bitcoins as equivalent, establishing the basic level of fungibility. Researchers have pointed out that the history of each bitcoin is registered and publicly available in the blockchain ledger, and that some users may refuse to accept bitcoins coming from controversial transactions, which would harm bitcoin's fungibility. Projects such as CryptoNote, Zerocoin, and Dark Wallet aim to address these privacy and fungibility issues.
+
+
+=== Scalability ===
+
+The blocks in the blockchain were originally limited to 32 megabyte in size. The block size limit of one megabyte was introduced by Satoshi Nakamoto in 2010, as an anti-spam measure. Eventually the block size limit of one megabyte created problems for transaction processing, such as increasing transaction fees and delayed processing of transactions due to the relative immaturity of the fee market.
+On 24 August 2017 (at block 481,824), Segregated Witness (SegWit) went live. Transactions contain some data which is only used to verify the transaction, and does not otherwise effect the movement of coins. SegWit introduces a new transaction format that moves this data into a new field in a backwards-compatible way. The segregated data, the so-called witness, is not sent to non-SegWit nodes and therefore does not form part of the blockchain as seen by legacy nodes. This lowers the size of the average transaction in such nodes' view, thereby increasing the block size without incurring the hard fork implied by other proposals for block size increases. Thus, per computer scientist Jochen Hoenicke, the actual block capacity depends on the ratio of SegWit transactions in the block, and on the ratio of signature data. Based on his estimate, if the ratio of SegWit transactions is 50%, the block capacity may be 1.25 megabytes. According to Hoenicke, if native SegWit addresses from Bitcoin Core version 0.16.0 are used, and SegWit adoption reaches 90 to 95%, a block size of up to 1.8 megabytes is possible.
+
+
+== Economics ==
+
+
+=== Classification ===
+Bitcoin is a digital asset designed by its inventor, Satoshi Nakamoto, to work as a currency. It is commonly referred to with terms like digital currency, digital cash, virtual currency, electronic currency, or cryptocurrency.
+The question whether bitcoin is a currency or not is still disputed. Bitcoins have three useful qualities in a currency, according to The Economist in January 2015: they are "hard to earn, limited in supply and easy to verify". Economists define money as a store of value, a medium of exchange, and a unit of account and agree that bitcoin has some way to go to meet all these criteria. It does best as a medium of exchange; as of February 2015 the number of merchants accepting bitcoin had passed 100,000. As of March 2014, the bitcoin market suffered from volatility, limiting the ability of bitcoin to act as a stable store of value, and retailers accepting bitcoin use other currencies as their principal unit of account.
+
+
+=== General use ===
+
+According to research produced by Cambridge University, there were between 2.9 million and 5.8 million unique users using a cryptocurrency wallet, as of 2017, most of them using bitcoin. The number of users has grown significantly since 2013, when there were 300,000 to 1.3 million users.
+
+
+=== Acceptance by merchants ===
+In 2015, the number of merchants accepting bitcoin exceeded 100,000. Instead of 2–3% typically imposed by credit card processors, merchants accepting bitcoins often pay fees under 2%, down to 0%. Firms that accepted payments in bitcoin as of December 2014 included PayPal, Microsoft, Dell, and Newegg. In 2017 bitcoin's acceptance among major online retailers included three out of the top 500 online merchants, down from five in 2016. Reasons for this fall include high transaction fees due to bitcoin's scalability issues, long transaction times and a rise in value making consumers unwilling to spend it. In November 2017 PwC accepted bitcoin at its Hong Kong office in exchange for providing advisory services to local companies who are specialists in blockchain technology and cryptocurrencies, the first time any Big Four accounting firm accepted the cryptocurrency as payment.
+
+
+=== Payment service providers ===
+Merchants accepting bitcoin ordinarily use the services of bitcoin payment service providers such as BitPay or Coinbase. When a customer pays in bitcoin, the payment service provider accepts the bitcoin on behalf of the merchant, converts it to the local currency, and sends the obtained amount to merchant's bank account, charging a fee for the service.
+
+
+=== Financial institutions ===
+Bitcoins can be bought on digital currency exchanges. According to Tony Gallippi, a co-founder of BitPay, "banks are scared to deal with bitcoin companies, even if they really want to". In 2014, the National Australia Bank closed accounts of businesses with ties to bitcoin, and HSBC refused to serve a hedge fund with links to bitcoin. Australian banks in general have been reported as closing down bank accounts of operators of businesses involving the currency; this has become the subject of an investigation by the Australian Competition and Consumer Commission. Nonetheless, Australian banks have trialled trading between each other using the blockchain technology on which bitcoin is based.
+In a 2013 report, Bank of America Merrill Lynch stated that "we believe bitcoin can become a major means of payment for e-commerce and may emerge as a serious competitor to traditional money-transfer providers." In June 2014, the first bank that converts deposits in currencies instantly to bitcoin without any fees was opened in Boston.
+Plans were announced to include a bitcoin futures option on the Chicago Mercantile Exchange in 2017. Trading in bitcoin futures was announced to begin on 10 December 2017.
+
+
+=== As an investment ===
+Some Argentinians have bought bitcoins to protect their savings against high inflation or the possibility that governments could confiscate savings accounts. During the 2012–2013 Cypriot financial crisis, bitcoin purchases in Cyprus rose due to fears that savings accounts would be confiscated or taxed.
+The Winklevoss twins have invested into bitcoins. In 2013 The Washington Post claimed that they owned 1% of all the bitcoins in existence at the time.
+Other methods of investment are bitcoin funds. The first regulated bitcoin fund was established in Jersey in July 2014 and approved by the Jersey Financial Services Commission. Forbes started publishing arguments in favor of investing in December 2015.
+In 2013 and 2014, the European Banking Authority and the Financial Industry Regulatory Authority (FINRA), a United States self-regulatory organization, warned that investing in bitcoins carries significant risks. Forbes named bitcoin the best investment of 2013. In 2014, Bloomberg named bitcoin one of its worst investments of the year. In 2015, bitcoin topped Bloomberg's currency tables.
+According to bitinfocharts.com, in 2017 there are 9,272 bitcoin wallets with more than $1 million worth of bitcoins. The exact number of bitcoin millionaires is uncertain as a single person can have more than one bitcoin wallet.
+
+
+=== Venture capital ===
+Venture capitalists, such as Peter Thiel's Founders Fund, which invested US$3 million in BitPay, do not purchase bitcoins themselves, instead funding bitcoin infrastructure like companies that provide payment systems to merchants, exchanges, wallet services, etc. In 2012, an incubator for bitcoin-focused start-ups was founded by Adam Draper, with financing help from his father, venture capitalist Tim Draper, one of the largest bitcoin holders after winning an auction of 30,000 bitcoins, at the time called 'mystery buyer'. The company's goal is to fund 100 bitcoin businesses within 2–3 years with $10,000 to $20,000 for a 6% stake. Investors also invest in bitcoin mining. According to a 2015 study by Paolo Tasca, bitcoin startups raised almost $1 billion in three years (Q1 2012 – Q1 2015).
+
+
+=== Price and volatility ===
+
+The price of bitcoins has gone through various cycles of appreciation and depreciation referred to by some as bubbles and busts. In 2011, the value of one bitcoin rapidly rose from about US$0.30 to US$32 before returning to US$2. In the latter half of 2012 and during the 2012–13 Cypriot financial crisis, the bitcoin price began to rise, reaching a high of US$266 on 10 April 2013, before crashing to around US$50. On 29 November 2013, the cost of one bitcoin rose to a peak of US$1,242. In 2014, the price fell sharply, and as of April remained depressed at little more than half 2013 prices. As of August 2014 it was under US$600.
+According to Mark T. Williams, as of 2014, bitcoin has volatility seven times greater than gold, eight times greater than the S&P 500, and 18 times greater than the US dollar. According to Forbes, there are uses where volatility does not matter, such as online gambling, tipping, and international remittances.
+According to an article in The Wall Street Journal, as of 19 April 2016, bitcoin had been more stable than gold for the preceding 24 days, and it was suggested that its value might be more stable in the future. On 3 March 2017, the price of a bitcoin surpassed the market value of an ounce of gold for the first time as its price surged to an all-time high of $1,268. A study in Electronic Commerce Research and Applications, going back through the network's historical data, showed the value of the bitcoin network as measured by the price of bitcoins, to be roughly proportional to the square of the number of daily unique users participating on the network, i.e. that the network is "fairly well modeled by the Metcalfe's law".
+
+
+=== Ponzi scheme and pyramid scheme concerns ===
+Various journalists, economists, and the central bank of Estonia have voiced concerns that bitcoin is a Ponzi scheme. In 2013, Eric Posner, a law professor at the University of Chicago, stated that "a real Ponzi scheme takes fraud; bitcoin, by contrast, seems more like a collective delusion." A 2014 report by the World Bank concluded that bitcoin was not a deliberate Ponzi scheme. The Swiss Federal Council examined the concerns that bitcoin might be a pyramid scheme; it concluded that "Since in the case of bitcoin the typical promises of profits are lacking, it cannot be assumed that bitcoin is a pyramid scheme." In July 2017, billionaire Howard Marks referred to bitcoin as a pyramid scheme.
+On 12 September 2017, Jamie Dimon, CEO of JP Morgan Chase, called bitcoin a "fraud" and said he would fire anyone in his firm caught trading it. Zero Hedge claimed that the same day Dimon made his statement, JP Morgan also purchased a large amount of bitcoins for its clients. In a January 2018 interview Dimon voiced regrets about his earlier remarks, and said "The blockchain is real. You can have cryptodollars in yen and stuff like that. ICOs ... you got to look at every one individually."
+
+
+=== Speculative bubble dispute ===
+
+Bitcoin has been labelled a speculative bubble by many including former Fed Chairman Alan Greenspan and economist John Quiggin. Nobel Memorial Prize laureate Robert Shiller said that bitcoin "exhibited many of the characteristics of a speculative bubble". Journalist Matthew Boesler in 2013 rejected the speculative bubble label and saw bitcoin's quick rise in price as nothing more than normal economic forces at work. Timothy B. Lee, in a 2013 piece for The Washington Post pointed out that the observed cycles of appreciation and depreciation don't correspond to the definition of speculative bubble. On 14 March 2014, the American business magnate Warren Buffett said, "Stay away from it. It's a mirage, basically." During their time as bitcoin developers, Gavin Andresen and Mike Hearn warned that bubbles may occur.
+
+
+== Legal status, tax and regulation ==
+
+Because of bitcoin's decentralized nature, nation-states cannot shut down the network or alter its technical rules. However, the use of bitcoin can be criminalized, and shutting down exchanges and the peer-to-peer economy in a given country would constitute a "de facto ban". The legal status of bitcoin varies substantially from country to country and is still undefined or changing in many of them. While some countries have explicitly allowed its use and trade, others have banned or restricted it. Regulations and bans that apply to bitcoin probably extend to similar cryptocurrency systems.
+
+
+== Energy consumption ==
+Bitcoin has been criticized for the amounts of electricity consumed by mining. As of 2015, The Economist estimated that even if all miners used modern facilities, the combined electricity consumption would be 166.7 megawatts (1.46 terawatt-hours per year). At the end of 2017, the global bitcoin mining activity was estimated to consume between 1 and 4 gigawatts of electricity. Politico noted that the banking sector today consumes about 6% of total global power, and even if bitcoin's consumption levels increased 100 fold from today's levels, bitcoin's consumption would still only amount to about 2% of global power consumption.
+To lower the costs, bitcoin miners have set up in places like Iceland where geothermal energy is cheap and cooling Arctic air is free. Bitcoin miners are known to use hydroelectric power in Tibet, Quebec, Washington (state), and Austria to reduce electricity costs. Miners are attracted to suppliers such as Hydro Quebec that have energy surpluses. According to a University of Cambridge study, much of bitcoin mining is done in China, where electricity is subsidized by the government.
+
+
+== Criminal activity ==
+
+The use of bitcoin by criminals has attracted the attention of financial regulators, legislative bodies, law enforcement, and the media. In the United States, the FBI prepared an intelligence assessment, the SEC issued a pointed warning about investment schemes using virtual currencies, and the U.S. Senate held a hearing on virtual currencies in November 2013.
+Several news outlets have asserted that the popularity of bitcoins hinges on the ability to use them to purchase illegal goods. In 2014, researchers at the University of Kentucky found "robust evidence that computer programming enthusiasts and illegal activity drive interest in bitcoin, and find limited or no support for political and investment motives".
+The New York Post has published a news article based on a report by researchers at Germany’s RWTH Aachen University. The researchers said "Our analysis shows that certain content, e.g., illegal pornography, can render the mere possession of a blockchain illegal".
+
+
+== In popular culture ==
+
+
+=== Academia ===
+In September 2015, the establishment of the peer-reviewed academic journal Ledger (ISSN 2379-5980) was announced. It will cover studies of cryptocurrencies and related technologies, and is published by the University of Pittsburgh. The journal encourages authors to digitally sign a file hash of submitted papers, which will then be timestamped into the bitcoin blockchain. Authors are also asked to include a personal bitcoin address in the first page of their papers.
+
+
+=== Film ===
+The documentary film, The Rise and Rise of Bitcoin (late 2014), features interviews with people who use bitcoin, such as a computer programmer and a drug dealer. The film Banking on Bitcoin is also a documentary about the beginnings of bitcoin and how it evolved to be what it is today.
+
+
+=== Literature ===
+In Charles Stross' science fiction novel, Neptune's Brood, "bitcoin" (a modified version) is used as the universal interstellar payment system.
+
+
+=== Television ===
+In November 2017, the American sitcom, The Big Bang Theory, dedicated an episode on bitcoins called "The Bitcoin Entanglement". In the episode, after hearing the price of a bitcoin had risen to $5,000, friends try to track down bitcoins they mined seven years earlier.
+
+
+== See also ==
+
+
+== Notes ==
+
+
+== References ==
+
+
+== External links ==
+Bitcoin Project
+Bitcoin node statistics
+Bitcoin network daily transactions
+.I 2
+Ethereum is an open-source, public, blockchain-based distributed computing platform and operating system featuring smart contract (scripting) functionality. It supports a modified version of Nakamoto consensus via transaction based state transitions.
+Ether is a cryptocurrency whose blockchain is generated by the Ethereum platform. Ether can be transferred between accounts and used to compensate participant mining nodes for computations performed. Ethereum provides a decentralized Turing-complete virtual machine, the Ethereum Virtual Machine (EVM), which can execute scripts using an international network of public nodes. "Gas", an internal transaction pricing mechanism, is used to mitigate spam and allocate resources on the network.
+Ethereum was proposed in late 2013 by Vitalik Buterin, a cryptocurrency researcher and programmer. Development was funded by an online crowdsale that took place between July and August 2014. The system went live on 30 July 2015, with 11.9 million coins "premined" for the crowdsale. This accounts for about 13 percent of the total circulating supply.
+In 2016, as a result of the collapse of The DAO project, Ethereum was split into two separate blockchains – the new separate version became Ethereum (ETH), and the original continued as Ethereum Classic (ETC). The value of the Ethereum currency grew over 13,000 percent in 2017.
+
+
+== Etymology ==
+Vitalik Buterin picked the name Ethereum after browsing Wikipedia articles about elements and science fiction, when he found the name, noting, "I immediately realized that I liked it better than all of the other alternatives that I had seen; I suppose it was the fact that sounded nice and it had the word 'ether', referring to the hypothetical invisible medium that permeates the universe and allows light to travel."
+
+
+== History ==
+Ethereum was initially described in a white paper by Vitalik Buterin, a programmer involved with Bitcoin Magazine, in late 2013 with a goal of building decentralized applications. Buterin had argued that Bitcoin needed a scripting language for application development. Failing to gain agreement, he proposed development of a new platform with a more general scripting language.
+At the time of public announcement in January 2014, the core Ethereum team was Vitalik Buterin, Mihai Alisie, Anthony Di Iorio, and Charles Hoskinson. Formal development of the Ethereum software project began in early 2014 through a Swiss company, Ethereum Switzerland GmbH (EthSuisse). Subsequently, a Swiss non-profit foundation, the Ethereum Foundation (Stiftung Ethereum), was created as well. Development was funded by an online public crowdsale during July–August 2014, with the participants buying the Ethereum value token (ether) with another digital currency, bitcoin. While there was early praise for the technical innovations of Ethereum, questions were also raised about its security and scalability.
+
+
+=== Enterprise Ethereum Alliance (EEA) ===
+
+In March 2017, various blockchain start-ups, research groups, and Fortune 500 companies announced the creation of the Enterprise Ethereum Alliance (EEA) with 30 founding members. By May, the nonprofit organization had 116 enterprise members—including ConsenSys, CME Group, Cornell University's research group, Toyota Research Institute, Samsung SDS, Microsoft, Intel, J. P. Morgan, Cooley LLP, Merck KGaA, DTCC, Deloitte, Accenture, Banco Santander, BNY Mellon, ING, and National Bank of Canada. By July 2017, there were over 150 members in the alliance, including recent additions MasterCard, Cisco Systems, and Scotiabank.
+
+
+=== Milestones ===
+Several codenamed prototypes of the Ethereum platform were developed by the Foundation, as part of their Proof-of-Concept series, prior to the official launch of the Frontier network. "Olympic" was the last of these prototypes, and public beta pre-release. The Olympic network provided users with a bug bounty of 25,000 ether for stress testing the limits of the Ethereum blockchain. "Frontier" marked the tentative experimental release of the Ethereum platform in July 2015.
+"Homestead" was the first to be considered stable. It includes improvements to transaction processing, gas pricing, and security. Since the initial launch, Ethereum has undergone several planned protocol upgrades, which are important changes affecting the underlying functionality and/or incentive structures of the platform.
+"Metropolis Part 1: Byzantium" was launched on October 16, 2017, and included changes to reduce the complexity of the EVM and provide more flexibility for smart contract developers. Byzantium also adds supports for zk-SNARKs (from Zcash); with the first zk-SNARK transaction occurring on testnet on September 19, 2017.
+There are at least two other protocol upgrades planned in the future: "Metropolis Part 2: Constantinople" will lay the foundations for the transition to proof-of-stake (Casper), make adjustments to the difficulty time bomb, and add support for account abstraction.
+
+
+=== The DAO event ===
+In 2016 a decentralized autonomous organization called The DAO, a set of smart contracts developed on the platform, raised a record US$150 million in a crowdsale to fund the project. The DAO was exploited in June when US$50 million in ether were claimed by an anonymous entity. The event sparked a debate in the crypto-community about whether Ethereum should perform a contentious "hard fork" to reappropriate the affected funds. As a result of the dispute, the network split in two. Ethereum (the subject of this article) continued on the forked blockchain, while Ethereum Classic continued on the original blockchain. The hard fork created a rivalry between the two networks.
+After the hard fork related to The DAO, Ethereum subsequently forked twice in the fourth quarter of 2016 to deal with other attacks. By the end of November 2016, Ethereum had increased its DDoS protection, de-bloated the blockchain, and thwarted further spam attacks by hackers.
+
+
+== Ether ==
+Ether is a fundamental cryptocurrency for operation of Ethereum, which thereby provides a public distributed ledger for transactions. It is used to pay for gas, a unit of computation used in transactions and other state transitions. Mistakingly, this currency is also referred to as Ethereum. It is listed under the code ETH and traded on cryptocurrency exchanges, and the Greek uppercase Xi character (Ξ) is generally used for its currency symbol. It is also used to pay for transaction fees and computational services on the Ethereum network.
+
+
+=== Characteristics ===
+
+As with other cryptocurrencies, the validity of each ether is provided by a blockchain, which is a continuously growing list of records, called blocks, which are linked and secured using cryptography. By design, the blockchain is inherently resistant to modification of the data. It is an open, distributed ledger that records transactions between two parties efficiently and in a verifiable and permanent way. Unlike Bitcoin, Ethereum operates using accounts and balances in a manner called state transitions. This does not rely upon unspent transaction outputs (UTXOs). State denotes the current balances of all accounts and extra data. State is not stored on the blockchain, it is stored in a separate Merkle Patricia tree. A cryptocurrency wallet stores the public and private "keys" or "addresses" which can be used to receive or spend Ether. These can be generated through BIP 39 style mnemonics for a BIP 32 "HD Wallet". In Ethereum, this is unnecessary as it does not operate in a UTXO scheme. With the private key, it is possible to write in the blockchain, effectively making an ether transaction. To send ether to an account, you need the public key of that account. Ether accounts are pseudonymous in that they are not linked to individual persons, but rather to one or more specific addresses. Owners can store these addresses in software, on paper and possibly in memory ("brain wallet").
+
+
+==== Addresses ====
+Ethereum addresses are composed of the prefix "0x", a common identifier for hexadecimal, concatenated with the rightmost 20 bytes of the Keccak-256 hash (big endian) of the ECDSA public key. In hexadecimal, 2 digits represents a byte, meaning addresses contain 40 hexadecimal digits. One example is 0xb794F5eA0ba39494cE839613fffBA74279579268, the Poloniex ColdWallet. Contract addresses are in the same format, however they are determined by sender and creation transaction nonce. User accounts are indistinguishable from contract accounts given only an address for each and no blockchain data. Any valid Keccak-256 hash put into the described format is valid, even if it does not correspond to an account with a private key or a contract. This is unlike Bitcoin, which uses base58check to ensure that addresses are properly typed.
+
+
+==== Comparison to bitcoin ====
+Ether is different from Bitcoin (the cryptocurrency with the largest market capitalization as of January 2018) in several aspects:
+Its block time is 14 to 15 seconds, compared with 10 minutes for bitcoin.
+Mining of ether generates new coins at a usually consistent rate, occasionally changing during hard forks, while for bitcoin the rate halves every 4 years.
+For proof-of-work, it uses the Ethash algorithm which reduces the advantage of specialized ASICs in mining.
+Transaction fees differ by computational complexity, bandwidth use and storage needs (in a system known as gas), while bitcoin transactions compete by means of transaction size, in bytes.
+Ethereum gas units each have a price that can be specified in a transaction. This is typically measured in Gwei. Bitcoin transactions usually have fees specified in satoshis per byte.
+Transaction fees are generally considerably lower for ether than for Bitcoin. In December 2017, the median transaction fee for ether corresponded to $0.33, while for bitcoin it corresponded to $23.
+Ethereum uses an account system where values in Wei are debited from accounts and credited to another, as opposed to Bitcoin's UTXO system, which is more analogous to spending cash and receiving change in return. Both systems have their pros and cons; in terms of storage space, complexity, and security/anonymity.
+
+
+=== Supply ===
+
+The total supply of ether was Ξ98 million as of January 2018. In 2017, mining generated 9.2 million new ether, corresponding to a 10% increase in its total supply. Casper FFG and CBC are expected to reduce the inflation rate to between 0.5% to 2%. There is no currently implemented hard cap on the total supply of ETH, but it is expected to end at a certain point, and become deflationary.
+
+
+=== Markets and stores ===
+Ether can be traded by regular currency brokers, cryptocurrency exchanges, as well as many online cryptocurrency wallets. As of January 2018, at least 150 stores accept ether.
+
+
+== Platform ==
+
+
+=== Virtual Machine ===
+The Ethereum Virtual Machine (EVM) is the runtime environment for smart contracts in Ethereum. It is a 256-bit register stack, designed to run the same code exactly as intended. It is the fundamental consensus mechanism for Ethereum. The formal definition of the EVM is specified in the Ethereum Yellow Paper. It is sandboxed and also completely isolated from the network, filesystem or other processes of the host computer system. Every Ethereum node in the network runs an EVM implementation and executes the same instructions. In February 1, 2018, there were 27,500 nodes in the main Ethereum network. Ethereum Virtual Machines have been implemented in C++, Go, Haskell, Java, JavaScript, Python, Ruby, Rust, and WebAssembly (currently under development). The Ethereum-flavoured WebAssembly (dubbed "e-WASM") is expected to become a major component of the "Web 3.0", a World Wide Web where users interact with smart contracts through a browser.
+
+
+=== Smart contracts ===
+Ethereum's smart contracts are based on different computer languages, which developers use to program their own functionalities. Smart contracts are high-level programming abstractions that are compiled down to EVM bytecode and deployed to the Ethereum blockchain for execution. They can be written in Solidity (a language library with similarities to C and JavaScript), Serpent (similar to Python, but deprecated), LLL (a low-level Lisp-like language), and Mutan (Go-based, but deprecated). There is also a research-oriented language under development called Viper (a strongly-typed Python-derived decidable language).
+Smart contracts can be public, which opens up the possibility to prove functionality, e.g. self-contained provably fair casinos.
+One issue related to using smart contracts on a public blockchain is that bugs, including security holes, are visible to all but cannot be fixed quickly. One example of this is the 17 June 2016 attack on The DAO, which could not be quickly stopped or reversed.
+There is ongoing research on how to use formal verification to express and prove non-trivial properties. A Microsoft Research report noted that writing solid smart contracts can be extremely difficult in practice, using The DAO hack to illustrate this problem. The report discussed tools that Microsoft had developed for verifying contracts, and noted that a large-scale analysis of published contracts is likely to uncover widespread vulnerabilities. The report also stated that it is possible to verify the equivalence of a Solidity program and the EVM code.
+
+
+=== Applications ===
+Ethereum blockchain applications are usually referred to as DApps (decentralized application), since they are based on the decentralized Ethereum Virtual Machine, and its smart contracts. Many uses have been proposed for Ethereum platform, including ones that are impossible or unfeasible. Use case proposals have included finance, the internet-of-things, farm-to-table produce, electricity sourcing and pricing, and sports betting. Ethereum is (as of 2017) the leading blockchain platform for initial coin offering projects, with over 50% market share.
+As of January 2018, there are more than 250 live DApps, with hundreds more under development. Project applications listed in this section are not exhaustive and may be outdated.
+Digital signatures that ensure authenticity and proof of existence of documents: the Luxembourg Stock Exchange has developed such a system
+Slock.It is developing smart locks
+Digital tokens pegged to fiat currencies: Dai, stablecoin pegged to US dollar. Decentralized Capital. Spanish bank Santander is also involved in such a project.
+Digital tokens pegged to gold: Digix
+Improved digital rights management for music: Imogen Heap used the technology
+Platforms for prediction markets: Augur, Gnosis Stox
+Platforms for crowdfunding: the DAO
+Social media platforms with economic incentives: Backfeed, Akasha
+Decentralized marketplaces: FreeMyVunk, TransActive Grid
+Remittance: Everex
+Online gambling: CoinPoker,Etheroll
+Electric car charging management: RWE
+Secure identity systems for the Internet: uPort
+Labour economics: Blocklancer, Ethlance
+Video games: CryptoKitties' popularity in December 2017 caused the Ethereum network to slow down.
+Financial exchanges: EverMarkets Exchange, a 'hybrid decentralized' exchange for trading global futures contracts' 
+
+
+==== Enterprise software ====
+Ethereum-based customized software and networks, independent from the public Ethereum chain, are being tested by enterprise software companies. Interested parties include Microsoft, IBM, JPMorgan Chase, Deloitte, R3, Innovate UK (cross-border payments prototype). Barclays, UBS and Credit Suisse are experimenting with Ethereum blockchain to automate Markets in Financial Instruments Directive (MiFID) II requirements.
+
+
+==== Permissioned ledgers ====
+Ethereum-based permissioned blockchain variants are used and being investigated for various projects.
+J. P. Morgan Chase is developing a permissioned-variant of Ethereum blockchain dubbed "Quorum". It's designed to toe the line between private and public in the realm of shuffling derivatives and payments. The idea is to satisfy regulators who need seamless access to financial goings-on, while protecting the privacy of parties that don't wish to reveal their identities nor the details of their transactions to the general public.
+Royal Bank of Scotland has announced that it has built a Clearing and Settlement Mechanism (CSM) based on the Ethereum distributed ledger and smart contract platform.
+
+
+=== Performance ===
+In Ethereum all smart contracts are stored publicly on every node of the blockchain, which has costs. Being a blockchain means it is secure by design and is an example of a distributed computing system with high Byzantine fault tolerance. The downside is that performance issues arise in that every node is calculating all the smart contracts in real time, resulting in lower speeds. As of January 2016, the Ethereum protocol could process 25 transactions per second. On 19 December 2016, Ethereum exceeded one million transactions in a single day for the first time.
+Micro Raiden was launched November 2017.
+Buterin and Joseph Poon (a co-author of Bitcoin's lightning network whitepaper) announced in 2017 their plan to launch a scaling solution called Plasma which creates "child" blockchains to the "main" parent blockchain. The plasma project has skeptics; specifically, Vlad Zamfir (Ethereum's lead researcher on proof of stake) has publicly questioned the plasma project's viability.
+Ethereum engineers have been working on sharding the calculations, and the next step (called Ethereum 2) was presented at Devcon 3.
+Ethereum's blockchain uses Merkle trees, for security reasons, to improve scalability, and to optimize transaction hashing. As with any Merkle tree implementation, it allows for storage savings, set membership proofs (called "Merkle proofs"), and light client synchronization.
+
+
+== Ethereum forks ==
+Ethereum-based cryptocurrencies that emerged from forking the Ethereum blockchain:
+Ethereum Classic
+Expanse
+ERC20 tokens that function within the Ethereum ecosystem are also referred as Ethereum tokens.
+
+
+== Criticisms ==
+A finance blogger on FT Alphaville has pointed out that criminals are using Ethereum to run Ponzi schemes and other forms of investment fraud. The article was based on a paper from the University of Cagliari, which placed the number of Ethereum smart contracts which facilitate Ponzi schemes at nearly 10% of 1384 smart contracts examined. However, it also estimated that only 0.05% of the transactions on the network were related to such contracts.
+
+
+== References ==
+
+
+== External links ==
+Official website
+State of the DApps (List of Ethereum DApps)
+.I 2
+A tether is a cord, fixture, or flexible attachment that anchors something movable to a reference point which may be fixed or moving. There are a number of applications for tethers: balloons, kites, tethered wind-energy conversion systems, anchors, tethered water-flow energy conversion systems, towing, animal constraint, spaceflight, and power-kiting. Tethering is also used to prevent the theft of a computer at a school or library.
+
+
+== Failures ==
+Tethers may break by various means; if a tether is a signal, then interruption by signal barriers breaks the tether. If the tether is a cord or rope, then upon reaching the breaking strength of the tether, the tether fails in its function. Failure modes for tethers are considered when designing arrangements where a tether is needed. When a tether or line breaks suddenly, backlash of the segments may cause severe damage or loss of life. Safety links are sometimes used to prevent excessive tension in a tether involved in towing objects or persons, like in the towing of sailplanes; the safety link in a tether is thus a tether itself.
+
+
+== See also ==
+Umbilical cable
+
+
+== References ==
+.I 2
+NuBits are advertised as stable-value cryptocurrencies issued by a DAO marketed under the same name. Shareholders achieve stability in NuBits by placing buy and sell orders at $1.00 using revenue from NuBit sales kept in external cryptoassets (such as Bitcoin).
+Partial revenue is distributed to shareholders to create a mechanism for deep backing by incentive for investment in Nu when NuBits leaving circulation exceed the value of Nu's cryptoasset reserve. Full backing of NuBits by design relies on investors purchasing new shares (NuShares) from the issuer.
+Allegedly, US NuBits is the first decentralized cryptocurrency to maintain a $1.00 US price peg for one year, on September 23, 2015.
+
+
+== Notes ==
+
+
+== References ==
+
+
+== External links ==
+Official website
+.I 2
+DigixDAO is the Digix Decentralized Autonomous Organization, a decentralized group of participants making decisions about how to grow the Digix Global Ecosystem.
+
+DGD token holders will make decisions related to any proposals submitted to DigixDAO. As a reward for voting and decision making in the growth of Digix, DGD holders receive rewards related to DGX, a token that represents 1 gram of gold. 
+The tokenization of gold aims to provide stability and store of value in the cryptocurrency space. 
+In order to distribute DGX tokens representing 1g of gold, Digix utilizes Proof of Asset (PoA).
+The DGX token represents value on the blockchain which will be retained over time. This token is compatible with Ethereum smart contracts. This particular token is advertised as the future gold-standard for value exchange in the Ethereum ecosystem.
+Official Website
+Coincentral: What is DigixDao?
+The Merkle: What is DigixDao?
+
+
+
+.I 3
+Litecoin (LTC or Ł) is a peer-to-peer cryptocurrency and open source software project released under the MIT/X11 license. Creation and transfer of coins is based on an open source cryptographic protocol and is not managed by any central authority. The coin was inspired by, and in technical details is nearly identical to, Bitcoin (BTC).
+
+
+== History ==
+Litecoin was released via an open-source client on GitHub on October 7, 2011 by Charlie Lee, a former Google employee. The Litecoin network went live on October 13, 2011. It was a fork of the Bitcoin Core client, differing primarily by having a decreased block generation time (2.5 minutes), increased maximum number of coins, different hashing algorithm (scrypt, instead of SHA-256), and a slightly modified GUI.
+During the month of November 2013, the aggregate value of Litecoin experienced massive growth which included a 100% leap within 24 hours.
+Litecoin reached a $1 billion market capitalization in November 2013.
+In May 2017, Litecoin became the first of the top 5 (by market cap) cryptocurrencies to adopt Segregated Witness. Later in May of the same year, the first Lightning Network transaction was completed through Litecoin, transferring 0.00000001 LTC from Zürich to San Francisco in under one second.
+In February 2018, the EU online retailer Alza.cz began accepting Litecoin as a payment method.
+
+
+== Differences from Bitcoin ==
+Litecoin is different in some ways from Bitcoin.
+The Litecoin Network aims to process a block every 2.5 minutes, rather than Bitcoin's 10 minutes. The developers claim that this allows Litecoin to have faster transaction confirmation.
+Litecoin uses scrypt in its proof-of-work algorithm, a sequential memory-hard function requiring asymptotically more memory than an algorithm which is not memory-hard.
+Due to Litecoin's use of the scrypt algorithm, FPGA and ASIC devices made for mining Litecoin are more complicated to create and more expensive to produce than they are for Bitcoin, which uses SHA-256.
+
+
+== See also ==
+Crypto-anarchism
+Private currency
+List of scrypt crypto currencies
+
+
+== References ==
+
+
+== External links ==
+Official website
+.I 3
+Bitcoin Cash is a cryptocurrency. In mid-2017 the developers, not content with the Segregated Witness feature, implemented a change to the bitcoin code. The change, called a hard fork, took effect on August 1, 2017. As a result, the bitcoin ledger called the blockchain and the cryptocurrency split in two. At the time of the fork anyone owning bitcoin was also in possession of the same number of Bitcoin Cash units.
+
+
+== History ==
+In May 2017, bitcoin transactions took up to four days to complete. In order to speed transactions, users could pay a transaction fee, which at the end of 2017 averaged about $28. The delay and especially the fees made bitcoin impractical for everyday use to make small purchases.
+
+
+=== Idea forms ===
+Up until July 2017, bitcoin users maintained a common set of rules for the cryptocurrency. On July 20, 2017 at block height 476768 Bitcoin Improvement Proposal (BIP) 91 was locked in (i.e. scheduled to activate at block height 477120). It was designed to reject blocks created by miners not supporting Segregated Witness (SegWit).
+Some members of the bitcoin community felt that adopting BIP 91 without increasing the block-size limit favored people who wanted to treat bitcoin as a digital investment rather than as a transactional currency and devised a plan to increase the number of transactions its ledger can process by increasing the block size limit to eight megabytes.
+The Bitcoin Cash name was originally proposed by Chinese mining pool ViaBTC.
+
+
+=== Development ===
+The first implementation of the Bitcoin Cash protocol called Bitcoin ABC was revealed by Amaury "Deadal Nix" Séchet at the Future of Bitcoin conference in Arnhem, Netherlands. Subsequently, Bitcoin Unlimited made its first release of Bitcoin Cash compatible software, named BUCash and Bitcoin XT also released before the Bitcoin Cash fork. This meant that 3 full node clients were available before the Bitcoin Cash hard fork on August 1, 2017.
+These clients implemented the following changes from bitcoin:
+Increase maximum block size to 8 megabytes.
+Modification of the transaction signature hashing algorithm. This provides replay protection for Bitcoin Cash transactions against the bitcoin chain.
+Replaced the original bitcoin difficulty adjustment algorithm (a difficulty adjustment every 2016 blocks), with the new Emergency Difficulty Adjustment (EDA) algorithm. EDA was intended to allow difficulty to more quickly respond to drastic drops in hashrate presumed to occur immediately post fork.
+
+
+=== Launch ===
+Upon launch, Bitcoin Cash inherited the transaction history of the bitcoin cryptocurrency on that date, but all later transactions were separate. Block 478558 was the last common block and thus the first separate Bitcoin Cash block was 478559. Bitcoin Cash cryptocurrency wallets started to reject bitcoin blocks and bitcoin transactions after 13:20 UTC, August 1, 2017 because it used a timer to initiate a fork. One exchange started Bitcoin Cash futures trading at 0.5 BTC on July 23; the futures dropped to 0.1 BTC by July 30. Market cap appeared since 23:15 UTC, August 1, 2017. Per the coinmarketcap.com site, the price of BTC on August 1, 2017 was USD$2,718.26 and the price of BCH was USD$380.01, which suggests the BCH split ratio to be 0.12265. The launch of Bitcoin Cash has created an ideological divide over which chain is the true bitcoin.
+
+
+=== Move of hashpower and difficulty adjustment ===
+On August 9, 2017 it was 30% more profitable to mine on the bitcoin chain. As both chains use the same proof-of-work algorithm, miners can easily move their hashpower between the two. As of August 30, 2017 around 1,500 more blocks were mined on the Bitcoin Cash chain than on the bitcoin chain as the high profitability periods attracted a significant proportion of total processing power. Due to the new Emergency Difficulty Adjustment (EDA) algorithm used by Bitcoin Cash, mining difficulty fluctuated rapidly, and the most profitable chain to mine switched repeatedly between Bitcoin Cash and bitcoin.
+A fix for these difficulty, hashrate, and profitability fluctuations was introduced on November 13, 2017 at 7:06 p.m. UTC. The EDA algorithm has been replaced with a new difficulty adjustment algorithm (DAA) that hopes to prevent extreme fluctuations in difficulty while still allowing Bitcoin Cash to adapt to hashrate changes faster than the original bitcoin algorithm adjusting the difficulty every 2016 blocks.
+
+
+=== Block size increase ===
+On May 15, 2018 the protocol was upgraded via a planned hard fork to increase the block size limit from 8 to 32 Megabytes.
+
+
+== Market acceptance and naming ==
+By the end of August 1, 2017, Bitcoin Cash became the third largest cryptocurrency in terms of market capitalization.
+
+
+=== Cryptocurrency exchanges ===
+Bitcoin Cash has been adopted by digital currency exchanges. Exchanges such as Coinbase, Kraken, ShapeShift and many others use the Bitcoin Cash name and the BCH ticker symbol for the cryptocurrency. Bitstamp and Bitfinex temporarily used the name Bcash, but after being criticized, they switched the name back to Bitcoin Cash.
+Bittrex, Binance, and Huobi exchange use BCC as Bitcoin Cash's ticker symbol instead. BCC is more commonly used as the ticker symbol for Bitconnect.
+
+
+=== Cryptocurrency wallets ===
+Cryptocurrency wallets such as the Ledger hardware wallet, KeepKey hardware wallet, Electron Cash software wallet and Bitcoin.com software wallet support Bitcoin Cash, using either BCH or BCC as the ticker symbol for it. Bitcoin Cash is also supported by the Trezor hardware wallet and the Blockchain.info wallet.
+
+
+=== Payment service providers ===
+The cryptocurrency payment processor Bitpay added support for Bitcoin Cash on March 28, 2018.
+
+
+== See also ==
+List of bitcoin forks
+List of cryptocurrencies
+
+
+== References ==
+
+
+== External links ==
+ Media related to Bitcoin Cash at Wikimedia Commons
+Official website
+.I 3
+Monero (XMR) is an open-source cryptocurrency created in April 2014 that focuses on privacy and decentralization that runs on Windows, macOS, Linux, Android, iOS, and FreeBSD. Monero uses a public ledger to record transactions while new units are created through a process called mining. Monero aims to improve on existing cryptocurrency design by obscuring sender, recipient and amount of every transaction made as well as making the mining process more egalitarian.
+The focus on privacy has attracted illicit use by people interested in evading law enforcement. The egalitarian mining process made it viable to distribute the mining effort opening new funding avenues for both legitimate online publishers and malicious hackers who covertly embed mining code into websites and apps.
+
+
+== Architecture ==
+Unlike many cryptocurrencies that are derivatives of Bitcoin, Monero is based on the CryptoNight proof-of-work hash algorithm, which comes from the CryptoNote protocol. It possesses significant algorithmic differences relating to blockchain obfuscation. By providing a high level of privacy, Monero is fungible, meaning that every unit of the currency can be substituted by another unit. This makes Monero different from public-ledger cryptocurrencies like Bitcoin, where addresses with coins previously associated with undesired activity can be blacklisted and have their coins refused by other users.
+In particular, the ring signatures mix the spender's input with a group of others, making it exponentially more difficult to establish a link between each subsequent transaction. Also, the "stealth addresses" generated for each transaction make it impossible to discover the actual destination address of a transaction by anyone else other than the sender and the receiver. Finally, the "ring confidential transactions" mechanism hides the transferred amount.
+Monero is designed to be resistant to application-specific integrated circuit mining, which is commonly used to mine other cryptocurrencies such as Bitcoin. It can be mined somewhat efficiently on consumer grade hardware such as x86, x86-64, ARM and GPUs.
+
+
+== History ==
+The underlying CryptoNote protocol that Monero is based on was originally launched by pseudonymous author Nicolas van Saberhagen in October 2013.
+Monero was originally launched by a Bitcointalk forum user only known as "thankful_for_today" under the name BitMonero which is a compound of Bit (as in Bitcoin) and Monero (literally meaning "coin" in Esperanto). Five days later, the currency's supporters opted for the name to be shortened to Monero.
+In September 2014, Monero was attacked when an unknown party exploited a flaw in CryptoNote that permitted the creation of two subchains that refused to recognize the validity of transactions on each other. CryptoNote later released a patch for the flaw, which Monero implemented.
+Monero experienced rapid growth in market capitalization and transaction volume during the year 2016, partly due to adoption in 2016 by major darknet market AlphaBay, which was closed in July 2017 by law enforcement.
+On January 10, 2017, the privacy of Monero transactions were further strengthened by the adoption of Bitcoin Core developer Gregory Maxwell's algorithm Confidential Transactions, hiding the amounts being transacted, in combination with an improved version of Ring Signatures.
+
+
+== Transaction linkability ==
+In April 2017 research highlighted three major threats to Monero user's privacy. The first relies on leveraging the ring signature size of zero, and ability to see the output amounts. The second, described as "Leveraging Output Merging", involves tracking transactions where two outputs belong to the same user, such as when a user is sending the funds to himself ("churning"). Finally the third threat, "Temporal Analysis", shows that predicting the right output in a ring signature is easier than previously thought.
+Monero development team addressed the first concern in early 2017 with introduction of Ring Confidential Transactions (ringCT) as well as mandating a minimum size of ring signatures in the March 2016 protocol upgrade. Monero developers also noted that Monero Research Labs, their academic and research arm, already noted and outlined the deficiency in two public research papers in 2014 and 2015.
+
+
+== Client software ==
+A user needs client software, a so-called wallet, to interact with the Monero network. The Monero Project produces the reference implementation of a Monero wallet and there are also third party implementations of Monero clients exist such as Monerujo and Cakewallet which also make it possible to use Monero on Android and iOS. Finally, a web wallet allows users to interact with the network entirely through the browser using a third party website.
+
+
+== Implementations of Monero ==
+The feasibility of CPU mining Monero has made it viable for malicious actors to covertly distribute miners embedded in malware, using the victim's hardware and electricity for the financial gain of the malware developer as well as legitimate uses with user consent.
+The JavaScript implementation of Monero miner Coinhive has made it possible to embed the miner into a website in such a way to use website visitor's CPU to mine the cryptocurrency while the visitor is consuming the content of the webpage. While this can be done with user's consent in an effort to provide an alternative funding model to serving ads, some websites have done this without informed consent which has prompted the in-browser miners to be blocked by browser extensions and ad blocking subscription lists.
+Monero is sometimes employed by Bitcoin users to break link between transactions, with bitcoins first converted to Monero, then after some delay, converted back and sent to an address unrelated to those used before. Researchers have reported that the operators behind the global ransomware incident WannaCry have converted their proceeds into Monero. It is also the preferred payment method of choice for The Shadow Brokers. Exchanges ShapeShift and Changelly are cooperating with police after it emerged that the WannaCry attackers used it to convert Bitcoin to Monero. "Any transactions made through ShapeShift can not be hidden or obscured and are thus 100 percent transparent" stated ShapeShift.
+
+
+== See also ==
+Crypto-anarchism
+
+
+== References ==
+
+
+== External links ==
+Official website
+.I 3
+Ark is a universal innovative platform designed to popularize and simplify as much as possible the processes of mutual relations, cooperation and calculations in the virtual space. Ark has its own virtual sign-Ark token, which carries a monetary value.
+Ark project was launched at the end of 2016. A huge team of 27 people is working on its launch and further promotion. Ark defines his mission as the proliferation of blockchain technologies among the broad masses of the population.
+Note that Ark is not a traditional virtual currency. It is an entire ecosystem, a safe platform for adaptation. The company has ambitious plans: to stimulate the mass adoption of crypto money by offering those tools that will be useful and in demand by users. The new project has its own currency - ARK coin.
+Ark (ARK) is a platform for consumer adoption. It is not just a cryptocurrency - it is an ecosystem meant for cryptocurrency mass adoption. Ark has a powerful core that allows transactions to take place with an eight-second block time. In addition, full decentralization is a distinctive feature of the project. Ark is also working to ensure anonymity[1].
+Features Ark does not end there. The project also uses its own Smart Bridge technology, which allows Ark to communicate with other blockchain technologies.
+In addition, a large number of tools from this project are being developed, the purpose of which will be to distribute not only its own cryptocurrency, but also digital money in General.
+To explain more easily than good Ark, we list its advantages:
+However, Ark's drawbacks also exist:
+To be honest, these disadvantages apply not only to Ark, but also to other cryptocurrencies.
+As already mentioned, the development of this project involved a huge team – 27 professionals in the field of blockchain technologies, most of which were previously involved in the creation of large-scale projects.
+Among the experts who created Ark – Francois Xavier, who has long held the position of chief programmer e-currency Lisk, and now manages the Department of development Ark. Also joined the team of professionals who previously engaged in the development of infrastructure network Bitshares.
+ARK market cap on 12 OCT 2017: $264,076,217     
+ARK price on 12 OCT 2017: $2.70[2]
+Experts working on the development of the project suggest that its further improvement will allow the platform to provide users with such features:
+It should be noted that everything that is done by the Ark project team is done with a single goal – to create a single system that combines a variety of services and tools. If they succeed, the company's support and high liquidity of ark cryptocurrencies are provided.
+ICO start date: 2016-12-11
+More information in the project whitepaper: https://ark.io/whitepaper/
+
+
+
+.I 3
+Zilliqa is a blockchain platform designed around the concept of sharding. Sharding means dividing the network into several smaller component networks that are able to process transactions in parallel. 
+
+Zilliqa is a blockchain platform that is designed to scale in an open, permission-less distributed network securely. This should be achieved through sharding.
+The Zilliqa team proposed the theory of sharding in a paper in 2015, and since then this protocol has been under research, refinement and active development.
+Whitepaper
+Zilliqa Blog
+
+
+
+.I 4
+Simple Token is a blockchain project and cryptocurrency which enables digital communities to design, launch, and manage their own branded tokens on open, scalable Ethereum side-chains. The OpenST protocol enables businesses to stake Simple Tokens (OST) against minting their own branded tokens. Users are able to manage, customise, and analyse their token economy. The project's co-founder and CEO is Jason Goldberg. Investors include Tencent, Greycroft and 500 Startups.
+
+
+== References ==
+
+
+== External links ==
+Simple Token official website
+.I 4
+Waves is an open-source blockchain platform, developed, marketed, and operated by Waves Platform AG, that allows users to launch their own custom cryptocurrency tokens. Whilst other popular cryptocurrencies such as Bitcoin and Ethereum can be traded on external exchanges, and Ethereum allows users to create new tokens on the platform using a smart contract, Waves includes this functionality in its core software and wallet. Users can create, transfer and exchange blockchain tokens on a peer-to-peer basis, paying transaction fees in the native WAVES token.
+The platform has a fixed supply of 100 million WAVES and uses a network consensus algorithm based on Bitcoin-NG, updated for proof-of-stake networks, called Waves-NG. Waves uses trusted gateways to issue blockchain tokens backed by fiat money and digital currencies for use on its own platform.
+Waves was founded in 2016 by Alexander Ivanov, a Russian physicist, with development funded by a crowdsale held in April and May 2016. Waves’ community and development is international, with a wide range of initiatives built on the platform and based in different locations around the world.
+
+
+== History ==
+
+
+=== Inception ===
+Waves was proposed early in 2016 by Alexander Ivanov, who had previously founded the Coinomat instant cryptocurrency exchange and had been involved with the Nxt cryptocurrency platform. Waves was created to address a number of the perceived barriers to wider blockchain adoption, including speed, scalability and user experience. Development was funded by a crowdsale that raised the equivalent of $16 million. At the time, Waves represented the second-largest successfully crowdfunded blockchain project, collecting almost 30,000 Bitcoins.
+
+
+=== Launch ===
+Waves was officially launched as a decentralised network with the release of full nodes in November 2016. The launch also included the release of token creation facilities, allowing developers to build their own blockchain-based applications.
+
+
+=== Milestones ===
+Waves launched its bitcoin gateway in March 2017, allowing users to hold and transfer bitcoin tokens (called wBTC) on the Waves network. The decentralised exchange (DEX) was launched in April 2017. A Euro gateway was introduced in May 2017 and a US dollar gateway in June 2017. An Ether gateway was also added in June 2017, with Litecoin and Zcash gateways in October. On 10 May 2017, the WAVES token reached parity with the dollar, climbing as high as $6 in subsequent weeks. Waves NG protocol was activated by the Waves Features Activation Protocol on Dec 22 2017.
+
+
+== Architecture ==
+The Waves platform is built using the Scala programming language. It is a Proof-of-Stake platform (in contrast to bitcoin’s Proof-of-Work consensus model) that uses an adapted form of Bitcoin-NG called Waves-NG to enable high transaction volumes and fast confirmation times/throughput.
+
+
+=== WAVES token ===
+The WAVES token serves as the ‘fuel’ for all operations on the Waves network and as a spam-prevention mechanism. A fixed supply of 100 million WAVES tokens were created after the crowdsale. The transaction fee for simple WAVES or token transfers is 0.001 WAVES, whilst it costs 1 WAVES to create a new token on the network.
+
+
+=== MRT and WCT ===
+Waves’ token facilities have enabled an ecosystem that incentivises useful activity and encourages participation.
+The Miners Reward Token (MRT) is distributed with every new block created, and is intended to function as a supplementary reward for miners whilst the volume of transaction fees grows. MRT is given value by businesses and other initiatives in the Waves ecosystem. These organisations want to incentivise miners to accept their own tokens as transaction fees, and reward nodes by distributing a share of tokens to MRT holders. Additionally, MRT will serve as a token for voting on key network parameters.
+The Waves Community Token (WCT) was distributed to WAVES holders on a monthly basis, in proportion to their average balance over the course of the previous month. One of its primary purposes is to encourage long-term holding of WAVES, and for users to keep their balances in local wallets rather than on exchanges, for security reasons. WCT will also be used as a form of collective due diligence for new token projects, allowing the community to vote on the perceived viability and legitimacy of forthcoming crowdsales.
+
+
+=== Waves-NG ===
+Waves’ blockchain consensus algorithm is Waves-NG, which is based on the Bitcoin-NG proposal created by Emin Gun Sire.r Bitcoin-NG was designed to increase transaction throughput on the bitcoin blockchain: ‘the system can at best achieve a modest transaction throughput, rising from ~3 transactions per second to ~6 transactions per second if the block size is doubled. This is far from the 30,000 transactions per second necessary to compete with the likes of VISA transactions. The same fundamental limitations apply to Ethereum, Litecoin, Dogecoin, and all other currencies that share Bitcoin’s blockchain management protocol. In Bitcoin, the system generates a retrospective block that encases in cryptographic stone the transactions that took place in the preceding 10 minutes. In Bitcoin-NG, the protocol is, instead, forward-looking: every 10 minutes, NG elects a leader, who then vets future transactions as soon as they happen. The former is necessarily limited by the block size and block interval, while the latter approach can run as fast as the network will allow.’ This approach has been adapted to Waves’ proof-of-stake model, theoretically enabling hundreds of transactions per second.
+
+
+=== Smart contracts ===
+Waves was designed for custom tokens operations, but Ivanov has stated that ‘some form of smart contracts’ will be included in the platform. After the exploit in The DAO and subsequent hardfork of the Ethereum blockchain, Ivanov has said that there would be Waves’ smart contracts that are not turing complete, but will allow most business operations without the risks inherent in offering such universal capabilities.
+According to the most recent development roadmap, published by The Waves Platform, Smart Contracts (non Turing) are scheduled to be added to Full Node software builds during Q1, 2018 and Turing complete smart contracts are scheduled during Q4, 2018.
+
+
+== Wallet and platform ==
+Ivanov has stated that he wants Waves to be an open and comprehensive ecosystem, which contains all the elements necessary for wider blockchain adoption. The core wallet, also known as the ‘lite client’, integrates a series of built-in features and third-party services.
+
+
+=== Balances and gateways ===
+Balances for popular tokens (including WAVES, US Dollars, Euros, Bitcoin, Zcash and Ether) are displayed on the wallet’s main page, with links to gateways for depositing and withdrawing fiat and crypto currencies. A list of recent transactions is also provided.
+
+
+=== DEX ===
+The decentralised exchange (DEX) is integrated within the wallet. This allows users to trade tokens on a peer-to-peer basis. The DEX uses centralised ‘Matcher’ nodes, which pair orders and execute trades in near-realtime, whilst ultimate settlement is carried out on the blockchain for security.
+
+
+=== Leasing ===
+Users can lease their available WAVES balance to full mining nodes, receiving income from them in return for the additional mining power they offer (See Miners, below).
+
+
+=== Token launcher ===
+The token creation tab enables users to launch their own token using a short form. Token names are not unique to avoid name squatting, though token ID numbers are unique. Tokens can have a short description which cannot be changed after token creation. Token supply is customisable, and tokens can have up to 8 decimal places. It is possible to issue further tokens, unless a token is made non-reissuable.
+
+
+== Mining and leasing ==
+
+
+=== Miners ===
+The Waves Platform Blockchain is maintained and validated by ‘miners’. However, since Waves is a Proof-of-Stake system, these full nodes on the network do not dedicate resources in the same way that bitcoin miners generate hashes to win the right to create the next block. A hosted server is adequate to run a node and no mining rigs or specialist hardware are required. Waves is an inflation-less system and miners receive only the fees from transactions users submit to the network, rather than any block rewards. Miners can also opt to accept transaction fees paid in a variety of tokens, if they wish, though WAVES is the default currency for fees. This ‘token mining’ facility means that businesses can create blockchain applications that do not require a separate currency to pay transaction fees, instead paying using their own token.
+Miners require a minimum balance of 1000 WAVES to qualify as a full node and add new blocks of transactions to the blockchain. The higher the number of WAVES held by a node, the greater the probability of mining the next block.
+
+
+== Partnerships ==
+Recent moves by The Waves Platform indicate a pro-regulation stance on blockchain technology and applications. In July 2017, The Platform announced a partnership with Deloitte, aimed at clarifying and shaping global blockchain crowdfunding regulation, and creating a clear framework for businesses to operate within.
+Waves has also partnered with the National Settlement Depository (NSD), the central depository for the Moscow Stock Exchange, to develop a digital blockchain platform for digital tokens and crypto assets.
+In May 2017, Microsoft announced that the Waves platform would be available on Azure, allowing one-click deployment of TestNet nodes via the company's cloud computing service.
+
+
+== References ==
+
+
+== External links ==
+Official Website
+.I 4
+Lisk (LSK) is a blockchain application platform, established in early 2016 by Max Kordek and Oliver Beddows. Based on its own Blockchain network and token LSK, Lisk will enable developers to create, distribute and manage decentralized Blockchain applications by deploying their own sidechain linked to the Lisk network, including a custom token. Thanks to the flexibility of sidechains, developers can implement and customize their Blockchain applications entirely.
+Lisk started as a fork of Crypti beginning with an ICO (Initial coin offering) to decide the initial distribution and raise development funds. The ICO raised 14,000 BTC and, at the time, was the second most successful cryptocurrency crowdfund (later that month, WAVES and The DAO would surpass it). On May 24, 2016, the mainnet for Lisk went live and it became available for trading on major exchanges. Quickly after trading started, Lisk briefly became the second most popular cryptocurrency traded against Bitcoin[1].
+Since November 2017, Lisk has suprassed a market cap of $1,000,000,000, thus joining the rank of other blockchain unicorns.
+Lisk aims to be the first (successful) of its kind as a modular cryptocurrency. The idea is that every Blockchain App is on its own sidechain, separate from the main blockchain. This should help with scalability issues that many cryptocurrencies were facing. The sidechain is secured by a group of 101 master nodes elected by the app's owner, and operate using the same Delegated-Proof-of-Stake (DPoS) consensus mechanism as the parent Lisk network. The Blockchain Apps are written using NodeJS/JavaScript on the backend and CSS3/HTML5/JavaScript for the frontend.
+Lisk uses the DPoS (Delegated-Proof-of-Stake) algorithm originally created by BitShares. What differentiates it from regular PoS (Proof of Stake) is that only the top 101 delegates (determined by voting weight of voters) are actively forging and securing the network.
+Lisk DPoS functions through a series of rounds. Rounds consist of 101 individual blocks. Each of the 101 active delegates are randomly assigned 1 block within the round to forge. A full cycle round takes 17 minutes. If a selected delegate is unable to forge their assigned block, activity from that block moves to the next block in the round.
+The Lisk network forges blocks in 10s intervals. In the event that a delegate fails to properly forge their assigned block, the transactions move to the next block in the round, causing the block to be extended by 10s. Each subsequent missed block results in a 10s delay for transaction processing and confirmations.
+Lisk utilizes an inflationary forging rewards system which creates new LSK for every successful block. During year 1, the forging rewards are set at 5 LSK per block. Every 3,000,000 blocks (~1 year) forging rewards are reduced by 1 LSK, ending at 1 LSK per block after 5 years. The forging rewards will then stay at 1 LSK per block indefinitely. The Forging Rewards will be equally distributed through all active (top 101) delegates, same as any network fees.
+Decentralized application or Dapps are exactly what the name suggests. Applications of any sort running on many servers, providing unseen security, uptime and entirely new business models. A powerful component of the Lisk application platform is the ability to deploy, distribute and manage decentralized applications all in one place with a seamless user experience. Decentralized applications include the whole package of front-end (what the user sees) and back-end (the logic behind it). A smart contract on the other hand, consists only of the back-end, and often only a small part of it. This means that if you want to create a decentralized application on a smart contract system (i.e. not with Lisk), you have to combine several smart contracts and rely on 3rd party systems for the front-end. Possible use cases include applications that offer proof-of-ownership, improved online identity verification or asset management. In order to build your own application it requires a developer to code it in JavaScript. By offering an SDK written in JavaScript, Lisk enables millions of developers around the world an accessible way to create their own decentralized applications by deploying their own Blockchain sidechain next to the Lisk network[2].
+With a fully functioning mainnet, Lisk is currently developing a variety of tools to enable developers and app comissioners to easily create their own decentralized apps:
+Lisk is commonly compared to other blockchain platforms Ethereum and Crypti, so it is important to note their differences[4].
+
+
+
+.I 4
+Komodo  is a cryptocurrency project that focuses on providing anonymity through zero knowledge proofs and security through a novel Delayed Proof of Work (dPoW) protocol. The Komodo Platform was forked from Zcash by the SuperNET team and it is the evolution of the BitcoinDark cryptocurrency[1]. 
+ICO start date: 2016-10-15
+Komodo is a new standard for cryptocurrency security and anonymity. Protected by Zcash Zero Knowledger proofs, users can make 100% untraceable transactions.
+The SuperNET team has also developed a hand full of individual tools that will stand together with Komodo to form a complete ecosystem with advanced functionalities like decentralized trading and mixing.
+Based on bitcoin dark and Zcash principles- A new mining algorithm, dPoW (delayed proof-of-work), uses bitcoin network hash power- Anonymous team, but the main developer is well-kinown in the community and has frequently worked with the Super.NET project.
+Komodo holders receive 5% annual percentage rate (APR) revenue. Every KMD holder will receive it, and it is indeed automatic as there are no settings to turn on, no modes to activate or no passwords to unlock. The 5% APR will remain until the max supply of 200M KMD is reached. Only T-address balances will get the APR.
+More information in the project whitepaper: https://komodoplatform.com/downloads/DEX_Whitepaper_v1.pdf
+The Komodo Platform relies on the technology developed by the Zcash team, Zero Knowledge Proofs. This technology allows the transactions within the Komodo blockchain to be 100% private or transparent according to the privacy requirements of each situation.
+When transactions are private, no one can see the amount, sender or recipient of the transaction on the blockchain, although miners can verify that it is correct and that no double-spending has taken place. When the transactions are transparent, they behave like a normal Bitcoin transaction. Anonymous transactions are important, not only to protect user privacy but also to ensure that all the coins remain fungible, which is one of the basic requisites for any currency[2].
+Komodo has a novel way of dealing with security. At its core, Komodo is a proof-of-work cryptocurrency with regular mining. But it also has a Delayed Proof of Work system, one that is able to "recycle" Bitcoin's hashrate to ensure Komodo's immutability.
+Through 64 pre-selected notary nodes that are voted on by the community, Komodo is able to notarize its blocks on the Bitcoin blockchain, ensuring that almost any attack attempt is mitigated since an attacker would also need to change the Bitcoin blockchain to tamper with Komodo[3].
+The block data from Komodo is introduced in Bitcoin via custom transactions made by the notary nodes that are connected to both blockchains. Any discrepancy on either blockchain will be detected by these nodes.
+This consensus mechanism can be used by basically any cryptocurrency that wishes to better its security system. Through Komodo itself, other blockchains can plug into Bitcoin, saving costs on the transaction fees (that are cheaper on Komodo).
+KMD market cap on 12 OCT 2017: $183,038,437
+KMD price on 12 OCT 2017: $1.81
+
+
+
+.I 5
+Steel is an alloy of iron and carbon and other elements. Because of its high tensile strength and low cost, it is a major component used in buildings, infrastructure, tools, ships, automobiles, machines, appliances, and weapons.
+Iron is the base metal of steel. Iron is able to take on two crystalline forms (allotropic forms), body centered cubic (BCC) and face centered cubic (FCC), depending on its temperature. In the body-centred cubic arrangement, there is an iron atom in the centre of each cube, and in the face-centred cubic, there is one at the center of each of the six faces of the cube. It is the interaction of the allotropes of iron with the alloying elements, primarily carbon, that gives steel and cast iron their range of unique properties.
+In pure iron, the crystal structure has relatively little resistance to the iron atoms slipping past one another, and so pure iron is quite ductile, or soft and easily formed. In steel, small amounts of carbon, other elements, and inclusions within the iron act as hardening agents that prevent the movement of dislocations that are common in the crystal lattices of iron atoms.
+The carbon in typical steel alloys may contribute up to 2.14% of its weight. Varying the amount of carbon and many other alloying elements, as well as controlling their chemical and physical makeup in the final steel (either as solute elements, or as precipitated phases), slows the movement of those dislocations that make pure iron ductile, and thus controls and enhances its qualities. These qualities include such things as the hardness, quenching behavior, need for annealing, tempering behavior, yield strength, and tensile strength of the resulting steel. The increase in steel's strength compared to pure iron is possible only by reducing iron's ductility.
+Steel was produced in bloomery furnaces for thousands of years, but its large-scale, industrial use began only after more efficient production methods were devised in the 17th century, with the production of blister steel and then crucible steel. With the invention of the Bessemer process in the mid-19th century, a new era of mass-produced steel began. This was followed by the Siemens-Martin process and then the Gilchrist-Thomas process that refined the quality of steel. With their introductions, mild steel replaced wrought iron.
+Further refinements in the process, such as basic oxygen steelmaking (BOS), largely replaced earlier methods by further lowering the cost of production and increasing the quality of the final product. Today, steel is one of the most common man-made materials in the world, with more than 1.6 billion tons produced annually. Modern steel is generally identified by various grades defined by assorted standards organizations.
+
+
+== Definitions and related materials ==
+The noun steel originates from the Proto-Germanic adjective stahliją or stakhlijan (made of steel), which is related to stahlaz or stahliją (standing firm).
+The carbon content of steel is between 0.002% and 2.14% by weight for plain iron–carbon alloys. These values vary depending on alloying elements such as manganese, chromium, nickel, iron, tungsten, carbon and so on. Basically, steel is an iron-carbon alloy that does not undergo eutectic reaction. In contrast, cast iron does undergo eutectic reaction. Too little carbon content leaves (pure) iron quite soft, ductile, and weak. Carbon contents higher than those of steel make a brittle alloy commonly called pig iron. While iron alloyed with carbon is called carbon steel, alloy steel is steel to which other alloying elements have been intentionally added to modify the characteristics of steel. Common alloying elements include: manganese, nickel, chromium, molybdenum, boron, titanium, vanadium, tungsten, cobalt, and niobium. Additional elements are also important in steel: phosphorus, sulfur, silicon, and traces of oxygen, nitrogen, and copper, that are most frequently considered undesirable.
+Plain carbon-iron alloys with a higher than 2.1% carbon content are known as cast iron. With modern steelmaking techniques such as powder metal forming, it is possible to make very high-carbon (and other alloy material) steels, but such are not common. Cast iron is not malleable even when hot, but it can be formed by casting as it has a lower melting point than steel and good castability properties. Certain compositions of cast iron, while retaining the economies of melting and casting, can be heat treated after casting to make malleable iron or ductile iron objects. Steel is distinguishable from wrought iron (now largely obsolete), which may contain a small amount of carbon but large amounts of slag.
+
+
+== Material properties ==
+
+Iron is commonly found in the Earth's crust in the form of an ore, usually an iron oxide, such as magnetite or hematite. Iron is extracted from iron ore by removing the oxygen through its combination with a preferred chemical partner such as carbon which is then lost to the atmosphere as carbon dioxide. This process, known as smelting, was first applied to metals with lower melting points, such as tin, which melts at about 250 °C (482 °F), and copper, which melts at about 1,100 °C (2,010 °F), and the combination, bronze, which has a melting point lower than 1,083 °C (1,981 °F). In comparison, cast iron melts at about 1,375 °C (2,507 °F). Small quantities of iron were smelted in ancient times, in the solid state, by heating the ore in a charcoal fire and then welding the clumps together with a hammer and in the process squeezing out the impurities. With care, the carbon content could be controlled by moving it around in the fire. Unlike copper and tin, liquid or solid iron dissolves carbon quite readily.
+All of these temperatures could be reached with ancient methods used since the Bronze Age. Since the oxidation rate of iron increases rapidly beyond 800 °C (1,470 °F), it is important that smelting take place in a low-oxygen environment. Smelting, using carbon to reduce iron oxides, results in an alloy (pig iron) that retains too much carbon to be called steel. The excess carbon and other impurities are removed in a subsequent step.
+Other materials are often added to the iron/carbon mixture to produce steel with desired properties. Nickel and manganese in steel add to its tensile strength and make the austenite form of the iron-carbon solution more stable, chromium increases hardness and melting temperature, and vanadium also increases hardness while making it less prone to metal fatigue.
+To inhibit corrosion, at least 11% chromium is added to steel so that a hard oxide forms on the metal surface; this is known as stainless steel. Tungsten slows the formation of cementite, keeping carbon in the iron matrix and allowing martensite to preferentially form at slower quench rates, resulting in high speed steel. On the other hand, sulfur, nitrogen, and phosphorus are considered contaminants that make steel more brittle and are removed from the steel melt during processing.
+The density of steel varies based on the alloying constituents but usually ranges between 7,750 and 8,050 kg/m3 (484 and 503 lb/cu ft), or 7.75 and 8.05 g/cm3 (4.48 and 4.65 oz/cu in).
+Even in a narrow range of concentrations of mixtures of carbon and iron that make a steel, a number of different metallurgical structures, with very different properties can form. Understanding such properties is essential to making quality steel. At room temperature, the most stable form of pure iron is the body-centered cubic (BCC) structure called alpha iron or α-iron. It is a fairly soft metal that can dissolve only a small concentration of carbon, no more than 0.005% at 0 °C (32 °F) and 0.021 wt% at 723 °C (1,333 °F). The inclusion of carbon in alpha iron is called ferrite. At 910 °C pure iron transforms into a face-centered cubic (FCC) structure, called gamma iron or γ-iron. The inclusion of carbon in gamma iron is called austenite. The more open FCC structure of austenite can dissolve considerably more carbon, as much as 2.1% (38 times that of ferrite) carbon at 1,148 °C (2,098 °F), which reflects the upper carbon content of steel, beyond which is cast iron. When carbon moves out of solution with iron it forms a very hard, but brittle material called cementite (Fe3C).
+When steels with exactly 0.8% carbon (known as a eutectoid steel), are cooled, the austenitic phase (FCC) of the mixture attempts to revert to the ferrite phase (BCC). The carbon no longer fits within the FCC austenite structure, resulting in an excess of carbon. One way for carbon to leave the austenite is for it to precipitate out of solution as cementite, leaving behind a surrounding phase of BCC iron called ferrite with a small percentage of carbon in solution. The two, ferrite and cementite, precipitate simultaneously producing a layered structure called pearlite, named for its resemblance to mother of pearl. In a hypereutectoid composition (greater than 0.8% carbon), the carbon will first precipitate out as large inclusions of cementite at the austenite grain boundaries until the percenage of carbon in the grains has decreased to the eutectoid composition (0.8% carbon), at which point the pearlite structure forms. For steels that have less than 0.8% carbon (hypoeutectoid), ferrite will first form within the grains until the remaining composition rises to 0.8% of carbon, at which point the pearlite structure will form. No large inclusions of cementite will form at the boundaries in hypoeuctoid steel. The above assumes that the cooling process is very slow, allowing enough time for the carbon to migrate.
+As the rate of cooling is increased the carbon will have less time to migrate to form carbide at the grain boundaries but will have increasingly large amounts of pearlite of a finer and finer structure within the grains; hence the carbide is more widely dispersed and acts to prevent slip of defects within those grains, resulting in hardening of the steel. At the very high cooling rates produced by quenching, the carbon has no time to migrate but is locked within the face-centered austenite and forms martensite. Martensite is a highly strained and stressed, supersaturated form of carbon and iron and is exceedingly hard but brittle. Depending on the carbon content, the martensitic phase takes different forms. Below 0.2% carbon, it takes on a ferrite BCC crystal form, but at higher carbon content it takes a body-centered tetragonal (BCT) structure. There is no thermal activation energy for the transformation from austenite to martensite. Moreover, there is no compositional change so the atoms generally retain their same neighbors.
+Martensite has a lower density (it expands during the cooling) than does austenite, so that the transformation between them results in a change of volume. In this case, expansion occurs. Internal stresses from this expansion generally take the form of compression on the crystals of martensite and tension on the remaining ferrite, with a fair amount of shear on both constituents. If quenching is done improperly, the internal stresses can cause a part to shatter as it cools. At the very least, they cause internal work hardening and other microscopic imperfections. It is common for quench cracks to form when steel is water quenched, although they may not always be visible.
+
+
+=== Heat treatment ===
+
+There are many types of heat treating processes available to steel. The most common are annealing, quenching, and tempering. Heat treatment is effective on compositions above the eutectoid composition (hypereutectoid) of 0.8% carbon. Hypoeutectoid steel does not benefit from heat treatment.
+Annealing is the process of heating the steel to a sufficiently high temperature to relieve local internal stresses. It does not create a general softening of the product but only locally relieves strains and stresses locked up within the material. Annealing goes through three phases: recovery, recrystallization, and grain growth. The temperature required to anneal a particular steel depends on the type of annealing to be achieved and the alloying constituents.
+Quenching involves heating the steel to create the austenite phase then quenching it in water or oil. This rapid cooling results in a hard but brittle martensitic structure. The steel is then tempered, which is just a specialized type of annealing, to reduce brittleness. In this application the annealing (tempering) process transforms some of the martensite into cementite, or spheroidite and hence it reduces the internal stresses and defects. The result is a more ductile and fracture-resistant steel.
+
+
+== Steel production ==
+
+When iron is smelted from its ore, it contains more carbon than is desirable. To become steel, it must be reprocessed to reduce the carbon to the correct amount, at which point other elements can be added. In the past, steel facilities would cast the raw steel product into ingots which would be stored until use in further refinement processes that resulted in the finished product. In modern facilities, the initial product is close to the final composition and is continuously cast into long slabs, cut and shaped into bars and extrusions and heat treated to produce a final product. Today only a small fraction is cast into ingots. Approximately 96% of steel is continuously cast, while only 4% is produced as ingots.
+The ingots are then heated in a soaking pit and hot rolled into slabs, billets, or blooms. Slabs are hot or cold rolled into sheet metal or plates. Billets are hot or cold rolled into bars, rods, and wire. Blooms are hot or cold rolled into structural steel, such as I-beams and rails. In modern steel mills these processes often occur in one assembly line, with ore coming in and finished steel products coming out. Sometimes after a steel's final rolling it is heat treated for strength, however this is relatively rare.
+
+
+== History of steelmaking ==
+
+
+=== Ancient steel ===
+Steel was known in antiquity and was produced in bloomeries and crucibles.
+The earliest known production of steel is seen in pieces of ironware excavated from an archaeological site in Anatolia (Kaman-Kalehoyuk) and are nearly 4,000 years old, dating from 1800 BC. Horace identifies steel weapons such as the falcata in the Iberian Peninsula, while Noric steel was used by the Roman military.
+The reputation of Seric iron of South India (wootz steel) grew considerably in the rest of the world. Metal production sites in Sri Lanka employed wind furnaces driven by the monsoon winds, capable of producing high-carbon steel. Large-scale Wootz steel production in Tamilakam using crucibles and carbon sources such as the plant Avāram occurred by the sixth century BC, the pioneering precursor to modern steel production and metallurgy.
+The Chinese of the Warring States period (403–221 BC) had quench-hardened steel, while Chinese of the Han dynasty (202 BC – 220 AD) created steel by melting together wrought iron with cast iron, gaining an ultimate product of a carbon-intermediate steel by the 1st century AD.
+
+
+=== Wootz steel and Damascus steel ===
+
+Evidence of the earliest production of high carbon steel in the Indian Subcontinent are found in Kodumanal in Tamil Nadu area, Golconda in Andhra Pradesh area and Karnataka, and in Samanalawewa areas of Sri Lanka. This came to be known as Wootz steel, produced in South India by about sixth century BC and exported globally. The steel technology existed prior to 326 BC in the region as they are mentioned in literature of Sangam Tamil, Arabic and Latin as the finest steel in the world exported to the Romans, Egyptian, Chinese and Arab worlds at that time – what they called Seric Iron. A 200 BC Tamil trade guild in Tissamaharama, in the South East of Sri Lanka, brought with them some of the oldest iron and steel artifacts and production processes to the island from the classical period. The Chinese and locals in Anuradhapura, Sri Lanka had also adopted the production methods of creating Wootz steel from the Chera Dynasty Tamils of South India by the 5th century AD. In Sri Lanka, this early steel-making method employed a unique wind furnace, driven by the monsoon winds, capable of producing high-carbon steel. Since the technology was acquired from the Tamilians from South India, the origin of steel technology in India can be conservatively estimated at 400–500 BC.
+The manufacture of what came to be called Wootz, or Damascus steel, famous for its durability and ability to hold an edge, may have been taken by the Arabs from Persia, who took it from India. It was originally created from a number of different materials including various trace elements, apparently ultimately from the writings of Zosimos of Panopolis. In 327 BCE, Alexander the Great was rewarded by the defeated King Porus, not with gold or silver but with 30 pounds of steel. Recent studies have suggested that carbon nanotubes were included in its structure, which might explain some of its legendary qualities, though given the technology of that time, such qualities were produced by chance rather than by design. Natural wind was used where the soil containing iron was heated by the use of wood. The ancient Sinhalese managed to extract a ton of steel for every 2 tons of soil, a remarkable feat at the time. One such furnace was found in Samanalawewa and archaeologists were able to produce steel as the ancients did.
+Crucible steel, formed by slowly heating and cooling pure iron and carbon (typically in the form of charcoal) in a crucible, was produced in Merv by the 9th to 10th century AD. In the 11th century, there is evidence of the production of steel in Song China using two techniques: a "berganesque" method that produced inferior, inhomogeneous, steel, and a precursor to the modern Bessemer process that used partial decarbonization via repeated forging under a cold blast.
+
+
+=== Modern steelmaking ===
+
+Since the 17th century, the first step in European steel production has been the smelting of iron ore into pig iron in a blast furnace. Originally employing charcoal, modern methods use coke, which has proven more economical.
+
+
+==== Processes starting from bar iron ====
+
+In these processes pig iron was refined (fined) in a finery forge to produce bar iron, which was then used in steel-making.
+The production of steel by the cementation process was described in a treatise published in Prague in 1574 and was in use in Nuremberg from 1601. A similar process for case hardening armour and files was described in a book published in Naples in 1589. The process was introduced to England in about 1614 and used to produce such steel by Sir Basil Brooke at Coalbrookdale during the 1610s.
+The raw material for this process were bars of iron. During the 17th century it was realized that the best steel came from oregrounds iron of a region north of Stockholm, Sweden. This was still the usual raw material source in the 19th century, almost as long as the process was used.
+Crucible steel is steel that has been melted in a crucible rather than having been forged, with the result that it is more homogeneous. Most previous furnaces could not reach high enough temperatures to melt the steel. The early modern crucible steel industry resulted from the invention of Benjamin Huntsman in the 1740s. Blister steel (made as above) was melted in a crucible or in a furnace, and cast (usually) into ingots.
+
+
+==== Processes starting from pig iron ====
+
+The modern era in steelmaking began with the introduction of Henry Bessemer's Bessemer process in 1855, the raw material for which was pig iron. His method let him produce steel in large quantities cheaply, thus mild steel came to be used for most purposes for which wrought iron was formerly used. The Gilchrist-Thomas process (or basic Bessemer process) was an improvement to the Bessemer process, made by lining the converter with a basic material to remove phosphorus.
+Another 19th-century steelmaking process was the Siemens-Martin process, which complemented the Bessemer process. It consisted of co-melting bar iron (or steel scrap) with pig iron.
+These methods of steel production were rendered obsolete by the Linz-Donawitz process of basic oxygen steelmaking (BOS), developed in the 1950s, and other oxygen steel making methods. Basic oxygen steelmaking is superior to previous steelmaking methods because the oxygen pumped into the furnace limited impurities, primarily nitrogen, that previously had entered from the air used. Today, electric arc furnaces (EAF) are a common method of reprocessing scrap metal to create new steel. They can also be used for converting pig iron to steel, but they use a lot of electrical energy (about 440 kWh per metric ton), and are thus generally only economical when there is a plentiful supply of cheap electricity.
+
+
+== Steel industry ==
+
+The steel industry is often considered an indicator of economic progress, because of the critical role played by steel in infrastructural and overall economic development. In 1980, there were more than 500,000 U.S. steelworkers. By 2000, the number of steelworkers fell to 224,000.
+The economic boom in China and India caused a massive increase in the demand for steel. Between 2000 and 2005, world steel demand increased by 6%. Since 2000, several Indian and Chinese steel firms have risen to prominence, such as Tata Steel (which bought Corus Group in 2007), Baosteel Group and Shagang Group. ArcelorMittal is however the world's largest steel producer. In 2005, the British Geological Survey stated China was the top steel producer with about one-third of the world share; Japan, Russia, and the US followed respectively.
+In 2008, steel began trading as a commodity on the London Metal Exchange. At the end of 2008, the steel industry faced a sharp downturn that led to many cut-backs.
+
+
+== Recycling ==
+
+Steel is one of the world's most-recycled materials, with a recycling rate of over 60% globally; in the United States alone, over 82,000,000 metric tons (81,000,000 long tons) were recycled in the year 2008, for an overall recycling rate of 83%.
+
+
+== Contemporary steel ==
+
+
+=== Carbon steels ===
+Modern steels are made with varying combinations of alloy metals to fulfill many purposes. Carbon steel, composed simply of iron and carbon, accounts for 90% of steel production. Low alloy steel is alloyed with other elements, usually molybdenum, manganese, chromium, or nickel, in amounts of up to 10% by weight to improve the hardenability of thick sections. High strength low alloy steel has small additions (usually < 2% by weight) of other elements, typically 1.5% manganese, to provide additional strength for a modest price increase.
+Recent Corporate Average Fuel Economy (CAFE) regulations have given rise to a new variety of steel known as Advanced High Strength Steel (AHSS). This material is both strong and ductile so that vehicle structures can maintain their current safety levels while using less material. There are several commercially available grades of AHSS, such as dual-phase steel, which is heat treated to contain both a ferritic and martensitic microstructure to produce a formable, high strength steel. Transformation Induced Plasticity (TRIP) steel involves special alloying and heat treatments to stabilize amounts of austenite at room temperature in normally austenite-free low-alloy ferritic steels. By applying strain, the austenite undergoes a phase transition to martensite without the addition of heat. Twinning Induced Plasticity (TWIP) steel uses a specific type of strain to increase the effectiveness of work hardening on the alloy.
+Carbon Steels are often galvanized, through hot-dip or electroplating in zinc for protection against rust.
+
+
+=== Alloy steels ===
+Stainless steels contain a minimum of 11% chromium, often combined with nickel, to resist corrosion. Some stainless steels, such as the ferritic stainless steels are magnetic, while others, such as the austenitic, are nonmagnetic. Corrosion-resistant steels are abbreviated as CRES.
+Some more modern steels include tool steels, which are alloyed with large amounts of tungsten and cobalt or other elements to maximize solution hardening. This also allows the use of precipitation hardening and improves the alloy's temperature resistance. Tool steel is generally used in axes, drills, and other devices that need a sharp, long-lasting cutting edge. Other special-purpose alloys include weathering steels such as Cor-ten, which weather by acquiring a stable, rusted surface, and so can be used un-painted. Maraging steel is alloyed with nickel and other elements, but unlike most steel contains little carbon (0.01%). This creates a very strong but still malleable steel.
+Eglin steel uses a combination of over a dozen different elements in varying amounts to create a relatively low-cost steel for use in bunker buster weapons. Hadfield steel (after Sir Robert Hadfield) or manganese steel contains 12–14% manganese which when abraded strain-hardens to form an incredibly hard skin which resists wearing. Examples include tank tracks, bulldozer blade edges and cutting blades on the jaws of life.
+In 2016, a breakthrough in creating a strong light aluminium steel alloy which might be suitable in applications such as aircraft was announced by researchers at Pohang University of Science and Technology. Adding small amounts of nickel was found to result in precipitation as nano particles of brittle B2 intermetallic compounds which had previously resulted in weakness. The result was a cheap strong light steel alloy—nearly as strong as titanium at 10% of the cost—which is slated for trial production at industrial scale by POSCO, a Korean steelmaker.
+
+
+=== Standards ===
+Most of the more commonly used steel alloys are categorized into various grades by standards organizations. For example, the Society of Automotive Engineers has a series of grades defining many types of steel. The American Society for Testing and Materials has a separate set of standards, which define alloys such as A36 steel, the most commonly used structural steel in the United States. The JIS also define series of steel grades that are being used extensively in Japan as well as in third world countries.
+
+
+== Uses ==
+
+Iron and steel are used widely in the construction of roads, railways, other infrastructure, appliances, and buildings. Most large modern structures, such as stadiums and skyscrapers, bridges, and airports, are supported by a steel skeleton. Even those with a concrete structure employ steel for reinforcing. In addition, it sees widespread use in major appliances and cars. Despite growth in usage of aluminium, it is still the main material for car bodies. Steel is used in a variety of other construction materials, such as bolts, nails, and screws and other household products and cooking utensils.
+Other common applications include shipbuilding, pipelines, mining, offshore construction, aerospace, white goods (e.g. washing machines), heavy equipment such as bulldozers, office furniture, steel wool, tools, and armour in the form of personal vests or vehicle armour (better known as rolled homogeneous armour in this role).
+
+
+=== Historical ===
+
+Before the introduction of the Bessemer process and other modern production techniques, steel was expensive and was only used where no cheaper alternative existed, particularly for the cutting edge of knives, razors, swords, and other items where a hard, sharp edge was needed. It was also used for springs, including those used in clocks and watches.
+With the advent of speedier and thriftier production methods, steel has become easier to obtain and much cheaper. It has replaced wrought iron for a multitude of purposes. However, the availability of plastics in the latter part of the 20th century allowed these materials to replace steel in some applications due to their lower fabrication cost and weight. Carbon fiber is replacing steel in some cost insensitive applications such as aircraft, sports equipment and high end automobiles.
+
+
+=== Long steel ===
+
+As reinforcing bars and mesh in reinforced concrete
+Railroad tracks
+Structural steel in modern buildings and bridges
+Wires
+Input to reforging applications
+
+
+=== Flat carbon steel ===
+Major appliances
+Magnetic cores
+The inside and outside body of automobiles, trains, and ships.
+
+
+=== Weathering steel (COR-TEN) ===
+
+Intermodal containers
+Outdoor sculptures
+Architecture
+Highliner train cars
+
+
+=== Stainless steel ===
+
+Cutlery
+Rulers
+Surgical instruments
+Watches
+Guns
+Rail passenger vehicles
+Tablets
+Trash Cans
+Body piercing jewellery
+
+
+=== Low-background steel ===
+
+Steel manufactured after World War II became contaminated with radionuclides by nuclear weapons testing. Low-background steel, steel manufactured prior to 1945, is used for certain radiation-sensitive applications such as Geiger counters and radiation shielding.
+
+
+== See also ==
+
+
+== References ==
+
+
+=== Bibliography ===
+Ashby, Michael F.; Jones, David Rayner Hunkin (1992). An introduction to microstructures, processing and design. Butterworth-Heinemann. 
+Degarmo, E. Paul; Black, J T.; Kohser, Ronald A. (2003). Materials and Processes in Manufacturing (9th ed.). Wiley. ISBN 0-471-65653-4. 
+Verein Deutscher Eisenhüttenleute (Ed.). Steel – A Handbook for Materials Research and Engineering, Volume 1: Fundamentals. Springer-Verlag Berlin, Heidelberg and Verlag Stahleisen, Düsseldorf 1992, 737 p. ISBN 3-540-52968-3, ISBN 3-514-00377-7.
+Verein Deutscher Eisenhüttenleute (Ed.). Steel – A Handbook for Materials Research and Engineering, Volume 2: Applications. Springer-Verlag Berlin, Heidelberg and Verlag Stahleisen, Düsseldorf 1993, 839 pages, ISBN 3-540-54075-X, ISBN 3-514-00378-5.
+Smith, William F.; Hashemi, Javad (2006). Foundations of Materials Science and Engineering (4th ed.). McGraw-Hill. ISBN 0-07-295358-6. 
+
+
+== Further reading ==
+Mark Reutter, Making Steel: Sparrows Point and the Rise and Ruin of American Industrial Might (2005).   Discussion with Mark Reutter, part 1 of 3 (February 2015), part 2 of 3 (February 2015), part 3 of 3 (March 2015), The Real News
+Duncan Burn, The Economic History of Steelmaking, 1867–1939: A Study in Competition. Cambridge University Press, 1961.
+Harukiyu Hasegawa, The Steel Industry in Japan: A Comparison with Britain. 1996.
+J. C. Carr and W. Taplin, History of the British Steel Industry. Harvard University Press, 1962.
+H. Lee Scamehorn, Mill & Mine: The Cf&I in the Twentieth Century. University of Nebraska Press, 1992.
+Warren, Kenneth, Big Steel: The First Century of the United States Steel Corporation, 1901–2001. University of Pittsburgh Press, 2001.
+
+
+== External links ==
+Official website of the World Steel Association (worldsteel)
+steeluniversity.org: Online steel education resources, an initiative of World Steel Association
+
+Metallurgy for the Non-Metallurgist from the American Society for Metals
+MATDAT Database of Properties of Unalloyed, Low-Alloy and High-Alloy Steels – obtained from published results of material testing
+.I 5
+Basic Attention Token is an open-source, decentralized digital advertising platform based on Ethereum, founded by web pioneer Brendan Eich.
+Basic Attention Token (BAT) held an initial coin offering (ICO) on May 31, 2017 for its eponymous ERC20 utility token, raising approximately $35M USD at the time in less than 30 seconds. The BAT token is designed to correctly value and price user attention within the platform.
+
+
+== Advertising platform ==
+The Basic Attention Token digital advertising platform is comprised of various components, including a digital advertising exchange, attention measurement systems, analytics dashboards and machine learning algorithms. Integration of BAT into a given host application involves implementing BAT Ads, a system that matches and displays ads to users based on locally stored data. Ad targeting is performed wholly on-device, removing the need for third-party tracking.
+
+
+=== Use of Ethereum-based token ===
+Basic Attention Token's eponymous Ethereum-based utility token, designed to monetize human attention with a pay to surf business model, serves as the unit of account within the platform:
+Advertisers purchase advertising space and user attention on the platform with BAT tokens;
+Publishers receive user contributions and advertising revenue in the form of BAT tokens;
+Users will be paid in BAT for viewing BAT ads.
+As a cryptocurrency, tokens may be used to redeem rewards and services with participating merchants in the BAT ecosystem, or withdrawn from the platform and exchanged for other currencies.
+
+
+== ERC20 token ==
+The total fixed supply of the token (1,500,000,000 BAT) was generated during the token's initial coin offering on May 31, 2017. One third of the total was initially retained by the BAT team as part of developer and user growth pools, the latter of which is used to promote adoption of the platform.
+
+
+=== Smart contract address ===
+As an ERC20 token, BAT is deployed as a smart contract on the Ethereum blockchain at address 0x0d8775f648430679a709e98d2b0cb6250d2887ef.
+
+
+=== User growth pool disbursements ===
+In early December 2017, the development team disbursed the first round of its user growth pool grants. A total of 300,000 BAT was distributed to new users of the Brave web browser's Brave Payments program on a first come first served basis.
+In mid January 2018, the team issued $1 million (USD) worth of BAT tokens to users in a promotional giveaway. All grants were claimed within ten days.
+In mid February 2018, the company launched a $1 million dollar (USD) referral program wherein publishers who succeeded in bringing on new users to the Brave browser who were active for at least thirty days would be rewarded with $5 USD worth of BAT tokens per user.
+On March 1, 2018, the company expanded Brave Payments support to streamers on the Twitch.tv platform while simultaneously increasing referral program grants by $1 million (USD) worth of BAT.
+
+
+== Integration with Brave ==
+Elements of the Basic Attention Token platform have been integrated into the Brave web browser as part of its Brave Payments program. Brave Payments, which formerly used Bitcoin, allows users to tip websites and content creators (like YouTubers and Twitch streamers) with BAT tokens, akin to patronage services like Patreon.
+Notable publishers who accept BAT tokens include the Washington Post, The Guardian, Vimeo, MarketWatch, Barron's, and Vice.
+In a future update, Brave will implement BAT Ads, a program designed to pay users in the platform's cryptocurrency (BAT) for viewing advertisements as compensation for their attention.
+Although the Brave web browser is co-developed with Basic Attention Token by Brave Software, the two remain distinct projects. BAT is not limited to the Brave web browser and may be integrated into other web browsers and applications.
+
+
+== Team ==
+Notable developers on the Basic Attention Token team at Brave Software include:
+Brendan Eich, inventor of the Javascript programming language, co-founder of Mozilla and Firefox.
+Yan Zhu, Forbes 30 under 30, Technologist Fellow at the Electronic Frontier Foundation and open web standards author for the W3C.
+Marshall Rose, inventor of the Simple Network Management Protocol (SNMP) and Internet Engineering Task Force (IETF) contributor.
+
+
+== Funding ==
+In addition to proceeds from the initial coin offering totalling 156,250 Ether, BAT and Brave Software have received at least $7 million USD in angel investments from venture capital firms such as Peter Thiel's Founders Fund, Propel Venture Partners, Pantera Capital, Foundation Capital, Digital Currency Group, among others.
+
+
+== References ==
+.I 5
+Binance is an international multi-language cryptocurrency exchange. The service raised 15 million dollars in a July 2017 Initial Coin Offering for its ERC20 BNB token. CEO Changpeng Zhao had previously founded Fusion Systems in 2005 in Shanghai; the company built high-frequency trading systems for brokers. In 2013 he joined Blockchain.info as the third member of the cryptocurrency wallet’s team. He also worked at OKCoin as CTO for less than a year, a platform for spot trading between fiat and digital assets. The other founder, Yi He, had also worked at OKCoin as head of branding and marketing head of the virtual currency exchange OKCoin; she had also worked at Yixia Tech.
+Users on the Binance Exchange can receive a 50% discount on trading fees by paying with the BNB token. Since the Binance ICO, a number of new exchanges have adopted the ICO model, issuing their own tokens
+The company was founded in China but moved its servers and headquarters out of China and into Japan in advance of the Chinese government ban on cryptocurrency trading in September 2017. By March 2018 the company had established offices in Taiwan.
+As of January 2018 it was largest crypto-exchange with a BNB market capitalization of $1.3 billion.
+In March 2018, Binance had announced its intentions to open an office in Malta after stricter regulations in Japan and China.
+
+
+== References ==
+
+
+== External links ==
+Official website
+.I 5
+
+TRON is a blockchain-based, descentralized protocol project that aims to be a content distribution platform for the digital entertainment industry [1]. As of April 2018, the public chain test network is online; the main network is not yet live. The countdown for the main network is available here.
+Tron Foundation was established in September 2017 by current CEO Justin Sun. The TRON landingpage describes the aim of the protocol as the construction of a global and free entertainment content ecosystem, in which creators have the power to freely publish, store, and own their content, interacting directly with consumers thanks to the decentralized issuance, circulation, and trading of digital assets [2].
+Tron ICO was in September 2017 that managed to raise $70 million. The platform's native token is the Tronix (TRX). The coin has been trading since September 2017 and reached its highest market TRX price at $0.30 on January 5th 2018. Its maximum market cap was $19.7 billion on January 5th 2018.[3] It has fluctuated between 1.5 billion and 3.5 billion between February and April 2018. Updated numbers available at CoinMarketCap.com
+Tron faced criticism for plagiarism in early 2018, because their whitepaper features open source code from Filecoin and IFPS whitepapers with no citation.[4][5] [6] [1] Justin Sun has since responded that this was just a mistake made by volunteer translators.[7]
+Tron code is available at GitHub.
+Tron is designed to ultimately make entertainment content both easier to sell and cheaper to consume. In theory this goal is achieved by putting the content on a blockchain and the creators and consumers in a network of peers, eliminating the middleman. [8]
+TRON network has built a set of consensus mechanisms, which can use minimum cost to solve identification and personal credit issues in online transactions. It also uses point-to-point transactions to avoid traditional centralized settlement structure. TRON network can play the host role between users and developers, to ensure authenticity and compliance of info credit. [9]
+As explained in their website, the Tron Protocol offers "scalable, high-availability and high-throughput support that underlies all the decentralized applications in the TRON ecosystem". The network incentivizes users to build their own decentralized entertainment applications (Dapps).[10].
+The Tron network's native token is the Tronix (TRX). One can purchase Tronix on exchanges like Liqui and Binance by exchanging them for other cryptocurrencies like ETH or BTC. Purchase with fiat currencies is not possible at present. It can be stored on wallets that support the Ethereum blockchain like MyEtherWallet[11]. Actually, there is no official Tron wallets.
+Tronix can be used by content consumers to pay for the content they want to access on the Tron network. These coins would then go to the content producers’ accounts, where they can be exchanged to other cryptocurrencies, or used to pay for blockchain services.
+In February 2018, TRX was ranked 15th on the list of largest cryptocurrencies by market capitalization. (See also, Tron Surges: Ethereum Tops $1,000 As Bitcoin Price Falls.)
+TRON TRX reached its highest market price at $0.30 on January 5th 2018. Tron's market cap peaked at $19.7 billion on the same date. It has fluctuated between 1.5 billion and 3.5 billion between February and April 2018. Updated numbers available at CoinMarketCap.com
+The Tron road map is divided into six stages, each with its own name.
+The digital entertainment market is estimated at about 1 trillion U.S. dollars, of which most part is occupied with online games like casino. The TRON platform can be compared in terms of volumes with such a company as Ali Baba, which is a world leader in the field of Internet Commerce. Since most of the TRON investors are from China, there is no doubt that this platform will get a lot of popularity there. According to our forecasts in 2018, the cryptocurrency TRX will be able to reach a price of 10 cents per coin, so take a look at it.
+The whitepaper for TRON appeared in English, Spanish and Russian translations in early January 2018. The document stated as foundational beliefs that the internet is not the free, descentralized territory it used to be, and that users should have a right to own and control their own data and to disclose information freely and voluntarily [14].
+The whitepaper was widely accused of plagiarizing Filecoin and IFPS whitepapers. [4][5] [6] Vitalik Buterin, creator of Ethereum, pointed out the whitepaper's plagiarism on Twitter on April 6th 2018.
+Justin Sun attributed the lack of citation to translation issues, saying "Our original version of the whitepaper is in Chinese and we have a very detailed reference to the latest Chinese version. The English, Korea, Japanese and Spanish versions are translated by the volunteers. The translation missed numerous important details not just reference"[7] The latests Tron coin news are available on the special resources.
+
+
+
+.I 5
+
+
+
+Dentacoin is the first Blockchain concept designed for the Global Dental Industry. The Dentacoin ERC20 token is configured to be used globally by all individuals. Dentacoin aims at improving dental care worldwide and making it affordable through crowd power. Numerous Blockchain-based tools will be developed and implemented.
+Project website Dentacoin (DCN)
+Dentacoin ICO start date: 2017-10-01
+Dentacoin (DCN) is a new Ethereum-based token, customized for the Global Dental Industry. The value that it brings to the community can be shown by the current usage of the coin. It has already been implemented as in partner clinics and results after the first test phase are out.
+More information in the project whitepaper: [1]
+DCN market cap on 12 OCT 2017: $42,891,313     
+DCN price on 12 OCT 2017: $0.000142
+Twitter
+Slack
+Facebook
+Blog
+Project website
+Tokenmarket
+
+
+

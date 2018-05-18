@@ -3,6 +3,7 @@ from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
 import re
+import wikipedia
 import urllib3
 urllib3.disable_warnings()
 
@@ -50,6 +51,7 @@ def log_error(e):
     """
     print(e)
 
+# 100 cryptocurrency data for similarity
 output_file=open("myfile.txt", "w")
 raw_html = simple_get('https://coinmarketcap.com/') # main page
 html = BeautifulSoup(raw_html, 'html.parser')
@@ -59,7 +61,7 @@ for each_div in html.findAll("a", {"class": "currency-name-container"}):
         new_html = BeautifulSoup(simple_get(new_href), 'html.parser') # open the cryptocurrency website
         for element in new_html.findAll("a", text="Website"):
             website = element['href']
-            if(simple_get(website) != None):
+            if(simple_get(website) != None):     # official website
                 output_file.write("\n")
                 output_file.write(".I ")
                 output_file.write(each_div.text) # cryptocurrency name
@@ -70,3 +72,114 @@ for each_div in html.findAll("a", {"class": "currency-name-container"}):
                     ipath = para.text
                     if(len(re.findall(r'[\u4e00-\u9fff]+', ipath)) == 0): # check Chinese character
                         output_file.write(para.text)
+    wiki = "https://en.bitcoinwiki.org/wiki/" + each_div.text     # bitcoin wiki
+    if(simple_get(wiki) != None):
+        wiki_html = BeautifulSoup(simple_get(wiki), 'html.parser')
+        for para in wiki_html.findAll("p"): # for each p tag
+            output_file.write(para.text)
+            sprint(para.text)
+
+"""
+# Training data for Bayesian model
+training=open("training.txt", "w")
+currency = ["Litecoin", "Bitcoin_Cash", "Monero"]
+store = ["Bitcoin", "DigixDAO", "Tether", "NuBits"]
+protocol = ["RChain", "ZCash"]
+service = ["Simple token", "Waves platform"]
+utility = ["Steem", "Basic Attention Token","Binance Coin"]
+
+for cur in currency:
+    training.write(".I ")
+    training.write("1")
+    training.write("\n")
+    content = wikipedia.page(cur).content;
+    training.write(content)
+    training.write("\n")
+    print(content)
+
+url=["https://en.bitcoinwiki.org/wiki/Nano", "https://en.wikipedia.org/wiki/Dash_(cryptocurrency)"]
+for u in url:
+    web = BeautifulSoup(simple_get(u), 'html.parser')
+    training.write(".I ")
+    training.write("1")
+    training.write("\n")
+    for para in web.findAll("p"):
+        training.write(para.text)
+    training.write("\n")
+
+
+for str in store:
+    training.write(".I ")
+    training.write("2")
+    training.write("\n")
+    content = wikipedia.page(str).content;
+    training.write(content)
+    print(content)
+    training.write("\n")
+
+url=["https://en.bitcoinwiki.org/wiki/DigixDAO"]
+for u in url:
+    web = BeautifulSoup(simple_get(u), 'html.parser')
+    training.write(".I ")
+    training.write("2")
+    training.write("\n")
+    for para in web.findAll("p"):
+        training.write(para.text)
+    training.write("\n")
+
+for pro in currency:
+    training.write(".I ")
+    training.write("3")
+    training.write("\n")
+    content = wikipedia.page(pro).content;
+    training.write(content)
+    training.write("\n")
+
+url=["https://en.bitcoinwiki.org/wiki/Ark", "https://en.bitcoinwiki.org/wiki/Zilliqa"]
+for u in url:
+    web = BeautifulSoup(simple_get(u), 'html.parser')
+    training.write(".I ")
+    training.write("3")
+    training.write("\n")
+    for para in web.findAll("p"):
+        training.write(para.text)
+    training.write("\n")
+
+for ser in service:
+    training.write(".I ")
+    training.write("4")
+    training.write("\n")
+    content = wikipedia.page(ser).content;
+    training.write(content)
+    training.write('\n')
+
+
+url=["https://en.bitcoinwiki.org/wiki/Lisk", "https://en.bitcoinwiki.org/wiki/Komodo"]
+for u in url:
+    web = BeautifulSoup(simple_get(u), 'html.parser')
+    training.write(".I ")
+    training.write("4")
+    training.write("\n")
+    for para in web.findAll("p"):
+        training.write(para.text)
+    training.write("\n")
+
+
+for ut in utility:
+    training.write(".I ")
+    training.write("5")
+    training.write("\n")
+    content = wikipedia.page(ut).content;
+    training.write(content)
+    training.write("\n")
+
+url=["https://en.bitcoinwiki.org/wiki/TRON", "https://en.bitcoinwiki.org/wiki/Dentacoin"]
+for u in url:
+    web = BeautifulSoup(simple_get(u), 'html.parser')
+    training.write(".I ")
+    training.write("5")
+    training.write("\n")
+    for para in web.findAll("p"):
+        training.write(para.text)
+    training.write("\n")
+"""
