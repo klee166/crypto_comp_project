@@ -20,3 +20,5 @@ $ pip install
 2. tokenizer.py: use nltk.tokenize package to tokenize the content of myfile.txt; write to myfile.raw.
 
 3. stemmer.py: use nltk.tokenize package to tokenize the content of myfile.txt first and then use nltk Porter Stemmers to stem each token; write to myfile.stemmed.
+
+4. similarity.py: Outputs pairwise cosine similarity in a matrix form and uses (k-mean clustering and agglomerative clustering to separate these data into different clusters
