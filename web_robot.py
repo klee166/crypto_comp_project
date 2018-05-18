@@ -77,7 +77,7 @@ for each_div in html.findAll("a", {"class": "currency-name-container"}):
         wiki_html = BeautifulSoup(simple_get(wiki), 'html.parser')
         for para in wiki_html.findAll("p"): # for each p tag
             output_file.write(para.text)
-            sprint(para.text)
+            print(para.text)
 
 """
 # Training data for Bayesian model

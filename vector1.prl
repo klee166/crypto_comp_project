@@ -30,16 +30,14 @@ use FileHandle;
 ## Program Defaults and Global Variables
 ############################################################
 
-##my $DIR  = "/home/1/yarowsky/cs466/hw2";
-# changed directory so that it can run on my local machine
 my $DIR = ".";
 my $HOME = ".";
 
-my $token_docs = "$DIR/myfile";           # tokenized cacm journals
-my $corps_freq = "$DIR/myfile";           # frequency of each token in the journ.
+my $token_docs = "$DIR/myfile";           # tokenized cryptocurrencies docs
+my $corps_freq = "$DIR/myfile";           # frequency of each token in the docs
 my $stoplist   = "$DIR/common_words";   # common uninteresting words
 my $crypto_words = "$DIR/key_words";        # words most relevant in the field of cryptocurrency
-
+# my $train_docs = "$DIR/training"         # tokenized cryptocurrency docs for training
 
 # @doc_vector
 #
@@ -48,6 +46,12 @@ my $crypto_words = "$DIR/key_words";        # words most relevant in the field o
 
 my @doc_vector = ( );
 
+# @train_vector
+#
+#   An array of hashes, each array index indicating a particular training document's
+#   weight "vector".
+
+# my @train_vector = ( );
 
 # %docs_freq_hash
 #
@@ -249,7 +253,7 @@ sub init_doc_vectors {
 
     push @doc_vector, { };     # push one empty value onto @doc_vector so that
                                # indices correspond with document numbers
-    push @titles_vector, "";  
+    push @titles_vector, "";
 
     while (defined( $word = <$token_docs_fh> )) {
 
@@ -291,22 +295,22 @@ sub init_doc_vectors {
 
     	foreach my $hash (@doc_vector) {
     	  	foreach my $key (keys %{ $hash }) {
-               
+
     	         #  $hash->{ $key } = $hash->{ $key } * log( $doc_num / $docs_freq_hash{ $key });
-                
+
                 if (exists $crypto_hash{ lc ($key) }) {
                     $hash->{ $key } = $hash->{ $key } + 3;
              #       print($key, "->", $hash->{ $key }, "\n");
-                } 
-                
+                }
+
              #       $hash->{ $key } = 1;
            #  print($key, "->", $hash->{ $key }, "\n");
             }
 
-                 
+
     	}
-            
-   		
+
+
 
 
     return $doc_num;
@@ -362,7 +366,8 @@ sub main_loop {
 	OPTIONS:
 	  1 = Find the similarity between two cryptocurrencies
 	  2 = Find cryptocurrencies most similar to a given one
-	  3 = Quit
+	  3 = Find the best cryptocurrency for each clustering
+	  4 = Quit
 
 	============================================================
 
@@ -374,7 +379,7 @@ EndOfMenu
 	my    $option = <STDIN>;
 	chomp $option;
 
-	exit 0 if $option == 3;
+	exit 0 if $option == 4;
 
 	&do_full_cosine_similarity and next if $option == 1;
     &get_and_show_retrieved_set and next if $option == 2;
@@ -386,10 +391,10 @@ EndOfMenu
 
 ##########################################################
 ## GET_AND_SHOW_RETRIEVED_SET
-##   
+##
 ##  This function requests key retrieval parameters,
 ##  including:
-##  
+##
 ##  A) Is a query vector or document vector being used
 ##     as the retrieval seed? Both are vector representations
 ##     but they are stored in different data structures,
@@ -408,7 +413,7 @@ EndOfMenu
 ##
 ##  Perl note: one reads a line from a file <FILE> or <STDIN>
 ##             by the assignment $string=<STDIN>; Beware of
-##             string equality testing, as these strings 
+##             string equality testing, as these strings
 ##             will have a newline (\n) attached.
 ##########################################################
 
@@ -416,10 +421,8 @@ sub get_and_show_retrieved_set {
 
     # if not an interactive query than we need to retrieve which
     # query/document we want to use from the corpus
-    
-    my $vect_num = 1;
 
-    &show_crypto;
+    my $vect_num = 1;
 
     print "Target Document/Query number: ";
 
@@ -429,34 +432,34 @@ sub get_and_show_retrieved_set {
     if   ($vect_num !~ /^[1-9]/) { $vect_num  = 1; }
 
     print "\n";
-    
+
 
 
     print "Show how many matching documents (20): ";
-    
+
     my    $max_show  = <STDIN>;
     chomp $max_show;
 
     if   ($max_show !~ /[0-9]/) { $max_show  = 20; }
 
-    
+
 
     print "Document to Document comparison\n";
-    
+
     &get_retrieved_set( $doc_vector[$vect_num]);
-    &shw_retrieved_set( $max_show, 
-                $vect_num, 
+    &shw_retrieved_set( $max_show,
+                $vect_num,
                 $doc_vector[$vect_num]);
-    
+
 }
 
 ###########################################################
 ## GET_RETRIEVED_SET
 ##
 ##  Parameters:
-## 
+##
 ##  $qry_vector{} - the query vector to be compared with the
-##                  document set. May also be another document 
+##                  document set. May also be another document
 ##                  vector.
 ##
 ##  This function computes the document similarity between the
@@ -465,12 +468,12 @@ sub get_and_show_retrieved_set {
 ##
 ##  An array of the document numbers is then sorted by this
 ##  similarity function, forming the rank order of documents
-##  for use in the retrieval set.  
+##  for use in the retrieval set.
 ##
 ##  The -1 in the simcomp similarity comparision function
 ##  makes the sorted list in descending order.
 ##########################################################
- 
+
 sub get_retrieved_set {
 
     my $qry_vector = shift;
@@ -481,17 +484,17 @@ sub get_retrieved_set {
     @doc_simula = ( );   # insure that storage vectors are empty before we
     @res_vector = ( );   # calculate vector similarities
 
-    push @doc_simula, 0.0;    # push one empty value so that indices 
+    push @doc_simula, 0.0;    # push one empty value so that indices
                               # correspond with document values
 
     for $index ( 1 .. $tot_number) {
-        
+
             push @doc_simula, &cosine_sim_a( $qry_vector, $doc_vector[$index], $index);
-        
+
     }
 
 
-    @res_vector = 
+    @res_vector =
       sort { -1 * ($doc_simula[$a] <=> $doc_simula[$b]); } 1 .. $tot_number;
 }
 
@@ -501,31 +504,31 @@ sub get_retrieved_set {
 ## Assumes the following global data structures have been
 ## initialized, based on the results of &get_retrieved_set.
 ##
-## 1) @res_vector - contains the document numbers sorted in 
+## 1) @res_vector - contains the document numbers sorted in
 ##                  rank order
-## 2) @doc_simula - The similarity measure for each document, 
+## 2) @doc_simula - The similarity measure for each document,
 ##                  computed by &get_retrieved_set.
 ##
 ## Also assumes that the following have been initialized in
 ## advance:
 ##
-##       $titles[ $doc_num ]    - the document title for a 
+##       $titles[ $doc_num ]    - the document title for a
 ##                                document number, $doc_num
 ##       $relevance_hash{ $qry_num }{ $doc_num }
 ##                              - is $doc_num relevant given
 ##                                query number, $qry_num
 ##
 ## Parameters:
-##   $max_show   - the maximum number of matched documents 
+##   $max_show   - the maximum number of matched documents
 ##                 to display.
 ##   $qry_num    - the vector number of the query
 ##   $qry_vect   - the query vector (passed by reference)
-##   $comparison - "Query" or "Document" (type of vector 
+##   $comparison - "Query" or "Document" (type of vector
 ##                 being compared to)
 ##
-## In the case of "Query"-based retrieval, the relevance 
-## judgements for the returned set are displayed. This is 
-## ignored when doing document-to-document comparisons, as 
+## In the case of "Query"-based retrieval, the relevance
+## judgements for the returned set are displayed. This is
+## ignored when doing document-to-document comparisons, as
 ## there are nor relevance judgements.
 ##
 ############################################################
@@ -555,12 +558,12 @@ EndOfList
     my $ind = $res_vector[$index];
     my $id = $ind;
     print "  ";
-    
+
 
     my ($similarity) = $doc_simula[$ind] == 1 ? "1.00000000" : ($doc_simula[$ind]    =~ /^([0-9]+\.\d{0,8})/);
    # my  $title       = substr $titles_vector[$ind], 0, 47;
 
-   
+
     printf("   %8f     %d\t %s\n", $similarity, $ind, $titles_vector[$ind]);
     #print($id, "\n");
 
@@ -599,21 +602,21 @@ EndOfList
 
 ########################################################
 ## SHOW_OVERLAP
-## 
+##
 ## Parameters:
 ##  - Two vectors ($qry_vect and $doc_vect), passed by
 ##    reference.
 ##  - The number of the vectors for display purposes
 ##
 ## PARTIALLY IMPLEMENTED:
-## 
+##
 ## This function should show the terms that two vectors
 ## have in common, the relative weights of these terms
 ## in the two vectors, and any additional useful information
 ## such as the document frequency of the terms, etc.
 ##
 ## Useful for understanding the reason why documents
-## are judged as relevant. 
+## are judged as relevant.
 ##
 ## Present in a sorted order most informative to the user.
 ##
@@ -627,7 +630,7 @@ sub show_overlap {
     my $doc_num  = shift;
 
     print "============================================================\n";
-    printf( "%-20s  %8d   %8d\t%s\n", 
+    printf( "%-20s  %8d   %8d\t%s\n",
        "Vector Overlap",
        $qry_num        ,
        $doc_num        ,
@@ -649,16 +652,6 @@ sub show_overlap {
     }
 }
 
-sub show_crypto {
-    print("\nHere is a list of available cryptocurrencies: \n");
-    my $tot_number = (scalar @titles_vector) - 1;
-    my $index      = 0;
-     for $index ( 1 .. $tot_number) {
-        print($index, ". ", $titles_vector[$index], "\n");
-     }
-
-}
-
 ########################################################
 ## DO_FULL_COSINE_SIMILARITY
 ##
@@ -671,7 +664,6 @@ sub show_crypto {
 
 sub do_full_cosine_similarity {
 
-    &show_crypto;
     print "\n";
     print "1st Document number: ";
 
