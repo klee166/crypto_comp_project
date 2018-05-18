@@ -20,6 +20,8 @@ $ pip install -U numpy
 
 $ pip install -U scikit-learn
 
+$ python -mpip install -U matplotlib
+
 # Tools
 1. web_robot.py: use Python BeautifulSoup to build a robot that crawls https://coinmarketcap.com/ and the official websites of the first 100 cryptocurrencies on CoinMarketCap; write the website contents to myfile.txt.
 
