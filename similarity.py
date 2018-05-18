@@ -1,10 +1,12 @@
 import gensim
 import numpy as np
 import nltk
+nltk.download('vader_lexicon')
 from nltk.tokenize import word_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.cluster import AgglomerativeClustering
 import matplotlib.pyplot as plt
 import string
@@ -25,8 +27,10 @@ def normalize(txt):
 # read myfile to create a model 
 # has to read 
 # raw-documents 
+sentiment_dic = {}
 docs_vector = {}
 gen_docs = []
+cluster_group = {}
 raw_documents = []
 list_names = []
 name = ""
@@ -36,6 +40,7 @@ second = -1
 
 # in order to get rid of extermely sparse matrices
 threshold_value = 18
+sid = SentimentIntensityAnalyzer()
 #print("Loading the Program... ")
 with open('myfile.txt','rb') as f:
 	read_txt = f.readlines()
@@ -46,6 +51,7 @@ with open('myfile.txt','rb') as f:
 			if(first == -1):
 				if(len(temp_txt) > threshold_value):
 					raw_documents.append(temp_txt)
+					sentiment_dic[name] = sid.polarity_scores(temp_txt)
 				else:
 					list_names.remove(name)
 				temp_txt = ""
@@ -75,7 +81,13 @@ with open('myfile.txt','rb') as f:
 	# categorize and come up with k means
 	print ("K-Mean Clustering")
 	j = 0
-	for i in np.nditer(kmeans):
+	for i in kmeans:
+		k = i.astype(int)
+		cluster_group[k] = list()
+
+	for i in kmeans:
+		k = i.astype(int)
+		cluster_group[k].append(list_names[j])
 		print list_names[j]
 		print i
 		j = j + 1
@@ -87,6 +99,26 @@ with open('myfile.txt','rb') as f:
 		print i
 		j = j + 1
 
+	print("The Best Sentimental Anaysis")
+	max_name = ""
+	first = -1
+	for i in range(len(cluster_group)):
+		print(i)
+		for name in cluster_group[i]:
+			if(first == -1):
+				max_name = cluster_group[i][0]
+				max_val = sentiment_dic[max_name]["pos"] - sentiment_dic[max_name]["neg"]
+				first = 1
+
+			val = sentiment_dic[name]["pos"] - sentiment_dic[name]["neg"]
+			if(max_val < val):
+				max_val = val
+				max_name = name
+		first = -1
+
+		print max_name 
+		print max_val
+
 
 
 	plt.xlabel('X')
@@ -95,5 +127,5 @@ with open('myfile.txt','rb') as f:
 		c=kmeans_f.labels_, edgecolor='')
 	plt.show()
 	np.set_printoptions(threshold=np.nan)
-   	print pairwise_similarity
+   	#print pairwise_similarity
 	f.close()
