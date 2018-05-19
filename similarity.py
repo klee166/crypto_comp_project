@@ -100,8 +100,8 @@ with open('myfile.txt','rb') as f:
 		if(choice == 1):
 	   		print (pairwise_similarity)
 	   	if(choice == 2):
-	   		k_value = input ("Enter k value: ")
-	   		kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
+			k_value = input ("Enter k value: ")
+			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
 		
 			j = 0
@@ -138,8 +138,8 @@ with open('myfile.txt','rb') as f:
 				c=hcluster_f.labels_, edgecolor='')
 			plt.show()
 		if(choice == 4):
-	   		k_value = input ("Enter k value: ")
-	   		kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
+			k_value = input ("Enter k value: ")
+			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
 
 			for i in kmeans:
