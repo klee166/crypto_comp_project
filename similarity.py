@@ -93,11 +93,11 @@ with open('myfile.txt','rb') as f:
 		print ("*     5: The Best Competitor in Hierarchial Cluster             *")
 		print ("*     6: Exit                                                   *")
 		print ("*****************************************************************")
-		choice = input ("Enter your choice (1 ~ 6): ")
+		choice = raw_input ("Enter your choice (1 ~ 6): ")
 		cluster_group = {}
-		if(choice == 1):
+		if(choice == '1'):
 	   		print (pairwise_similarity)
-		if(choice == 2):
+		if(choice == '2'):
 			k_value = input ("Enter k value: ")
 			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
@@ -115,7 +115,7 @@ with open('myfile.txt','rb') as f:
 				c=kmeans_f.labels_, edgecolor='')
 			plt.show()
 
-		if(choice == 3):
+		if(choice == '3'):
 			n_value = input ("Number of cluster: ")
 			hcluster = AgglomerativeClustering(n_clusters=n_value).fit_predict(pairwise_similarity)
 			hcluster_f = AgglomerativeClustering(n_clusters=n_value).fit(pairwise_similarity)
@@ -134,7 +134,7 @@ with open('myfile.txt','rb') as f:
 			plt.scatter(pairwise_similarity[:,0], pairwise_similarity[:,1],
 				c=hcluster_f.labels_, edgecolor='')
 			plt.show()
-		if(choice == 4):
+		if(choice == '4'):
 			k_value = input ("Enter k value: ")
 			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
@@ -170,7 +170,7 @@ with open('myfile.txt','rb') as f:
 				print ("The Best Competitor:")
 				print (max_name)
 
-		if(choice == 5):
+		if(choice == '5'):
 			n_value = input ("Number of cluster: ")
 			hcluster = AgglomerativeClustering(n_clusters=n_value).fit_predict(pairwise_similarity)
 			hcluster_f = AgglomerativeClustering(n_clusters=n_value).fit(pairwise_similarity)
@@ -208,7 +208,7 @@ with open('myfile.txt','rb') as f:
 				print (i) 
 				print ("The Best Competitor:")
 				print (max_name)
-		if (choice == 6):
+		if (choice == '6'):
 				sys.exit()
 
 	f.close()
