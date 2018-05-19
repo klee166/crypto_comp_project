@@ -1,7 +1,5 @@
 import gensim
 import numpy as np
-from Tkinter import *
-import Tkinter as tk
 import nltk
 from nltk.tokenize import word_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
@@ -99,11 +97,10 @@ with open('myfile.txt','rb') as f:
 		cluster_group = {}
 		if(choice == 1):
 	   		print (pairwise_similarity)
-	   	if(choice == 2):
-	   		k_value = input ("Enter k value: ")
-	   		kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
+		if(choice == 2):
+			k_value = input ("Enter k value: ")
+			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
-		
 			j = 0
 			for i in kmeans:
 				k = i.astype(int)
@@ -138,8 +135,8 @@ with open('myfile.txt','rb') as f:
 				c=hcluster_f.labels_, edgecolor='')
 			plt.show()
 		if(choice == 4):
-	   		k_value = input ("Enter k value: ")
-	   		kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
+			k_value = input ("Enter k value: ")
+			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
 
 			for i in kmeans:
