@@ -10,23 +10,24 @@ Our User Interface for Perl:
 
 Welcome to Cryptocurrency Analysis Engine!
 *************************************************************
-*   OPTIONS:                                                  *
-* 1 = Find the similarity between two cryptocurrencies        *
-* 2 = Find cryptocurrencies most similar to a given one       *
-* 3 = Naive Bayesian Classification on cryptocurrencies       *
-* 4 = Quit                                                    *
+*   OPTIONS:                                                  
+* 1 = Find the similarity between two cryptocurrencies        
+* 2 = Find cryptocurrencies most similar to a given one       
+* 3 = Naive Bayesian Classification on cryptocurrencies       
+* 4 = Quit                                                    
 *************************************************************
 Enter your choice (1 ~ 4):
 
 Our User Interface for Python:
+
+Cryptocurrency Analysis Application
 ***************************************************************
-*            Cryptocurrency Analysis Application                *
-*     1: Compute cosine-similarity between all possible pairs   *
-*     2: Categorize and Visualize K-Mean Cluster                *
-*     3: Categorize and Visualize Hierarchial Cluster           *
-*     4: The Best Competitor in K-Mean Cluster                  *
-*     5: The Best Competitor in Hierarchial Cluster             *
-*     6: Exit                                                   *
+* 1: Compute cosine-similarity between all possible pairs
+* 2: Categorize and Visualize K-Mean Cluster   
+* 3: Categorize and Visualize Hierarchial Cluster 
+* 4: The Best Competitor in K-Mean Cluster      
+* 5: The Best Competitor in Hierarchial Cluster 
+* 6: Exit 
 ***************************************************************
 Enter your choice (1 ~ 6):
 
