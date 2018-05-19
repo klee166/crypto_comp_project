@@ -5,12 +5,10 @@ We crawl texts regarding around 100 cryptocurrencies from https://coinmarketcap.
 
 In addition, we build a Naive Bayesian Model and train the model using training.txt based on the classification dimensions provided by https://medium.com/swlh/a-better-taxonomy-for-cryptocurrencies-cbffd2e1b58c: 1. Mode of Payment/Currency 2. Store of Value 3. Protocol Improvement 4. Coin-as-a-Service 5. Utility Token. We then run the Bayesian model on the test sets--myfile.txt and return the log likelihood for each category, by which we classify each cryptocurrency into one or two categories.
 
+
 Our User Interface for Perl:
-============================================================
-==     Welcome to the 600.466 Cryptocurrency Analysis Engine
-==
-      == Total Documents: 91
-============================================================
+
+Welcome to Cryptocurrency Analysis Engine!
 
 OPTIONS:
   1 = Find the similarity between two cryptocurrencies
