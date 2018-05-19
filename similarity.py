@@ -101,6 +101,7 @@ with open('myfile.txt','rb') as f:
 	   		print (pairwise_similarity)
 		if(choice == 2):
 			k_value = input ("Enter k value: ")
+			k_value = int(k_value)
 			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
 			j = 0
@@ -119,6 +120,7 @@ with open('myfile.txt','rb') as f:
 
 		if(choice == 3):
 			n_value = input ("Number of cluster: ")
+			n_value = int(n_value)
 			hcluster = AgglomerativeClustering(n_clusters=n_value).fit_predict(pairwise_similarity)
 			hcluster_f = AgglomerativeClustering(n_clusters=n_value).fit(pairwise_similarity)
 
@@ -138,6 +140,7 @@ with open('myfile.txt','rb') as f:
 			plt.show()
 		if(choice == 4):
 			k_value = input ("Enter k value: ")
+			k_value = int(k_value)
 			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
 
@@ -174,6 +177,7 @@ with open('myfile.txt','rb') as f:
 
 		if(choice == 5):
 			n_value = input ("Number of cluster: ")
+			n_value = int(n_value)
 			hcluster = AgglomerativeClustering(n_clusters=n_value).fit_predict(pairwise_similarity)
 			hcluster_f = AgglomerativeClustering(n_clusters=n_value).fit(pairwise_similarity)
 
