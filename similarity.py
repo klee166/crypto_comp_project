@@ -97,11 +97,7 @@ with open('myfile.txt','rb') as f:
 		cluster_group = {}
 		if(choice == 1):
 	   		print (pairwise_similarity)
-<<<<<<< HEAD
-	   	if(choice == 2):
-=======
 		if(choice == 2):
->>>>>>> bffdaf9b9cca977555758d2cd06c40f6f586a12d
 			k_value = input ("Enter k value: ")
 			kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
 			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
