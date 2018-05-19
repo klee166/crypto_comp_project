@@ -26,6 +26,8 @@ $ pip install -U scikit-learn
 
 $ python -mpip install -U matplotlib
 
+The twython library should be installed as well
+
 Please download nltk packages as you can get messages when running the code
 
 # Tools
