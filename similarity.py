@@ -1,7 +1,8 @@
 import gensim
 import numpy as np
+from Tkinter import *
+import Tkinter as tk
 import nltk
-nltk.download('vader_lexicon')
 from nltk.tokenize import word_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -10,6 +11,8 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.cluster import AgglomerativeClustering
 import matplotlib.pyplot as plt
 import string
+
+
 
 # Coming up with stemmer
 stemmer = nltk.stem.porter.PorterStemmer()
@@ -22,7 +25,18 @@ def stem_tk(tks):
 def normalize(txt):
 	return stem_tk(nltk.word_tokenize(txt.lower().translate(remove_punctuation_map)))
 
-
+def initialize_gui():
+	window = Tk()
+	window.title("Cryptocurrency Compatitor Detector")
+	window.geometry('600x800')
+	buttons = ['Show Cluster', 'Calculate the Best Competitor']
+	lb = Label(window, text="1")
+	for i in range(2):
+		l = tk.Label(window,
+					text=buttons[i],
+					)
+		l.place(x = 20, y = 30 + i * 30, width=120, height=25)
+	window.mainloop()
 
 # read myfile to create a model 
 # has to read 
@@ -64,68 +78,140 @@ with open('myfile.txt','rb') as f:
 		else: 
 			temp_txt = temp_txt + text
 
-
 	vect = TfidfVectorizer(tokenizer=normalize, stop_words='english').fit_transform(raw_documents)
 	pairwise_similarity = cosine_similarity(vect)
-
-	# predict k_means
-	#eigen_values, eigen_vectors = np.linalg.eigh(pairwise_similarity)
-	kmeans = KMeans(n_clusters=5, init='k-means++').fit_predict(pairwise_similarity)
-	kmeans_f = KMeans(n_clusters=5, init='k-means++').fit(pairwise_similarity)
-
-
-
-	hcluster = AgglomerativeClustering(n_clusters=5).fit_predict(pairwise_similarity)
-	hcluster_f = AgglomerativeClustering(n_clusters=5).fit(pairwise_similarity)
-
-	# categorize and come up with k means
-	print ("K-Mean Clustering")
-	j = 0
-	for i in kmeans:
-		k = i.astype(int)
-		cluster_group[k] = list()
-
-	for i in kmeans:
-		k = i.astype(int)
-		cluster_group[k].append(list_names[j])
-		print (list_names[j])
-		print (i)
-		j = j + 1
-
-	j = 0
-	print("Hierachy Clustering")
-	for i in np.nditer(hcluster):
-		print (list_names[j])
-		print (i)
-		j = j + 1
-
-	print("The Best Sentimental Anaysis")
-	max_name = ""
-	first = -1
-	for i in range(len(cluster_group)):
-		print(i)
-		for name in cluster_group[i]:
-			if(first == -1):
-				max_name = cluster_group[i][0]
-				max_val = sentiment_dic[max_name]["pos"] - sentiment_dic[max_name]["neg"]
-				first = 1
-
-			val = sentiment_dic[name]["pos"] - sentiment_dic[name]["neg"]
-			if(max_val < val):
-				max_val = val
-				max_name = name
-		first = -1
-
-		print (max_name) 
-		print (max_val)
-
-
-
-	plt.xlabel('X')
-	plt.ylabel('Y')
-	plt.scatter(pairwise_similarity[:,0], pairwise_similarity[:,1],
-		c=kmeans_f.labels_, edgecolor='')
-	plt.show()
 	np.set_printoptions(threshold=np.nan)
-   	#print pairwise_similarity
+
+	while(1):
+		print ("*****************************************************************")
+		print ("*            Cryptocurrency Analysis Application                *")
+		print ("*                                                               *")
+		print ("*                                                               *")
+		print ("*                                                               *")
+		print ("*     1: Compute cosine-similarity between all possible pairs   *")
+		print ("*     2: Categorize and Visualize K-Mean Cluster                *")
+		print ("*     3: Categorize and Visualize Hierarchial Cluster           *")
+		print ("*     4: The Best Competitor in K-Mean Cluster                  *")
+		print ("*     5: The Best Competitor in Hierarchial Cluster             *")
+		print ("*     6: Exit                                                   *")
+		print ("*****************************************************************")
+		choice = input ("Enter your choice (1 ~ 6): ")
+		cluster_group = {}
+		if(choice == 1):
+	   		print pairwise_similarity
+	   	if(choice == 2):
+	   		k_value = input ("Enter k value: ")
+	   		kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
+			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
+		
+			j = 0
+			for i in kmeans:
+				k = i.astype(int)
+				print (list_names[j])
+				print (i)
+				print (" ")
+				j = j + 1
+
+			plt.xlabel('X')
+			plt.ylabel('Y')
+			plt.scatter(pairwise_similarity[:,0], pairwise_similarity[:,1],
+				c=kmeans_f.labels_, edgecolor='')
+			plt.show()
+
+		if(choice == 3):
+			n_value = input ("Number of cluster: ")
+			hcluster = AgglomerativeClustering(n_clusters=n_value).fit_predict(pairwise_similarity)
+			hcluster_f = AgglomerativeClustering(n_clusters=n_value).fit(pairwise_similarity)
+
+		
+			j = 0
+			for i in hcluster:
+				k = i.astype(int)
+				print (list_names[j])
+				print (i)
+				print (" ")
+				j = j + 1
+
+			plt.xlabel('X')
+			plt.ylabel('Y')
+			plt.scatter(pairwise_similarity[:,0], pairwise_similarity[:,1],
+				c=hcluster_f.labels_, edgecolor='')
+			plt.show()
+		if(choice == 4):
+	   		k_value = input ("Enter k value: ")
+	   		kmeans = KMeans(n_clusters=k_value, init='k-means++').fit_predict(pairwise_similarity)
+			kmeans_f = KMeans(n_clusters=k_value, init='k-means++').fit(pairwise_similarity)
+
+			for i in kmeans:
+				k = i.astype(int)
+				cluster_group[k] = list()
+
+			j = 0
+			for i in kmeans:
+				k = i.astype(int)
+				cluster_group[k].append(list_names[j])
+				j = j + 1
+
+			max_name = ""
+			first = -1
+			for i in range(len(cluster_group)):
+				for name in cluster_group[i]:
+					if(first == -1):
+						max_name = cluster_group[i][0]
+						max_val = sentiment_dic[max_name]["pos"] - sentiment_dic[max_name]["neg"]
+						first = 1
+
+					val = sentiment_dic[name]["pos"] - sentiment_dic[name]["neg"]
+					if(max_val < val):
+						max_val = val
+						max_name = name
+				first = -1
+
+				print ("")
+				print ("The Cluster No:")
+				print (i) 
+				print ("The Best Competitor:")
+				print (max_name)
+
+		if(choice == 5):
+			n_value = input ("Number of cluster: ")
+			hcluster = AgglomerativeClustering(n_clusters=n_value).fit_predict(pairwise_similarity)
+			hcluster_f = AgglomerativeClustering(n_clusters=n_value).fit(pairwise_similarity)
+
+
+
+			for i in hcluster:
+				k = i.astype(int)
+				cluster_group[k] = list()
+
+			j = 0
+			for i in hcluster:
+				k = i.astype(int)
+				cluster_group[k].append(list_names[j])
+				j = j + 1
+
+			max_name = ""
+			first = -1
+			for i in range(len(cluster_group)):
+				for name in cluster_group[i]:
+					if(first == -1):
+						max_name = cluster_group[i][0]
+						max_val = sentiment_dic[max_name]["pos"] - sentiment_dic[max_name]["neg"]
+						first = 1
+
+					val = sentiment_dic[name]["pos"] - sentiment_dic[name]["neg"]
+					if(max_val < val):
+						max_val = val
+						max_name = name
+				first = -1
+
+
+				print ("")
+				print ("The Cluster No:")
+				print (i) 
+				print ("The Best Competitor:")
+				print (max_name)
+		if (choice == 6):
+				sys.exit()
+
 	f.close()
